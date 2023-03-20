@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ItemList/ItemList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ItemList/item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Jpanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/person/maincharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Jpanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/maincharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/maincharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +65,7 @@
       <workItem from="1678805766567" duration="5773000" />
       <workItem from="1678815894320" duration="815000" />
       <workItem from="1678856943240" duration="3501000" />
+      <workItem from="1679278193971" duration="3885000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>

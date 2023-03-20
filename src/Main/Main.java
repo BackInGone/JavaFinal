@@ -10,6 +10,11 @@ public class Main {
         window.setTitle("Pocketmon Adventure");
         window.setResizable(false);
 
+        GamePanel gamePanel = new GamePanel();
+        window.add(gamePanel);
+        window.pack();
+
         window.setLocationRelativeTo(null);
         window.setVisible(true);
     }
+}

@@ -16,5 +16,10 @@ public class Main {
 
         window.setLocationRelativeTo(null);
         window.setVisible(true);
+
+//        Runnable r = new GamePanel();
+//        Thread gameThread = new Thread(r);
+//        gameThread.start();
+        gamePanel.startGameThread();
     }
 }

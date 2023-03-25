@@ -16,41 +16,40 @@ boolean rightPressed;
     }
     public void keyPressed(KeyEvent e){
         int code = e.getKeyCode();
-        if(code == KeyEvent.VK_W);{
+        if(code == KeyEvent.VK_W){
             boolean upPressed = true;
-            System.out.println("w press");
+//            System.out.println("w press");
         }
-        if(code == KeyEvent.VK_S);{
+        if (code == KeyEvent.VK_S){
             boolean downPressed = true;
-            System.out.println("s press");
+//            System.out.println("s press");
         }
-        if(code == KeyEvent.VK_A);{
+        if(code == KeyEvent.VK_A){
             boolean leftPressed = true;
-            System.out.println("a press");
+//            System.out.println("a press");
         }
-        if(code == KeyEvent.VK_D);{
+        if(code == KeyEvent.VK_D){
             boolean rightPressed = true;
-            System.out.println("d press");
+//            System.out.println("d press");
         }
     }
     public void keyReleased(KeyEvent e){
         int code = e.getKeyCode();
-
-        if(code == KeyEvent.VK_W);{
+        if(code == KeyEvent.VK_W){
             boolean upPressed = false;
-            System.out.println("w release ");
+//            System.out.println("w release ");
         }
-        if(code == KeyEvent.VK_S);{
+        if(code == KeyEvent.VK_S){
             boolean downPressed = false;
-            System.out.println("s release");
+//            System.out.println("s release");
         }
-        if(code == KeyEvent.VK_A);{
+        if(code == KeyEvent.VK_A){
             boolean leftPressed = false;
-            System.out.println("a release");
+//            System.out.println("a release");
         }
-        if(code == KeyEvent.VK_D);{
+        if(code == KeyEvent.VK_D){
             boolean rightPressed = false;
-            System.out.println("d release");
+//            System.out.println("d release");
         }
 
     }

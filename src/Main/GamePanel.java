@@ -21,89 +21,58 @@ public class GamePanel extends JPanel implements Runnable {
     int playerSpeed=100;
 
 
-
     public GamePanel() {
-
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
         this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
-
     }
-
 
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
     }
-
-
     int cnt = 0;
     public void run() {
-
-//        System.out.println("run?");
-//        Scanner scan = new Scanner(System.in);
-//        int a = scan.nextInt();
-
-
         while (gameThread != null) {
 
-            //                System.out.println("Loop is running" + cnt + "times");
-                cnt += 1;
             try {
-                Thread.sleep(1000);
+                gameThread.sleep(1000);
+            cnt += 1;
             update();
 //            System.out.println("update"+ cnt);
             repaint();
 //            System.out.println("repaint"+ cnt);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
+                        }
             }
-//                paintComponent(Graphics g);
-        }
     }
 
     private void update() {
         System.out.println("여긴 update...");
-        if(keyH.upPressed==true){
-            System.out.println("uppressed");
+        System.out.println(keyH.upPressed);
+        System.out.println(keyH.downPressed);
+        System.out.println(keyH.leftPressed);
+        System.out.println(keyH.rightPressed);
+        if(keyH.upPressed){
+        System.out.println("uppressed");
             playerY -= playerSpeed;
         }
-        else if(keyH.downPressed==true){
+        else if(keyH.downPressed){
             playerY += playerSpeed;
             System.out.println("downpressed");
         }
-        else if(keyH.leftPressed==true){
+        else if(keyH.leftPressed){
             playerX -= playerSpeed;
             System.out.println("leftpressed");
         }
-        else if(keyH.rightPressed==true){
+        else if(keyH.rightPressed){
             playerX += playerSpeed;
             System.out.println("rightpressed");
         }
     }
-
-
-//    public void update(Graphics g2){
-//        super.update(g2);
-////    if(keyH.upPressed){
-////        playerY -= playerSpeed;
-////        System.out.println("uppressed");
-////    }
-////    else if(keyH.downPressed){
-////        playerY += playerSpeed;
-////        System.out.println("downpressed");
-////    }
-////    else if(keyH.leftPressed){
-////        playerX -= playerSpeed;
-////        System.out.println("leftpressed");
-////    }
-////    else if(keyH.rightPressed){
-////        playerX += playerSpeed;
-////        System.out.println("rightpressed");
-////    }
-//    }
 
     public void paintComponent(Graphics g){
         super.paintComponent(g);

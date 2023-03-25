@@ -1,8 +1,7 @@
 package Main;
 
+import javax.swing.*;
 import java.awt.*;
-import java.util.Scanner;
-import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements Runnable {
 
@@ -18,7 +17,7 @@ public class GamePanel extends JPanel implements Runnable {
     KeyHandler keyH = new KeyHandler();
     int playerX = 100;
     int playerY = 100;
-    int playerSpeed=100;
+    int playerSpeed=10;
 
 
     public GamePanel() {
@@ -38,7 +37,7 @@ public class GamePanel extends JPanel implements Runnable {
         while (gameThread != null) {
 
             try {
-                gameThread.sleep(1000);
+                gameThread.sleep(50);
             cnt += 1;
             update();
 //            System.out.println("update"+ cnt);
@@ -51,26 +50,77 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     private void update() {
-        System.out.println("여긴 update...");
-        System.out.println(keyH.upPressed);
-        System.out.println(keyH.downPressed);
-        System.out.println(keyH.leftPressed);
-        System.out.println(keyH.rightPressed);
+        // 화면 밖으로 벗어났을때 메시지와 함께 제자리로 돌리는 else if 문
+        // upPerssed, downPressed, leftPressed, rightPressed 마다 플레이어 필셀의 위치 업데이트 (플레이어픽셀크기 48*48)
         if(keyH.upPressed){
         System.out.println("uppressed");
-            playerY -= playerSpeed;
+            if(playerX<0)
+            {System.out.println("XXX");
+                playerX = 0;
+                JFrame window2 = new JFrame();
+                GamePanel gamePanel2 = new GamePanel();
+                window2.add(gamePanel2);
+                window2.pack();
+                window2.setVisible(true);
+            }else if(playerY<0) {
+                System.out.println("XXX");
+                playerY = 0;
+            }else if(playerX>720){
+                System.out.println("XXX");
+                playerX=720;
+            }else if(playerY>528){
+                System.out.println("XXX");
+                playerY=528;
+            }else {
+            playerY -= playerSpeed;}
         }
         else if(keyH.downPressed){
-            playerY += playerSpeed;
             System.out.println("downpressed");
+            if(playerX<0)
+            {System.out.println("XXX");
+                playerX = 0;
+            }else if(playerY<0) {
+                System.out.println("XXX");
+                playerY = 0;
+            }else if(playerX>720){
+                System.out.println("XXX");
+                playerX=720;
+            }else if(playerY>528){
+                System.out.println("XXX");
+                playerY=528;
+            }else {playerY += playerSpeed;}
         }
         else if(keyH.leftPressed){
-            playerX -= playerSpeed;
             System.out.println("leftpressed");
+            if(playerX<0)
+            {System.out.println("XXX");
+                playerX = 0;
+            }else if(playerY<0) {
+                System.out.println("XXX");
+                playerY = 0;
+            }else if(playerX>720){
+                System.out.println("XXX");
+                playerX=720;
+            }else if(playerY>528){
+                System.out.println("XXX");
+                playerY=528;
+            }else {playerX -= playerSpeed;}
         }
         else if(keyH.rightPressed){
-            playerX += playerSpeed;
-            System.out.println("rightpressed");
+            if(playerX<0)
+            {System.out.println("XXX");
+                playerX = 0;
+            }else if(playerY<0) {
+                System.out.println("XXX");
+                playerY = 0;
+            }else if(playerX>720){
+                System.out.println("XXX");
+                playerX=720;
+            }else if(playerY>528){
+                System.out.println("XXX");
+                playerY=528;
+            }else {System.out.println("rightpressed");
+            playerX += playerSpeed;}
         }
     }
 

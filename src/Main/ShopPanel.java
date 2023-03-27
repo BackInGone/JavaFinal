@@ -19,7 +19,7 @@ public class ShopPanel extends JFrame{
 //        window2.setVisible(true);
         setSize(400,600);
         setVisible(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
         }

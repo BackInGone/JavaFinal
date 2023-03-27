@@ -49,19 +49,24 @@ public class GamePanel extends JPanel implements Runnable {
             }
     }
 
-    private void update() {
+    private void update() throws InterruptedException {
         // 화면 밖으로 벗어났을때 메시지와 함께 제자리로 돌리는 else if 문
-        // upPerssed, downPressed, leftPressed, rightPressed 마다 플레이어 필셀의 위치 업데이트 (플레이어픽셀크기 48*48)
+        // upPressed, downPressed, leftPressed, rightPressed 마다 플레이어 필셀의 위치 업데이트 (플레이어픽셀크기 48*48)
         if(keyH.upPressed){
         System.out.println("uppressed");
             if(playerX<0)
             {System.out.println("XXX");
                 playerX = 0;
-                JFrame window2 = new JFrame();
-                GamePanel gamePanel2 = new GamePanel();
-                window2.add(gamePanel2);
-                window2.pack();
-                window2.setVisible(true);
+                new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
+//                ShopPanel shop1 = new ShopPanel();
+//                shop1.goShop();
+                System.out.printf("shop 진입");
+                gameThread.wait();
+//                JFrame window2 = new JFrame();
+//                GamePanel gamePanel2 = new GamePanel();
+//                window2.add(gamePanel2);
+//                window2.pack();
+//                window2.setVisible(true);
             }else if(playerY<0) {
                 System.out.println("XXX");
                 playerY = 0;
@@ -132,8 +137,11 @@ public class GamePanel extends JPanel implements Runnable {
         g2.fillRect( playerX, playerY,tileSize,tileSize);
         g2.drawOval(150,150,50,50);
         g2.dispose();
-
     }
+
+
+
+
 
 
 

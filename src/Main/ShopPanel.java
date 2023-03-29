@@ -14,6 +14,7 @@ public class ShopPanel extends JFrame{
 
 
         public void goShop(){
+            synchronized (this){
         JFrame window2 = new JFrame();
         GamePanel gamePanel2 = new GamePanel();
         window2.pack();
@@ -21,8 +22,11 @@ public class ShopPanel extends JFrame{
         window2.setVisible(true);
         setSize(400,600);
         setVisible(true);
-        window2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                }
+        if(JFrame.EXIT_ON_CLOSE==3){
+            notify();
+        }
+        //window2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                }}
         public void paint(Graphics g3){
 //            super.paint(g3);
             g3.drawImage(background,0,0,null);

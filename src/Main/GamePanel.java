@@ -68,8 +68,16 @@ public class GamePanel extends JPanel implements Runnable{
             new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
             setVisible(true);
             //gameThread.sleep(1);
-            wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
-            playerX = 0;}
+           // wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
+            playerX = 20;
+            keyH.upPressed = false;
+            keyH.downPressed = false;
+            keyH.leftPressed = false;
+            keyH.rightPressed = false;
+           // if(JFrame.EXIT_ON_CLOSE==3){
+           //     notify();
+           // }
+            }
         } else if (playerY < 0) {
             System.out.println("XXX");
             playerY = 0;

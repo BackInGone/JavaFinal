@@ -10,7 +10,7 @@ public boolean upPressed, downPressed, leftPressed, rightPressed;
     public void keyTyped(KeyEvent e){
 
     }
-    public void keyPressed(KeyEvent e){
+    public void keyPressed(KeyEvent e){;
         int code = e.getKeyCode();
         if(code == KeyEvent.VK_UP){
             upPressed = true;

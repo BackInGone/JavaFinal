@@ -7,6 +7,8 @@
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="First">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Pocketmongame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ShopPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +28,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Mpbo4FXQbnR5DsUsbxUjFUo1Vw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -49,6 +54,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="Pocketmongame" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.Pocketmongame" />
+      <module name="JavaFinal" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -69,6 +88,9 @@
       <workItem from="1679634837916" duration="20463000" />
       <workItem from="1679725973315" duration="14711000" />
       <workItem from="1679799906072" duration="5989000" />
+      <workItem from="1680071747781" duration="5385000" />
+      <workItem from="1680110190422" duration="302000" />
+      <workItem from="1680110505100" duration="3753000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>
@@ -126,14 +148,7 @@
       <option name="project" value="LOCAL" />
       <updated>1679769573058</updated>
     </task>
-    <task id="LOCAL-00009" summary="First">
-      <created>1679938521820</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1679938521820</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,8 +2,8 @@ package Main;
 
 import javax.swing.*;
 
-public class Main {
-    public static void main(String[] args) {
+public class Pocketmongame {
+    public static void main(String[] args) throws InterruptedException{
 
         JFrame window = new JFrame();
 //        window.setDefaultCloseOperation(JFraame.);
@@ -22,10 +22,15 @@ public class Main {
 //        Thread gameThread = new Thread(r);
 //        gameThread.start();
 //        new ShopPanel();
+//        window.add(new JLabel("Pocketmon Adventure"));
         gamePanel.startGameThread();
+
+
+
+        }
+
 
 
 
 
     }
-}

@@ -6,8 +6,9 @@ import java.awt.*;
 
 public class ShopPanel extends JFrame{
     public Image img;
-    public ShopPanel(){
+        JFrame Shop = new JFrame();
         ShopPanel shopPanel1 = new ShopPanel();
+    public ShopPanel(){
         shopPanel1.img = img;
         goshop();
     }
@@ -20,12 +21,11 @@ public class ShopPanel extends JFrame{
     }
 
     public void goshop(){
-    JFrame Shop = new JFrame();
     Shop.setSize(400,600);
     Shop.setLocationRelativeTo(null);
+    Shop.add(shopPanel1);
     Shop.setVisible(true);
-    ShopPanel ShopPanel1 = new ShopPanel(new ImageIcon("/image/상점.png").getImage());
-    Shop.add(ShopPanel1);
+    ShopPanel shopPanel1 = new ShopPanel(new ImageIcon("/image/상점.png").getImage());
 
 
 

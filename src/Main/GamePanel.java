@@ -53,21 +53,19 @@ public class GamePanel extends JPanel implements Runnable{
         // 화면 밖으로 벗어났을때 메시지와 함께 제자리로 돌리는 else if 문
         // upPressed, downPressed, leftPressed, rightPressed 마다 플레이어 필셀의 위치 업데이트 (플레이어픽셀크기 48*48)
         if (playerX < 0) {
+            synchronized (this){
+              ShopPanel test1 = new ShopPanel();
+            wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
+              test1.goshop();
             System.out.println("XXX");
             playerX = 30;
             keyH.upPressed = false;
             keyH.downPressed = false;
             keyH.leftPressed = false;
             keyH.rightPressed = false;
-            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
-//            setVisible(true);
-            synchronized (this){
-//            wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
-//                ShopPanel test = new ShopPanel();
-            //gameThread.sleep(1);
-           // if(JFrame.EXIT_ON_CLOSE==3){
-           //     notify();
-           // }
+            setVisible(true);
+                System.out.println("여기는?");
+//            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
             }
         } else if (playerY < 0) {
             System.out.println("XXX");
@@ -106,4 +104,3 @@ public class GamePanel extends JPanel implements Runnable{
 
     }
 
-}

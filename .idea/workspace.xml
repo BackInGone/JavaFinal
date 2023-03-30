@@ -7,6 +7,7 @@
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Pocketmongame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Pocketmongame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ShopPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +90,7 @@
       <workItem from="1680071747781" duration="5385000" />
       <workItem from="1680110190422" duration="302000" />
       <workItem from="1680110505100" duration="5906000" />
+      <workItem from="1680152190899" duration="12609000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>

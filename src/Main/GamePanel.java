@@ -39,7 +39,6 @@ public class GamePanel extends JPanel implements Runnable{
 
             try {
                 gameThread.sleep(50);
-                cnt += 1;
                 update();
 //            System.out.println("update"+ cnt);
                 repaint();
@@ -53,27 +52,19 @@ public class GamePanel extends JPanel implements Runnable{
         private void update () throws InterruptedException {
         // 화면 밖으로 벗어났을때 메시지와 함께 제자리로 돌리는 else if 문
         // upPressed, downPressed, leftPressed, rightPressed 마다 플레이어 필셀의 위치 업데이트 (플레이어픽셀크기 48*48)
-////                ShopPanel shop1 = new ShopPanel();
-////                shop1.goShop();
-//                System.out.printf("shop 진입");
-////                gameThread.wait();
-////                JFrame window2 = new JFrame();
-////                GamePanel gamePanel2 = new GamePanel();
-////                window2.add(gamePanel2);
-////                window2.pack();
-////                window2.setVisible(true);
         if (playerX < 0) {
-            synchronized (this){
             System.out.println("XXX");
-            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
-            setVisible(true);
-            //gameThread.sleep(1);
-           // wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
-            playerX = 20;
+            playerX = 30;
             keyH.upPressed = false;
             keyH.downPressed = false;
             keyH.leftPressed = false;
             keyH.rightPressed = false;
+            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
+//            setVisible(true);
+            synchronized (this){
+//            wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
+//                ShopPanel test = new ShopPanel();
+            //gameThread.sleep(1);
            // if(JFrame.EXIT_ON_CLOSE==3){
            //     notify();
            // }
@@ -113,15 +104,6 @@ public class GamePanel extends JPanel implements Runnable{
         g2.dispose();
     }
 
-    public void threadRestart(){
-            synchronized (this) {
-                gameThread.notify();
-            }
     }
-
-
-
-
-
 
 }

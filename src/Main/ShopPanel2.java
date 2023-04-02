@@ -6,6 +6,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import static Main.GamePanel.awakeThread;
+import static Main.GamePanel.gameThread;
+
 public class ShopPanel2 {
     JFrame Shop2 = new JFrame();
     JPanel btnPanel = new JPanel();
@@ -20,7 +23,6 @@ public class ShopPanel2 {
 
 }
     public synchronized void goshop2() throws InterruptedException {
-        wait();
         Shop2.setSize(600,1000);
 //        btnPanel.setSize(200,300);
         Shop2.add(btnPanel);
@@ -34,17 +36,30 @@ public class ShopPanel2 {
         btnPanel.setVisible(true);
         btn1.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public synchronized void actionPerformed(ActionEvent e) {
                 Shop2.dispose();
                 System.out.println("dispose");
-                notifyAll();
-                System.out.println("notifyall");
+                synchronized (gameThread){
+                    notifyAll();
+                    System.out.println("클릭안에 노티파이");
+                };
+                System.out.println("gamePanel awake호출한다!");
+
+                awakeThread();
+
             }
         });
         System.out.println("dispose1=" + GamePanel.dispose1);
 //        GamePanel test1 = new GamePanel();
 //        test1.awakeThread();
     }
+    /*public synchronized void waitm() throws InterruptedException {
+        wait();
+    }
+    public synchronized void notifym() throws InterruptedException{
+        notifyAll();
+    }*/
+
     public void paint(Graphics g){
 //        g.drawImage(img,0,0,null);
     }

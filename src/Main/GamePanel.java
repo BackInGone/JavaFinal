@@ -14,13 +14,14 @@ public class GamePanel extends JPanel implements Runnable{
         final int screenWidth = tileSize * maxScreenCol;
         final int screenHeight = tileSize * getMaxScreenRow;
 
-        Thread gameThread = new Thread();
+        static Thread gameThread = new Thread();
         KeyHandler keyH = new KeyHandler();
         int playerX = 100;
         int playerY = 100;
         int playerSpeed = 10;
 
         public static int dispose1 = 0;
+//        GamePanel gamePanel = new GamePanel();
 
 
     public GamePanel() {
@@ -51,16 +52,17 @@ public class GamePanel extends JPanel implements Runnable{
         }
     }
 
-        private void update () throws InterruptedException {
+        public void update () throws InterruptedException {
         // 화면 밖으로 벗어났을때 메시지와 함께 제자리로 돌리는 else if 문
         // upPressed, downPressed, leftPressed, rightPressed 마다 플레이어 필셀의 위치 업데이트 (플레이어픽셀크기 48*48)
         if (playerX < 0) {
             synchronized (this){
                 getThreadState();
-            playerX = 30;
 //            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
             new ShopPanel2();
             System.out.println("XXX1");
+                System.out.println(gameThread.getState());
+            playerX = 30;
 //               wait();
             System.out.println("XXX2");
 //            notify();
@@ -97,13 +99,19 @@ public class GamePanel extends JPanel implements Runnable{
             playerX += playerSpeed;
         }
     }
-        public void getThreadState(){
+        public static void getThreadState(){
         Thread.State a = gameThread.getState();
         }
 
-        public void awakeThread(){
-            synchronized (this) {
-                gameThread.notify();
+        public static void awakeThread(){
+            synchronized (gameThread) {
+                GamePanel gamepanel = new GamePanel();
+//                gamepanel.playerX = 30;
+                System.out.println(gameThread.getState());
+                GamePanel.gameThread.notifyAll();
+                System.out.println(gameThread.getState());
+                System.out.println("awakeThread () 호출");
+                System.out.println(gameThread.getState());
             }
         }
 

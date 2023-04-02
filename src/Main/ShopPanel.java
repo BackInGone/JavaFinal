@@ -21,14 +21,12 @@ public class ShopPanel extends JFrame{
     }
 
     public void goshop(){
-    Shop.setSize(400,600);
-    Shop.setLocationRelativeTo(null);
+        System.out.println("여까진 가냐");
+    this.setSize(400,600);
+    this.setLocationRelativeTo(null);
     Shop.add(shopPanel1);
-    Shop.setVisible(true);
-    ShopPanel shopPanel1 = new ShopPanel(new ImageIcon("/image/상점.png").getImage());
-
-
-
+    this.setVisible(true);
+//    ShopPanel shopPanel1 = new ShopPanel(new ImageIcon("/image/상점.png").getImage());
     }
 
     public void paintComponent(Graphics g){
@@ -36,10 +34,7 @@ public class ShopPanel extends JFrame{
         setSize(new Dimension(img.getWidth(null), img.getHeight(null)));
         setPreferredSize(new Dimension(img.getWidth(null), img.getHeight(null)));
         setLayout(null);
-
     }
-
-
 }
 /*
 //        JFrame ShopPanel1 = new JFrame();

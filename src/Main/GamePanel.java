@@ -54,9 +54,11 @@ public class GamePanel extends JPanel implements Runnable{
         // upPressed, downPressed, leftPressed, rightPressed 마다 플레이어 필셀의 위치 업데이트 (플레이어픽셀크기 48*48)
         if (playerX < 0) {
             synchronized (this){
-              ShopPanel test1 = new ShopPanel();
+                getThreadState();
+               new ShopPanel2();
+               getThreadState();
             wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
-              test1.goshop();
+                getThreadState();
             System.out.println("XXX");
             playerX = 30;
             keyH.upPressed = false;
@@ -90,6 +92,10 @@ public class GamePanel extends JPanel implements Runnable{
             playerX += playerSpeed;
         }
     }
+        public void getThreadState(){
+        Thread.State a = gameThread.getState();
+        }
+
 
 
         public void paintComponent (Graphics g){

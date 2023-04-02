@@ -15,6 +15,7 @@ public class Pocketmongame {
         window.pack();
         //윈도우 창 중앙 출력
         window.setLocationRelativeTo(null);
+
         window.setVisible(true);
 //        Runnable r = new GamePanel();
 //        Thread gameThread = new Thread(r);

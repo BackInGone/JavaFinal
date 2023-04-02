@@ -8,7 +8,7 @@ public class ShopPanel extends JFrame{
     public Image img;
         JFrame Shop = new JFrame();
         ShopPanel shopPanel1 = new ShopPanel();
-    public ShopPanel(){
+        public ShopPanel(){
         shopPanel1.img = img;
         goshop();
     }

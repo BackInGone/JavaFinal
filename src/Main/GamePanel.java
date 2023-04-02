@@ -20,11 +20,13 @@ public class GamePanel extends JPanel implements Runnable{
         int playerY = 100;
         int playerSpeed = 10;
 
+        public static int dispose1 = 0;
+
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.black);
-        this.setDoubleBuffered(true);
+//        this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
     }
@@ -55,19 +57,22 @@ public class GamePanel extends JPanel implements Runnable{
         if (playerX < 0) {
             synchronized (this){
                 getThreadState();
-               new ShopPanel2();
-               getThreadState();
-            wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
-                getThreadState();
-            System.out.println("XXX");
             playerX = 30;
+//            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
+            new ShopPanel2();
+            System.out.println("XXX1");
+//               wait();
+            System.out.println("XXX2");
+//            notify();
+                System.out.println("XXX3");
+
+//            gameThread.wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
             keyH.upPressed = false;
             keyH.downPressed = false;
             keyH.leftPressed = false;
             keyH.rightPressed = false;
             setVisible(true);
                 System.out.println("여기는?");
-//            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
             }
         } else if (playerY < 0) {
             System.out.println("XXX");
@@ -94,6 +99,12 @@ public class GamePanel extends JPanel implements Runnable{
     }
         public void getThreadState(){
         Thread.State a = gameThread.getState();
+        }
+
+        public void awakeThread(){
+            synchronized (this) {
+                gameThread.notify();
+            }
         }
 
 

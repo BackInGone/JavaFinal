@@ -9,7 +9,6 @@ public class Pocketmongame {
 //        window.setDefaultCloseOperation(JFraame.);
         window.setTitle("Pocketmon Adventure");
         window.setResizable(false);
-
         GamePanel gamePanel = new GamePanel();
         window.add(gamePanel);
         window.pack();
@@ -32,4 +31,7 @@ public class Pocketmongame {
 
 
 
+
+
     }
+

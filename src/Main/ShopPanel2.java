@@ -15,6 +15,7 @@ public class ShopPanel2 {
     JButton btn1 = new JButton("짜증");
     JButton btn2 = new JButton("두개");
 
+                GamePanel gamepanel = new GamePanel();
 
 
 
@@ -23,6 +24,8 @@ public class ShopPanel2 {
 
 }
     public synchronized void goshop2() throws InterruptedException {
+        System.out.println("상점에 들어온 후 gameThread 의 상태는 = " + gameThread.getState());
+
         Shop2.setSize(600,1000);
 //        btnPanel.setSize(200,300);
         Shop2.add(btnPanel);
@@ -38,18 +41,20 @@ public class ShopPanel2 {
             @Override
             public synchronized void actionPerformed(ActionEvent e) {
                 Shop2.dispose();
-                System.out.println("dispose");
-                synchronized (gameThread){
-                    notifyAll();
-                    System.out.println("클릭안에 노티파이");
-                };
-                System.out.println("gamePanel awake호출한다!");
+                gamepanel.dispose1 = 1;
+                // 스태틱 변수 테스트
+                System.out.println("상점에서 나왔다.");
+        System.out.println("나오기 전 dispose1=" + gamepanel.dispose1);
+//                synchronized (gameThread){
+//                    notifyAll();
+//                    System.out.println("클릭안에 노티파이");
+//                };
+//                System.out.println("gamePanel awake호출한다!");
 
                 awakeThread();
 
             }
         });
-        System.out.println("dispose1=" + GamePanel.dispose1);
 //        GamePanel test1 = new GamePanel();
 //        test1.awakeThread();
     }

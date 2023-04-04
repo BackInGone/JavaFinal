@@ -41,7 +41,8 @@ public class GamePanel extends JPanel implements Runnable{
         while (gameThread != null) {
 
             try {
-                gameThread.sleep(50);
+                gameThread.sleep(50);   // 천천히 움직이게 하기 위한 딜레이
+            cnt += 1;
                 update();
 //            System.out.println("update"+ cnt);
                 repaint();
@@ -59,6 +60,12 @@ public class GamePanel extends JPanel implements Runnable{
             moveCharacter();
 //            System.out.println("dispose 변화 = " +  gamepanel.dispose1);
 
+
+            if(cnt % 50 == 0){
+                System.out.println("똑딱");
+            }
+
+            ////왼쪽으로 이탈하여 상점으로 들어갑니다 !!!
         if (playerX < 0) {
             System.out.println("왼쪽으로 이탈");
             synchronized (this){
@@ -79,18 +86,37 @@ public class GamePanel extends JPanel implements Runnable{
                 System.out.println("벗어난 if문 끝자락");
                 //창이 2개 생셩할수도 있는 case아직 미헤결
             }
-        } else if (playerY < 0) {
+        }
 
+
+
+        ////아래로 이탈하여
+        else if (playerY < 0) {
             System.out.println("아래로 이탈");
             playerY = 0;
-        } else if (playerX > 720) {
+        }
+
+
+
+
+        else if (playerX > 720) {
             System.out.println("오른쪽으로 이탈");
             playerX = 720;
-        } else if (playerY > 528) {
+        }
+
+
+
+
+        else if (playerY > 528) {
             System.out.println("위로 이탈");
             playerY = 528;
         }
     }
+
+
+
+
+
 
         public void moveCharacter(){
             if (keyH.upPressed) {

@@ -1,9 +1,14 @@
 package person;
 
+
+import pocketmon.Pocketmon;
+
 public class person {
 
-  int speed;
-  boolean pocketmon_trainer;
-  int money;
+  public int speed;
+  public boolean pocketmon_trainer;
+  public int money;
+//  Pocketmon[] a = new Pocketmon[];
+
 
 }

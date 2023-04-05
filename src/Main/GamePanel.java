@@ -1,5 +1,7 @@
 package Main;
 
+import pocketmon.Pocketmon;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -61,7 +63,7 @@ public class GamePanel extends JPanel implements Runnable{
 //            System.out.println("dispose 변화 = " +  gamepanel.dispose1);
 
 
-            if(cnt % 50 == 0){
+            if(cnt % 200 == 0){
                 System.out.println("똑딱");
             }
 
@@ -83,7 +85,7 @@ public class GamePanel extends JPanel implements Runnable{
             keyH.downPressed = false;
             keyH.leftPressed = false;
             keyH.rightPressed = false;
-                System.out.println("벗어난 if문 끝자락");
+                System.out.println("벗어난 if문 끝자락의 tmp" + Pocketmon.tmp);
                 //창이 2개 생셩할수도 있는 case아직 미헤결
             }
         }
@@ -93,6 +95,10 @@ public class GamePanel extends JPanel implements Runnable{
         ////아래로 이탈하여
         else if (playerY < 0) {
             System.out.println("아래로 이탈");
+            System.out.println("다시 왔을때 hp는 ? =" + Pocketmon.tmp);
+            Pocketmon charmender = new Pocketmon();
+            System.out.println("여기서 charmender 받으려면? 객체 hp = " + ShopPanel2.charmender.hp);
+            System.out.println("여기서 charmender 받으려면? 객체 get" + charmender.getHP());
             playerY = 0;
         }
 

@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/person/Trainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemList/item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemList/item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Pocketmongame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Pocketmongame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ShopPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/ShopPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/ShopPanel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,11 +30,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -110,6 +115,7 @@
       <workItem from="1680517398365" duration="7320000" />
       <workItem from="1680572564984" duration="1724000" />
       <workItem from="1680611574523" duration="9448000" />
+      <workItem from="1680659828795" duration="18483000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>

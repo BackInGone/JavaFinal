@@ -1,5 +1,7 @@
 package Main;
 
+import pocketmon.Pocketmon;
+
 import javax.swing.*;
 
 public class Pocketmongame {
@@ -23,17 +25,19 @@ public class Pocketmongame {
 //        new ShopPnel();
 //        window.add(new JLabel("Pocketmon Adventure"));
         gamePanel.startGameThread();
-
-
-
         }
 
 
 
+        Pocketmon charmender = new Pocketmon();
 
-
-
-
+    public Pocketmon getCharmender() {
+        return charmender;
     }
+
+    public void setCharmender(Pocketmon charmender) {
+        this.charmender = charmender;
+    }
+}
 
 

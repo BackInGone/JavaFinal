@@ -29,11 +29,15 @@ public class GamePanel extends JPanel implements Runnable{
 
         public int dispose1 = 0;
 //        GamePanel gamePanel = new GamePanel();
+        Image backimg = new ImageIcon(GamePanel.class.getResource("../image/배경.png")).getImage();
+//        ImageIcon back = new ImageIcon("../image/배경.png");
+//        Image back2 = back.getImage();
+
 
 
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
-        this.setBackground(Color.black);
+//        this.setBackground(Color.black);
 //        this.setDoubleBuffered(true);
         this.addKeyListener(keyH);
         this.setFocusable(true);
@@ -83,7 +87,7 @@ public class GamePanel extends JPanel implements Runnable{
             new ShopPanel2(); //상점 윈도우 객체 생성
             System.out.println("상점에 들어왔다");
             playerX = 30;
-//               wait(); //으유!!!!!!! (구조문제인지, 이거 여기에 불러놓고, 다른 JFRAME 갔다가 dispose()로 돌아올때, 
+//               wait(); //으유!!!!!!! (구조문제인지, 이거 여기에 불러놓고, 다른 JFRAME 갔다가 dispose()로 돌아올때,
                 // 쓰레드 소유권 다시 얻는 방법을 아직 못찾았다... 기본기가 너무 부족함
 //            gameThread.wait(); //gamePanel.wait(); 하면 illegalMonitorStateExceptionerror 남
             keyH.upPressed = false;
@@ -164,22 +168,20 @@ public class GamePanel extends JPanel implements Runnable{
         }
 
 
-        ImageIcon backgroundimg = new ImageIcon("../image/배경.png");
-        Image backimg = backgroundimg.getImage();
 
 
 
 
         public void paintComponent (Graphics g){
         super.paintComponent(g);
+        Graphics2D g4 = (Graphics2D) g;
+            g4.drawImage(backimg,0,0,screenWidth, screenHeight, this);
         Graphics2D g2 = (Graphics2D) g;
         Graphics2D g3 = (Graphics2D) g;
         g2.setColor(Color.MAGENTA);
         g2.fillRect(playerX, playerY, tileSize, tileSize);
         g2.drawOval(150, 150, 50, 50);
         g3.drawString("포켓몬센터",400 , 50);
-        Graphics2D g4 = (Graphics2D) g;
-            g4.drawImage(backimg, screenWidth, screenHeight, this);
 
         g2.dispose();
     }

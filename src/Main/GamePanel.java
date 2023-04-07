@@ -1,9 +1,14 @@
 package Main;
 
+import Shop.ShopPanel2;
 import pocketmon.Pocketmon;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class GamePanel extends JPanel implements Runnable{
 
@@ -16,7 +21,7 @@ public class GamePanel extends JPanel implements Runnable{
         final int screenWidth = tileSize * maxScreenCol;
         final int screenHeight = tileSize * getMaxScreenRow;
 
-        static Thread gameThread = new Thread();
+        public static Thread gameThread = new Thread();
         KeyHandler keyH = new KeyHandler();
         int playerX = 100;
         int playerY = 100;
@@ -159,15 +164,23 @@ public class GamePanel extends JPanel implements Runnable{
         }
 
 
+        ImageIcon backgroundimg = new ImageIcon("../image/배경.png");
+        Image backimg = backgroundimg.getImage();
+
 
 
 
         public void paintComponent (Graphics g){
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
+        Graphics2D g3 = (Graphics2D) g;
         g2.setColor(Color.MAGENTA);
         g2.fillRect(playerX, playerY, tileSize, tileSize);
         g2.drawOval(150, 150, 50, 50);
+        g3.drawString("포켓몬센터",400 , 50);
+        Graphics2D g4 = (Graphics2D) g;
+            g4.drawImage(backimg, screenWidth, screenHeight, this);
+
         g2.dispose();
     }
 

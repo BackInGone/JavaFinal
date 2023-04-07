@@ -1,5 +1,6 @@
-package Main;
+package Shop;
 
+import Main.GamePanel;
 import pocketmon.Pocketmon;
 
 import javax.swing.*;
@@ -8,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static Main.GamePanel.gameThread;
+
 
 public class ShopPanel2 {
 
@@ -22,7 +24,6 @@ public class ShopPanel2 {
     JButton btn1 = new JButton("나가기"){
         @Override
         public void setBounds(int x, int y, int width, int height) {
-
             super.setBounds(100, 500, 200, 50);
         }
     };

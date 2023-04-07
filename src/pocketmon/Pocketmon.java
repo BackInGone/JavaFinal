@@ -16,6 +16,7 @@ public class Pocketmon {
     public float attackgrow;
     public float dependgrow;
 
+
     public int setHp(int hp) {
         System.out.println("메소드 안에서 값 =" + this.hp);
         this.hp = hp;
@@ -25,6 +26,9 @@ public class Pocketmon {
     public int getHP(){
         return hp;
     }
+    public void setFaint(){
+    }
+
 
     int[] skill = new int[3];
 

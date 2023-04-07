@@ -3,19 +3,18 @@ package skill;
 import pocketmon.Pikachu;
 import pocketmon.Pocketmon;
 
-public class Skill {
+public class Skill extends Thread{
 
     int damage;
     boolean speical;
             //paralyze, poison, accuracy+-, defend+-
-
     String type;
     boolean feature;
     int skillnum;
 
     Pocketmon me = new Pocketmon();
     Pocketmon oppo = new Pocketmon();
-
+    Thread poisonthread = new Thread();
 
     public void tackle(){}              //1
     public void hardening(){}           //2
@@ -37,13 +36,19 @@ public class Skill {
 
     }
     public void poison(){
-        synchronized (this){
-            Thread poison = new Thread();
-        oppo.hp -= 1;
-        }
+        poisonthread.start();
     }
     public void accuracydown(int x){
         oppo.accuracy += x;
     }
+        public void run() {
+                oppo.hp -= 1;
+            try {
+                poisonthread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+        }
 
 }

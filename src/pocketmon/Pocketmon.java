@@ -9,7 +9,8 @@ public class Pocketmon {
     public int hp;
     public int attack;
     public int depend;
-    String type;
+    public int accuracy;
+    public String type;
     public boolean faintcheck;
     public float hpgrow;
     public float attackgrow;
@@ -24,4 +25,7 @@ public class Pocketmon {
     public int getHP(){
         return hp;
     }
+
+    int[] skill = new int[3];
+
 }

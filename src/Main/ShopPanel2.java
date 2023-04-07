@@ -22,19 +22,35 @@ public class ShopPanel2 {
     JButton btn1 = new JButton("나가기"){
         @Override
         public void setBounds(int x, int y, int width, int height) {
-            super.setBounds(200, 300, 100, 300);
+
+            super.setBounds(100, 500, 200, 50);
         }
     };
 
     JButton btn2 = new JButton("회복약") {
         public void setBounds(int x, int y, int width, int height) {
-            super.setBounds(100, 400, 100, 100);
+            super.setBounds(50, 200, 100, 50);
         }};
 
 
-        JButton btn3 = new JButton("해독제");
-        JButton btn4 = new JButton("회복");
-        JButton btn5 = new JButton("두개");
+    JButton btn3 = new JButton("해독제"){
+            public void setBounds(int x, int y, int width, int height){
+                super.setBounds(200,200,100,50);
+            }
+        };
+
+   JButton btn4 = new JButton("몬스터볼"){
+       @Override
+       public void setBounds(int x, int y, int width, int height) {
+           super.setBounds(50, 400, 100, 50);
+       }
+   };
+    JButton btn5 = new JButton("이상한사탕"){
+        @Override
+        public void setBounds(int x, int y, int width, int height) {
+            super.setBounds(200, 400, 100, 50);
+        }
+    };
 
 
         GamePanel gamepanel = new GamePanel();
@@ -67,6 +83,9 @@ public class ShopPanel2 {
             btnPanel.setSize(400, 600);
             btnPanel.add(btn1);
             btnPanel.add(btn2);
+            btnPanel.add(btn3);
+            btnPanel.add(btn4);
+            btnPanel.add(btn5);
         }
 
         public void setBtnPanel() {

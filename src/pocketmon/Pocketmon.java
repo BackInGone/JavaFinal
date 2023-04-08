@@ -15,6 +15,10 @@ public class Pocketmon {
     public float hpgrow;
     public float attackgrow;
     public float dependgrow;
+    public int pp1;
+    public int pp2;
+    public int pp3;
+    public int pp4;
 
 
     public int setHp(int hp) {

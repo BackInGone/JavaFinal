@@ -1,6 +1,7 @@
 package Shop;
 
 import Main.GamePanel;
+import pocketmon.Pikachu;
 import pocketmon.Pocketmon;
 
 import javax.swing.*;
@@ -101,6 +102,9 @@ public class ShopPanel2 {
                     // 스태틱 변수 테스트
                     System.out.println("상점에서 나왔다.");
                     System.out.println("나오기 전 dispose1=" + gamepanel.dispose1);
+                    Pikachu pika1 = new Pikachu();
+                    System.out.println();
+                    System.out.println("shoppanel hp =" + pika1.hp + "////exp" + pika1.exp);
 //                synchronized (gameThread){
 //                    notifyAll();
 //                    System.out.println("클릭안에 노티파이");

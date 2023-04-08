@@ -5,6 +5,17 @@ import pocketmon.Pocketmon;
 public class item {
 
     int hpnum;
+    static int portion;
+    static int superportion;
+    static int monsterball;
+    static int superball;
+    static int antidode;
+    static int cleaner;
+    static int stragecandy;
+
+    static int redfruit;
+    static int bluefruit;
+    static int greenfruit;
 
 //    public setHPup(int hpnum){
 //        this.hpnum = hpnum;

@@ -1,5 +1,6 @@
 package Shop;
 
+import ItemList.Item;
 import Main.GamePanel;
 import pocketmon.Pikachu;
 import pocketmon.Pocketmon;
@@ -98,13 +99,17 @@ public class ShopPanel2 {
                 @Override
                 public synchronized void actionPerformed(ActionEvent e) {
                     Shop2.dispose();
-                    gamepanel.dispose1 = 1;
-                    // 스태틱 변수 테스트
                     System.out.println("상점에서 나왔다.");
                     System.out.println("나오기 전 dispose1=" + gamepanel.dispose1);
                     Pikachu pika1 = new Pikachu();
-                    System.out.println();
+                    System.out.println(Item.itemlist3);
+
+//                    for (int i = 0; i < 13;i++){
+                        System.out.println(Item.itemlist3.values());
+//                    }
+                    // 스태틱 변수 테스트
                     System.out.println("shoppanel hp =" + pika1.hp + "////exp" + pika1.exp);
+
 //                synchronized (gameThread){
 //                    notifyAll();
 //                    System.out.println("클릭안에 노티파이");

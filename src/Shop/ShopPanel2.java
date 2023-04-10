@@ -56,7 +56,6 @@ public class ShopPanel2 {
     };
 
 
-        GamePanel gamepanel = new GamePanel();
 
 
         public ShopPanel2() throws InterruptedException {
@@ -93,14 +92,13 @@ public class ShopPanel2 {
 
         public void setBtnPanel() {
 
-                    Pocketmon charmender = new Pocketmon();
+                    Pocketmon charmendershop = new Pocketmon();
             //나가기 버튼
             btn1.addActionListener(new ActionListener() {
                 @Override
                 public synchronized void actionPerformed(ActionEvent e) {
                     Shop2.dispose();
                     System.out.println("상점에서 나왔다.");
-                    System.out.println("나오기 전 dispose1=" + gamepanel.dispose1);
                     Pikachu pika1 = new Pikachu();
                     System.out.println(Item.itemlist3);
 
@@ -124,11 +122,10 @@ public class ShopPanel2 {
             btn2.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    charmender.hp = Pocketmon.tmp;
-                    charmender.hp = charmender.setHp(charmender.hp);
-                   System.out.println("누른 후 HP = " + charmender.hp);
-                    System.out.println("gethp = " + charmender.getHP());
-                    Pocketmon.tmp = charmender.getHP();
+//                    charmender.hp = Pocketmon.tmp;
+                    charmendershop.hp = charmendershop.setHp(charmendershop.hp);
+                   System.out.println("누른 후 HP = " + charmendershop.hp);
+                    System.out.println("gethp = " + charmendershop.getHP());
                     System.out.println(Pocketmon.tmp);
                 }
             });

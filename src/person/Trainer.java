@@ -1,9 +1,6 @@
 package person;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Trainer extends person{
+public class Trainer extends Person {
 
     //item
 

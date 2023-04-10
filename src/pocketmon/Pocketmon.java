@@ -1,5 +1,7 @@
 package pocketmon;
 
+import Shop.ShopPanel2;
+
 public class Pocketmon {
 
     public static int tmp;
@@ -20,6 +22,7 @@ public class Pocketmon {
     public int pp3;
     public int pp4;
 
+    Pocketmon tmp1 = new Pocketmon();
 
     public int setHp(int hp) {
         System.out.println("메소드 안에서 값 =" + this.hp);
@@ -28,12 +31,14 @@ public class Pocketmon {
         return this.hp;
     }
     public int getHP(){
-        return hp;
+
+        return hp+1;
     }
     public void setFaint(){
     }
 
 
     int[] skill = new int[3];
+
 
 }

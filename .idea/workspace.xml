@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Battle/Battlepanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemList/item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemList/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Pocketmongame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Pocketmongame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/person/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/Trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/person_notrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person_notrainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/person_trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person_trainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +118,8 @@
       <workItem from="1680659828795" duration="19176000" />
       <workItem from="1680753287465" duration="8519000" />
       <workItem from="1680849598013" duration="24661000" />
-      <workItem from="1680952269143" duration="17124000" />
+      <workItem from="1680952269143" duration="17186000" />
+      <workItem from="1681104001493" duration="12024000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>
@@ -249,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680978492830</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="First">
+      <created>1681017411967</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681017411967</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

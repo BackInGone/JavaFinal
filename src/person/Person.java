@@ -1,9 +1,7 @@
 package person;
 
 
-import pocketmon.Pocketmon;
-
-public class person {
+public class Person {
 
   public int speed;
   public boolean pocketmon_trainer;

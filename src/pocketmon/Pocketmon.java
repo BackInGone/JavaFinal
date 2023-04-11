@@ -30,15 +30,14 @@ public class Pocketmon {
         this.hp += 40;
         return this.hp;
     }
-    public int getHP(){
-
-        return hp+1;
-    }
-    public void setFaint(){
-    }
+    public void takeDamage(){}
+    public void isFainted(){}
 
 
     int[] skill = new int[3];
+    public static move(){
+
+    }
 
 
 }

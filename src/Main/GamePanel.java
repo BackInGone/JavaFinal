@@ -107,7 +107,6 @@ public class GamePanel extends JPanel implements Runnable{
             System.out.println("다시 왔을때 hp는 ? =" + Pocketmon.tmp);
             Pocketmon charmender = new Pocketmon();
             System.out.println("여기서 charmender 받으려면? 객체 hp = " + charmender.hp);
-            System.out.println("여기서 charmender 받으려면? 객체 get(hp) = " + charmender.getHP());
             playerY = 0;
         }
 

@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Battle/Battlepanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Battle/Battle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Battle/Battlepanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Battle/Battlepanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/person/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/Trainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/person/person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/person/person_notrainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person_notrainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/person/person_trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/person_trainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +68,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BAEK\IdeaProjects\JavaFinal\src\pocketmon" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Pocketmongame" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Pocketmongame" />
@@ -120,6 +122,7 @@
       <workItem from="1680849598013" duration="24661000" />
       <workItem from="1680952269143" duration="17186000" />
       <workItem from="1681104001493" duration="12024000" />
+      <workItem from="1681182944806" duration="11390000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>

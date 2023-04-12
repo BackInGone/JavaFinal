@@ -47,7 +47,7 @@ public class Battle extends Thread{
            switch (actionnum){
                case 1 :
                {
-                   switch (Pocketmon.skill){
+                   switch (Pocketmon){
                        case 1:{}
                        case 2:{}
                        case 3:{}
@@ -61,15 +61,15 @@ public class Battle extends Thread{
 
         }
     }
-        else {
-
-        }
-
-        public static Pocketmon getRandomPokemon(List<Pocketmon> availablePoketmon){
-            int randomIndex = random.extInt(availablePokemon.size());
-            Pocketmon poketmon = availablePoketmon.get(randomIndex);
-            return new Pocketmon(poketmon.hp, poketmon.pp1,poketmon.pp2,poketmon.pp3,poketmon.pp4, new ArrayList<Pocketmon.takeDamage()>());
-        }
+//        else {
+//
+//        }
+//
+//        public static Pocketmon getRandomPokemon(List<Pocketmon> availablePoketmon){
+//            int randomIndex = random.extInt(availablePokemon.size());
+//            Pocketmon poketmon = availablePoketmon.get(randomIndex);
+//            return new Pocketmon(poketmon.hp, poketmon.pp1,poketmon.pp2,poketmon.pp3,poketmon.pp4, new ArrayList<Pocketmon.takeDamage()>());
+//        }
 
 
 

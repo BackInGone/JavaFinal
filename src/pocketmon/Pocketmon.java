@@ -1,6 +1,9 @@
 package pocketmon;
 
-import Shop.ShopPanel2;
+import skill.Skill;
+
+import java.awt.*;
+import java.util.ArrayList;
 
 public class Pocketmon {
 
@@ -35,9 +38,10 @@ public class Pocketmon {
 
 
     int[] skill = new int[3];
-    public static move(){
-
-    }
+//
+//    public static move(new Skill){
+//
+//    }
 
 
 }

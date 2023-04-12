@@ -1,6 +1,9 @@
 package Main;
 
 import Shop.ShopPanel2;
+import pocketmon.Charmender;
+import pocketmon.Esangssi;
+import pocketmon.Kkobook;
 import pocketmon.Pocketmon;
 
 import javax.imageio.ImageIO;
@@ -48,7 +51,28 @@ public class GamePanel extends JPanel implements Runnable{
         gameThread.start();
     }
         int cnt = 0;
+        int startPoke;
         public void run () {
+
+            //첫 포켓몬 고르기
+            System.out.println("1 : 이상해씨");
+            System.out.println("2 : 파이리");
+            System.out.println("3 : 꼬부기");
+            switch (startPoke){
+                case 1: {
+                    Esangssi firstpoke = new Esangssi();
+                }
+                case 2: {
+                    Charmender firstpoke = new Charmender();
+                }
+                case 3: {
+                    Kkobook firstpoke = new Kkobook();
+                }
+            }
+
+
+
+
         while (gameThread != null) {
 
             try {

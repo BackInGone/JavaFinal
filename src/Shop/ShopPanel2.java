@@ -125,7 +125,6 @@ public class ShopPanel2 {
 //                    charmender.hp = Pocketmon.tmp;
                     charmendershop.hp = charmendershop.setHp(charmendershop.hp);
                    System.out.println("누른 후 HP = " + charmendershop.hp);
-                    System.out.println("gethp = " + charmendershop.getHP());
                     System.out.println(Pocketmon.tmp);
                 }
             });

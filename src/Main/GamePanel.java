@@ -61,6 +61,7 @@ public class GamePanel extends JPanel implements Runnable{
             switch (startPoke){
                 case 1: {
                     Esangssi firstpoke = new Esangssi();
+
                 }
                 case 2: {
                     Charmender firstpoke = new Charmender();

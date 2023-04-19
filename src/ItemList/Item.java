@@ -21,14 +21,14 @@ public class Item {
 
 
     String[] itemlist = new String[20];
-    String itemlist2[] = {"portion", "superportion", "monsterball", "superball", "antidod", "cleaner", "strangecandy"
+    String itemlist2[] = {"potion", "superpotion", "monsterball", "superball", "antidod", "cleaner", "strangecandy"
             , "redfruit" , "bluefruit", "greenfruit","","","","","","","","","",""};
 
     public static HashMap<String,Integer> itemlist3 = new HashMap<String,Integer>();
 
     public static void makeitemlist() {
-            itemlist3.put("portion",1);
-            itemlist3.put("superportion",2);
+            itemlist3.put("potion",1);
+            itemlist3.put("superpotion",2);
             itemlist3.put("monsterball",3);
             itemlist3.put("superball",4);
             itemlist3.put("antidode",5);
@@ -37,13 +37,11 @@ public class Item {
             itemlist3.put("redfruit",8);
             itemlist3.put("bluefruit",9);
             itemlist3.put("greenfruit",10);
+    }
 
-    }
-    public void setHpnum(){
-        Pocketmon charmender = new Pocketmon();
-        charmender.hp = 30;
-        this.hpnum += 30;
-    }
+
+
+
 
 
 }

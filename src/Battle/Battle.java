@@ -13,8 +13,10 @@ public class Battle extends Thread{
     public boolean running;
     Trainer player;
     Trainer opponent;
+    Pocketmon opponentPocketmon;
             int actionnum;
-    private boolean isPlayerTurn;
+    public boolean isTrainter;
+    public boolean isPlayerTurn;
     Scanner scanner = new Scanner(System.in);
 
     public void run(){
@@ -60,6 +62,10 @@ public class Battle extends Thread{
            }
 
         }
+    }
+
+    public void isTrainer(){
+
     }
 //        else {
 //

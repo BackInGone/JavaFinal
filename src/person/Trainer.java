@@ -11,7 +11,8 @@ public class Trainer extends Person {
 
 //        availablePokemon.add(new Poktemon("Pikachu", 100, Arrays.asList(new move("Thunderbolt", 25, "Electric"), new Move("Quick Attack", 15, "Normal"))));
 
-        List<Pocketmon> availablePokemon = new ArrayList<Pocketmon>();
+        List<Pocketmon> availablePokemon = new ArrayList<Pocketmon>(); //해보고 싶었는데
+        Pocketmon[] pocketmonlist = new Pocketmon[5];
     public static void createAvailablePokemon() {
         available
 //        availablePokemon.add(new Poketmon("Charmander", 80, Arrays.asList(new Move("Ember", 20, "Fire"), new Move("Scratch", 15, "Normal"))));
@@ -22,9 +23,14 @@ public class Trainer extends Person {
 //        return availablePokemon;
     }
 
-//    public getPockmetmon(List<Pocketmon> availablePokemon){
-//        this.availablePokemon = new ArrayList<>(availablePokemon);
-//    }
+    public void getPockmetmon(List<Pocketmon> availablePokemon){
+        int i = 0;
+        while(availablePokemon.size()==5)
+
+            this.availablePokemon = new ArrayList<>(availablePokemon);
+
+            i++;
+    }
 
 
 }

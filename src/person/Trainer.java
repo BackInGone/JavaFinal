@@ -14,7 +14,7 @@ public class Trainer extends Person {
         List<Pocketmon> availablePokemon = new ArrayList<Pocketmon>(); //해보고 싶었는데
         Pocketmon[] pocketmonlist = new Pocketmon[5];
     public static void createAvailablePokemon() {
-        available
+//        available
 //        availablePokemon.add(new Poketmon("Charmander", 80, Arrays.asList(new Move("Ember", 20, "Fire"), new Move("Scratch", 15, "Normal"))));
 //        availablePokemon.add(new Poketmon("Bulbasaur", 90, Arrays.asList(new Move("Vine Whip", 22, "Grass"), new Move("Tackle", 15, "Normal"))));
 //        availablePokemon.add(new Poketmon("Squirtle", 85, Arrays.asList(new Move("Water Gun", 18, "Water"), new Move("Tackle", 15, "Normal"))));

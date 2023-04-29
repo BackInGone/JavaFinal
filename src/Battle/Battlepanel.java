@@ -15,7 +15,7 @@ public class Battlepanel extends JFrame {
 
     Battle battle1 = new Battle();
     Thread battleThread = new Thread(battle1);
-    battleThread.start();
+//    battleThread.start();
 
 
 }

@@ -20,7 +20,7 @@ public class Battle extends Thread{
     Scanner scanner = new Scanner(System.in);
 
     public void run(){
-        running = true;
+/*        running = true;
         while(running){
 
             Battlepanel battlepanel = new Battlepanel();
@@ -35,8 +35,8 @@ public class Battle extends Thread{
             game.update(){
         }
 
-    }
-    public void update(){
+    }*/
+ /*   public void update(){
         if(game.isPlayerTurn){
             System.out.println("Choose your action:");
             System.out.println("1. Attack");
@@ -44,9 +44,9 @@ public class Battle extends Thread{
             System.out.println("3. Exit");
             System.out.print("4. ");
 
-            int actionnum = scanner.nextInt();
+            int actionnum = scanner.nextInt();*/
 
-           switch (actionnum){
+         /*  switch (actionnum){
                case 1 :
                {
                    switch (Pocketmon){
@@ -59,14 +59,14 @@ public class Battle extends Thread{
                case 2 :
                case 3 :
                case 4 :
-           }
+           }*/
 
         }
     }
-
-    public void isTrainer(){
-
-    }
+//
+//    public void isTrainer(){
+//
+//    }
 //        else {
 //
 //        }
@@ -79,4 +79,4 @@ public class Battle extends Thread{
 
 
 
-}
+//}

@@ -23,42 +23,75 @@ public class ShopPanel2 {
         g.drawImage(background,0,0,null);
     }};
 
-    JButton btn1 = new JButton("나가기"){
+    JButton btn1 = new JButton("구매"){
         @Override
         public void setBounds(int x, int y, int width, int height) {
             super.setBounds(100, 500, 200, 50);
         }
     };
 
-    JButton btn2 = new JButton("회복약") {
+    JButton btn2 = new JButton("판매") {
         public void setBounds(int x, int y, int width, int height) {
             super.setBounds(50, 200, 100, 50);
         }};
 
 
-    JButton btn3 = new JButton("해독제"){
+    JButton btn3 = new JButton("나가기"){
             public void setBounds(int x, int y, int width, int height){
                 super.setBounds(200,200,100,50);
             }
         };
 
-   JButton btn4 = new JButton("몬스터볼"){
+   JButton btn4 = new JButton("회복약"){
        @Override
        public void setBounds(int x, int y, int width, int height) {
            super.setBounds(50, 400, 100, 50);
        }
    };
-    JButton btn5 = new JButton("이상한사탕"){
+
+    JButton btn5 = new JButton("좋은회복약"){
         @Override
         public void setBounds(int x, int y, int width, int height) {
-            super.setBounds(200, 400, 100, 50);
+            super.setBounds(250, 400, 100, 50);
+        }
+    };
+
+    JButton btn6 = new JButton("상태이상회복제"){
+        @Override
+        public void setBounds(int x, int y, int width, int height) {
+            super.setBounds(300, 400, 100, 50);
+        }
+    };
+    JButton btn7 = new JButton("해독제"){
+        @Override
+        public void setBounds(int x, int y, int width, int height) {
+            super.setBounds(350, 400, 100, 50);
+        }
+    };
+    JButton btn8 = new JButton("몬스터볼"){
+        @Override
+        public void setBounds(int x, int y, int width, int height) {
+            super.setBounds(400, 400, 100, 50);
+        }
+    };
+    JButton btn9 = new JButton("슈퍼볼"){
+        @Override
+        public void setBounds(int x, int y, int width, int height) {
+            super.setBounds(250, 500, 100, 50);
+        }
+    };
+
+    JButton btn10 = new JButton("이상한사탕"){
+        @Override
+        public void setBounds(int x, int y, int width, int height) {
+            super.setBounds(350, 500, 100, 50);
         }
     };
 
 
 
 
-        public ShopPanel2() throws InterruptedException {
+    public ShopPanel2() throws InterruptedException {
             Shop2.setSize(400, 600);
             goshop2();
 
@@ -69,7 +102,10 @@ public class ShopPanel2 {
 
             setBtnPanel();
             setPanel();
+            setBuypanel();
+
             btnPanel.setVisible(true);
+            buypanel.setVisible(false);
             Shop2.getContentPane().setLayout(null);
             Shop2.setVisible(true);
             Pocketmon charmender = new Pocketmon();
@@ -82,19 +118,56 @@ public class ShopPanel2 {
 
         public void setPanel() {
             Shop2.add(btnPanel);
+            Shop2.add(buypanel);
             btnPanel.setSize(400, 600);
+            buypanel.setSize(400,600);
             btnPanel.add(btn1);
             btnPanel.add(btn2);
-            btnPanel.add(btn3);
-            btnPanel.add(btn4);
-            btnPanel.add(btn5);
+            buypanel.add(btn3);
+            buypanel.add(btn4);
+        }
+
+        JPanel buypanel = new JPanel();
+
+        public void setBuypanel(){
+
+            btn1.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+            btnPanel.setVisible(false);
+            buypanel.setVisible(true);
+
+
+                }
+            });
+
         }
 
         public void setBtnPanel() {
 
+            buypanel.add(btn5);
+            buypanel.add(btn6);
+            buypanel.add(btn7);
+            buypanel.add(btn8);
+            buypanel.add(btn9);
+            buypanel.add(btn10);
+
                     Pocketmon charmendershop = new Pocketmon();
-            //나가기 버튼
-            btn1.addActionListener(new ActionListener() {
+
+            btn2.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+//                    charmender.hp = Pocketmon.tmp;
+                    charmendershop.hp = charmendershop.setHp(charmendershop.hp);
+                   System.out.println("누른 후 HP = " + charmendershop.hp);
+                    System.out.println(Pocketmon.tmp);
+                }
+            });
+
+
+
+            btn3.addActionListener(new ActionListener() {
                 @Override
                 public synchronized void actionPerformed(ActionEvent e) {
                     Shop2.dispose();
@@ -119,15 +192,6 @@ public class ShopPanel2 {
 
 
             //회복약 구매 버튼
-            btn2.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-//                    charmender.hp = Pocketmon.tmp;
-                    charmendershop.hp = charmendershop.setHp(charmendershop.hp);
-                   System.out.println("누른 후 HP = " + charmendershop.hp);
-                    System.out.println(Pocketmon.tmp);
-                }
-            });
         }
 
 

@@ -42,26 +42,26 @@ public class Pocketmon {
     public void takeDamage(){}
     public void isFainted(){}
     public void catchPokemon(){
-       new = tmp1;
+//       new = tmp1;
     }
 
 
     int[] skill = new int[3];
         
-    public void useItem(Pocketmon){
-        if(itemscan.equals("potion")){
-             this.hp +=30;
-            }
-        else if (itemscan.equals("superpotion")) {
-            this.hp += 50;
-            }
-        else if (itemscan.equals("monsterball")) {
-            if(this instanceof Trainer){
+//    public void useItem(Pocketmon){
+//        if(itemscan.equals("potion")){
+//             this.hp +=30;
+//            }
+//        else if (itemscan.equals("superpotion")) {
+//            this.hp += 50;
+//            }
+//        else if (itemscan.equals("monsterball")) {
+//            if(this instanceof Trainer){
+//
+//            }
+//        }
 
-            }
-        }
-
-        }
+//        }
 
 
     }

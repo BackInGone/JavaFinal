@@ -26,7 +26,7 @@ public class ShopPanel2 {
     JButton btn1 = new JButton("구매"){
         @Override
         public void setBounds(int x, int y, int width, int height) {
-            super.setBounds(100, 500, 200, 50);
+            super.setBounds(100, 500, 100, 50);
         }
     };
 
@@ -88,6 +88,15 @@ public class ShopPanel2 {
         }
     };
 
+    JButton btn11 = new JButton("뒤로가기"){
+        @Override
+        public void setBounds(int x, int y, int width, int height) {
+            super.setBounds(100, 500, 100, 50);
+        }
+    };
+
+
+
 
 
 
@@ -123,8 +132,15 @@ public class ShopPanel2 {
             buypanel.setSize(400,600);
             btnPanel.add(btn1);
             btnPanel.add(btn2);
-            buypanel.add(btn3);
+            btnPanel.add(btn3);
             buypanel.add(btn4);
+            buypanel.add(btn5);
+            buypanel.add(btn6);
+            buypanel.add(btn7);
+            buypanel.add(btn8);
+            buypanel.add(btn9);
+            buypanel.add(btn10);
+            buypanel.add(btn11);
         }
 
         JPanel buypanel = new JPanel();
@@ -137,21 +153,12 @@ public class ShopPanel2 {
 
             btnPanel.setVisible(false);
             buypanel.setVisible(true);
-
-
                 }
             });
 
         }
 
         public void setBtnPanel() {
-
-            buypanel.add(btn5);
-            buypanel.add(btn6);
-            buypanel.add(btn7);
-            buypanel.add(btn8);
-            buypanel.add(btn9);
-            buypanel.add(btn10);
 
                     Pocketmon charmendershop = new Pocketmon();
 
@@ -187,6 +194,15 @@ public class ShopPanel2 {
 //                };
 //                System.out.println("gamePanel awake호출한다!");
 //                awakeThread();
+                }
+            });
+
+            btn11.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    buypanel.setVisible(false);
+                    btnPanel.setVisible(true);
                 }
             });
 

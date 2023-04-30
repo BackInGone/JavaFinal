@@ -42,7 +42,6 @@ public class Pocketmon {
     public void takeDamage(){}
     public void isFainted(){}
     public void catchPokemon(){
-//       new = tmp1;
     }
 
 

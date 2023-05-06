@@ -17,7 +17,7 @@ public class Pocketmon {
     public int exp;
     public int hp;
     public int attack;
-    public int depend;
+    public int defence;
     public int accuracy;
     public String type;
     public boolean faintcheck;

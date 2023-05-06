@@ -2,6 +2,7 @@ package Shop;
 
 import ItemList.Item;
 import Main.GamePanel;
+import pocketmon.Charmender;
 import pocketmon.Pikachu;
 import pocketmon.Pocketmon;
 
@@ -200,6 +201,9 @@ public class ShopPanel2 {
             btn11.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    Charmender charmender = new Charmender();
+                    charmender.tmp +=3;
+                    System.out.println("처음 HP = " + charmender.tmp);
 
                     buypanel.setVisible(false);
                     btnPanel.setVisible(true);

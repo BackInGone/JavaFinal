@@ -7,6 +7,7 @@
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Charmender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Charmender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +134,7 @@
       <workItem from="1681921855106" duration="3339000" />
       <workItem from="1682531669725" duration="869000" />
       <workItem from="1682749154335" duration="6599000" />
-      <workItem from="1682778861897" duration="7464000" />
+      <workItem from="1682778861897" duration="38905000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>
@@ -303,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682766669418</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="First">
+      <created>1682873277311</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1682873277311</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

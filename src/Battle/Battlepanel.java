@@ -12,10 +12,12 @@ public class Battlepanel extends JFrame {
     JPanel BtnPanel = new JPanel();
 //    Image oppo = new ImageIcon(ShopPanel2.class.getResource());
 //    Image me = new ImageIcon(ShopPanel2.class.getResource());
+//
+//    Battle battle1 = new Battle();
+//    Thread battleThread = new Thread(battle1);
+////    battleThread.start();
 
-    Battle battle1 = new Battle();
-    Thread battleThread = new Thread(battle1);
-//    battleThread.start();
+    Skill battleSkill =  new SKill();
 
 
 }

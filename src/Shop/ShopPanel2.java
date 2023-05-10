@@ -43,12 +43,12 @@ public class ShopPanel2 {
             }
         };
 
-   JButton btn4 = new JButton("회복약"){
+    JButton btn4 = new JButton("회복약"){
        @Override
        public void setBounds(int x, int y, int width, int height) {
            super.setBounds(50, 400, 100, 50);
        }
-   };
+        };
 
     JButton btn5 = new JButton("좋은회복약"){
         @Override
@@ -166,13 +166,10 @@ public class ShopPanel2 {
             btn2.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-//                    charmender.hp = Pocketmon.tmp;
-                    charmendershop.hp = charmendershop.setHp(charmendershop.hp);
-                   System.out.println("누른 후 HP = " + charmendershop.hp);
+
                     System.out.println(Pocketmon.tmp);
                 }
             });
-
 
 
             btn3.addActionListener(new ActionListener() {

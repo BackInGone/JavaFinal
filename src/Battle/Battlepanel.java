@@ -1,10 +1,9 @@
 package Battle;
 
-import Shop.ShopPanel2;
-import person.Trainer;
+import pocketmon.Pocketmon;
+import skill.Skill;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Battlepanel extends JFrame {
 
@@ -17,7 +16,36 @@ public class Battlepanel extends JFrame {
 //    Thread battleThread = new Thread(battle1);
 ////    battleThread.start();
 
-    Skill battleSkill =  new SKill();
+    int b=1;
+    int skillNum;
+    Pocketmon[] oppos = new Pocketmon[4];
+
+    Skill battleSkill = new Skill();
+
+    Pocketmon test = new Pocketmon();
+    test.tackle();
+
+    /*public void useSkill(Pocketmon tool, int skillNum) {
+        switch (skillNum) {
+            case 0: {tool.nothing(opponent);}
+            case 1: {tackle(opponent);}
+            case 2: {hardening(opponent);}
+            case 3: {sandwind(opponent);}
+            case 4: {electricshock(opponent);}
+            case 5: {electromagnetic(opponent);}
+            case 6: {ember(opponent);}
+            case 7: {fireball(opponent);}
+            case 8: {fireblast(opponent);}
+            case 9: {watergun(opponent);}
+            case 10: {bubblebeam(opponent);}
+            case 11: {hydropump(opponent);}
+            case 12: {vinewhip(opponent);}
+            case 13: {petaldance(opponent);}
+            case 14: {solarbeam(opponent);}
+        }
+    }*/
+
+
 
 
 }

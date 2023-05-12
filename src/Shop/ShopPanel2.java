@@ -1,10 +1,11 @@
 package Shop;
 
 import ItemList.Item;
-import Main.GamePanel;
+import person.Trainer;
 import pocketmon.Charmender;
 import pocketmon.Pikachu;
 import pocketmon.Pocketmon;
+import skill.Skill;
 
 import javax.swing.*;
 import java.awt.*;
@@ -161,12 +162,10 @@ public class ShopPanel2 {
 
         public void setBtnPanel() {
 
-                    Pocketmon charmendershop = new Pocketmon();
 
             btn2.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
                     System.out.println(Pocketmon.tmp);
                 }
             });
@@ -207,8 +206,53 @@ public class ShopPanel2 {
                 }
             });
 
+                    Pocketmon testPoke = new Pocketmon();
+                    Charmender testChar = new Charmender();
+                    Skill testSkill = new Skill();
 
-            //회복약 구매 버튼
+                    Pocketmon[] oppos = new Pocketmon[6];
+                    for (int i = 0; i <= 5; i++) {
+                        oppos[i] = new Pocketmon();
+                    }
+
+                    int pokenum = 0;
+                    for (int i = 0; i <= 4; i++) {
+                        for (int j = 0; j <= 3; j++) {
+                        oppos[i].skill[j] = j;
+                        }
+                    }
+                    oppos[0].hp =400;
+
+            btn4.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    System.out.println("메서드 들어온 후 oppos.hp =" + oppos[0].hp);
+
+                    for (int i = 0; i <3; i++) {
+                    System.out.println("oppos0 skill["+ i +"]의 스킬넘 = " + oppos[0].skill[i]);
+
+                    }
+                    System.out.println("oppos default = " + oppos[0].hp);
+                    oppos[0].takeDamage(40);
+                    System.out.println("takedamage 하면 = " + oppos[0].hp);
+                    testSkill.useSkill(oppos[0], 3);
+                    System.out.println();
+                    System.out.println("useSkill([oppos0],3) 하면 =" + oppos[0].hp);
+
+                    System.out.println("지금 opps[0].hp = " + oppos[0].hp);
+                    System.out.println("지금 skill1은 = " + oppos[0].skill[1]);
+                    testSkill.doSkill(oppos[0],oppos[0].skill[1]);
+                    System.out.println("doSkill  oppos[0] 스킬 1번 사용 후 " + oppos[0].hp);
+
+
+                    Trainer my = new Trainer();
+
+
+                }
+            });
+
+
         }
 
 

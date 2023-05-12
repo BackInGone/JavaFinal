@@ -3,8 +3,6 @@ package Battle;
 import person.Trainer;
 import pocketmon.Pocketmon;
 
-import java.awt.*;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Battle extends Thread{
@@ -14,7 +12,7 @@ public class Battle extends Thread{
     Trainer player;
     Trainer opponent;
     Pocketmon opponentPocketmon;
-            int actionnum;
+    int actionnum;
     public boolean isTrainter;
     public boolean isPlayerTurn;
     Scanner scanner = new Scanner(System.in);

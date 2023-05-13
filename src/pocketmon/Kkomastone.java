@@ -1,4 +1,4 @@
 package pocketmon;
 
-public class Kkomastone {
+public class Kkomastone extends Pocketmon {
 }

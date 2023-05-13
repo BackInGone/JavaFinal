@@ -1,8 +1,9 @@
 package pocketmon;
 
-public class FourthPocketmon extends Pocketmon{public static int index;
-
+public class FourthPocketmon extends Pocketmon{
     public static boolean exist;
+    public static int index;
+    public static int level;
     public static  int exp;
     public static int hp;
     public static int attack;

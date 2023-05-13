@@ -1,4 +1,4 @@
 package pocketmon;
 
-public class Ddakguri {
+public class Ddakguri extends Pocketmon{
 }

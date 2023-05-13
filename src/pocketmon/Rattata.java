@@ -1,4 +1,4 @@
 package pocketmon;
 
-public class Rattata {
+public class Rattata extends Pocketmon{
 }

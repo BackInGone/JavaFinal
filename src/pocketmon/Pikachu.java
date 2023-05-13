@@ -1,8 +1,6 @@
 package pocketmon;
 
-public class Pikachu {
+public class Pikachu extends Pocketmon{
 
-    public static int hp;
-    public int exp;
 
 }

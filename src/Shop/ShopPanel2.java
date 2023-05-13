@@ -247,6 +247,17 @@ public class ShopPanel2 {
 
 
                     Trainer my = new Trainer();
+                    double num = 0;
+                    while (true) {
+                            num = (Math.random() * 20);
+                        System.out.println(num);
+                        if(num<=6 && num>=0) {
+                            System.out.println("(int)num = " + (int) num);
+//                        double ranNum = (int) (Math.random() * 10);
+//                    System.out.println("랜덤 숫자 = " + ranNum);
+                            break;
+                        }
+                    }
 
 
                 }

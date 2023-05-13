@@ -1,4 +1,4 @@
 package pocketmon;
 
-public class Googoo {
+public class Googoo extends Pocketmon{
 }

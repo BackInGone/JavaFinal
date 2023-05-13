@@ -4,7 +4,9 @@ public class Pocketmon {
 
     public static int tmp;
 
+    public boolean exist;
     public int index;
+    public int level;
     public int exp;
     public int hp;
     public int attack;
@@ -22,6 +24,12 @@ public class Pocketmon {
     public int[] maxPP = new int[4];
     public int[] PP = new int[4];
     public int[] skill = new int[4];
+
+
+    public Pocketmon(){}
+    public Pocketmon(int level){
+        this.level = level;
+    }
 
 
 

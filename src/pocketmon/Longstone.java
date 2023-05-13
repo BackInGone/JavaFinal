@@ -1,4 +1,4 @@
 package pocketmon;
 
-public class Longstone {
+public class Longstone extends Pocketmon{
 }

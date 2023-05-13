@@ -37,6 +37,10 @@ public class Item {
             itemlist3.put("redfruit",8);
             itemlist3.put("bluefruit",9);
             itemlist3.put("greenfruit",10);
+            itemlist3.put("firestone",11);
+            itemlist3.put("waterstone",12);
+            itemlist3.put("grassstone",13);
+            itemlist3.put("electrictone",14);
     }
 
 

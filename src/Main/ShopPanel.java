@@ -8,17 +8,18 @@ public class ShopPanel extends JFrame{
     public Image img;
         JFrame Shop = new JFrame();
         ShopPanel shopPanel1 = new ShopPanel();
+
         public ShopPanel(){
         shopPanel1.img = img;
         goshop();
     }
-    public ShopPanel(Image img){
-        this.img = img;
-        setSize(new Dimension(img.getWidth(null), img.getHeight(null)));
-        setPreferredSize(new Dimension(img.getWidth(null), img.getHeight(null)));
-        setLayout(null);
-        goshop();
-    }
+//    public ShopPanel(Image img){
+//        this.img = img;
+//        setSize(new Dimension(img.getWidth(null), img.getHeight(null)));
+//        setPreferredSize(new Dimension(img.getWidth(null), img.getHeight(null)));
+//        setLayout(null);
+//        goshop();
+//    }
 
     public void goshop(){
         System.out.println("여까진 가냐");

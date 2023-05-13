@@ -3,7 +3,7 @@ package pocketmon;
 public class FirstPocketmon extends Pocketmon{
 
 
-    public static int index;
+    public static boolean exist;
     public static  int exp;
     public static int hp;
     public static int attack;

@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Main/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Battle/BattlePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemList/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemList/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Pocketmongame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Pocketmongame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +73,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BAEK\IdeaProjects\JavaFinal\src\Main" />
       <recent name="C:\Users\BAEK\IdeaProjects\JavaFinal\src\pocketmon" />
     </key>
   </component>
@@ -135,7 +142,8 @@
       <workItem from="1683642878266" duration="25884000" />
       <workItem from="1683726680319" duration="49482000" />
       <workItem from="1683908084586" duration="1525000" />
-      <workItem from="1683923470226" duration="36283000" />
+      <workItem from="1683923470226" duration="38709000" />
+      <workItem from="1684093986356" duration="22534000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>
@@ -354,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684011447419</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="First">
+      <created>1684090953920</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1684090953920</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

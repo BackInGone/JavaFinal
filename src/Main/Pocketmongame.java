@@ -25,7 +25,6 @@ public class Pocketmongame {
 //        gameThread.start();
 //        new ShopPnel();
 //        window.add(new JLabel("Pocketmon Adventure"));
-        Item.makeitemlist();
         gamePanel.startGameThread();
         }
 

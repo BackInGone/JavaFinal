@@ -20,6 +20,7 @@ public class Pocketmon {
     public float attackgrow;
     public float dependgrow;
     public boolean isParalyzed;
+    public boolean isPoisoned;
 
     public int[] maxPP = new int[4];
     public int[] PP = new int[4];

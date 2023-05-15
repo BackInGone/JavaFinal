@@ -260,6 +260,19 @@ public class ShopPanel2 {
                     }
 
 
+                    Item itemtest = new Item();
+//                    System.out.println(itemlist3);
+//                    itemtest.makeitemlist();
+                    System.out.println(Item.itemlist3);
+                    System.out.println("after makeitelist() =" + Item.itemlist3);
+
+                    Item.itemlist3.remove("potion");
+                    System.out.println("after remove potion = " + Item.itemlist3);
+                    int potionnum = (int)(Math.random()*100);
+                    Item.itemlist3.put("potion", potionnum);
+
+                    System.out.println("after put potion = " + Item.itemlist3);
+
                 }
             });
 

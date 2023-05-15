@@ -1,5 +1,6 @@
-package Battle;
+package Main;
 
+import ItemList.Item;
 import Shop.ShopPanel2;
 import person.Trainer;
 import pocketmon.*;
@@ -20,6 +21,7 @@ public class BattlePanel {
     Pocketmon[] oppos = new Pocketmon[5];
 
     Skill battleSkill = new Skill();
+    Item battleItem = new Item();
     Trainer battleTrainer = new Trainer();
     Scanner scan = new Scanner(System.in);
 
@@ -30,7 +32,6 @@ public class BattlePanel {
     public int turnstack;
     public int num;
     public int turnNumb=0;
-
 
     public void setmyPocketmon(){
         System.out.println("현재 보유 포켓몬은 " + battleTrainer.CountPocketmon() + "마리");
@@ -253,22 +254,32 @@ public class BattlePanel {
         }
     }
     public void changePoketmon(int num){
-        if (num==1) {
+
+
+        if (num==1) { //내 포켓몬 변경
             System.out.println("보유중인 포켓몬");
             for(int i=0;i<myPoke.length;i++){
-                if(myPoke[i].exist){
+                if(myPoke[i].exist&&(myPoke[i].hp!=0)){
                     System.out.println(i + "번 : " + myPoke[i].name + "   hp = " + myPoke[i].hp);
                 }
             }
+
+            while(true){
             int next = scan.nextInt();
-            num=0;
-                        myPokeNum++;
+            if(myPoke[next].exist&&(myPoke[next].hp!=0)){
+                myPokeNum= next;
+                break;
+            } }
+
         }
-        else if(num==2) {
+        else if(num==2) { //상대 포켓몬 변경
             oppoPokeNum++;
             num=0;
         }
 
+
+    }
+    public void useItem(Pocketmon pocketmon, Pocketmon oppo){
 
     }
 
@@ -287,16 +298,30 @@ public class BattlePanel {
 
 
             ////////////////내턴//////////////////
+            System.out.println("행동을 선택");
+            System.out.println("1. 기술사용");
+            System.out.println("2. 포켓몬변경");
+            System.out.println("3. 아이템사용");
+            System.out.println("4. 나가기");
           int choiceNum =  scan.nextInt();
-          if(choiceNum>=1 && choiceNum<=4)
 
+
+
+          if(choiceNum>=1 && choiceNum<=4) {}
+            else {System.out.println("다시 입력");}
             if(choiceNum==1){//기술사용
-
-
+                int selectSkill = scan.nextInt();
+                battleSkill.doSkill(oppos[oppoPokeNum], myPoke[myPokeNum].skill[selectSkill]);
+                System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
+                break;
 
             }else if(choiceNum==2){//포켓몬변경
+                changePoketmon(1);
 
             } else if (choiceNum==3) {//아이템사용
+                System.out.println(battleItem.itemlist3);
+                useItem(myPoke[myPokeNum], oppos[oppoPokeNum]);
+
 
             } else{ //나가기
                 if (isTrainer){

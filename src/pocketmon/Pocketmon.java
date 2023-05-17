@@ -18,7 +18,7 @@ public class Pocketmon {
 
     public float hpgrow;
     public float attackgrow;
-    public float dependgrow;
+    public float defencegrow;
     public boolean isParalyzed;
     public boolean isPoisoned;
 

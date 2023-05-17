@@ -119,12 +119,7 @@ public class ShopPanel2 {
             buypanel.setVisible(false);
             Shop2.getContentPane().setLayout(null);
             Shop2.setVisible(true);
-            Pocketmon charmender = new Pocketmon();
-            System.out.println("처음 HP = " + charmender.hp);
 
-
-//        GamePanel test1 = new GamePanel();
-//        test1.awakeThread();
         }
 
         public void setPanel() {
@@ -260,7 +255,7 @@ public class ShopPanel2 {
                     }
 
 
-                    Item itemtest = new Item();
+//                    Item itemtest = new Item();     //여기서 thread 관련 오류가 나네
 //                    System.out.println(itemlist3);
 //                    itemtest.makeitemlist();
                     System.out.println(Item.itemlist3);

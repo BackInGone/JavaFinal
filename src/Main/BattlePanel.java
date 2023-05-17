@@ -15,24 +15,31 @@ public class BattlePanel {
 
     JFrame Battle1 = new JFrame();
     JPanel battlepanel = new JPanel();
-    Image background = new ImageIcon(ShopPanel2.class.getResource("../image/상점.png")).getImage();
+//    Image background = new ImageIcon(ShopPanel2.class.getResource("../image/상점.png")).getImage();
 
     Pocketmon[] myPoke = new Pocketmon[5];
     Pocketmon[] oppos = new Pocketmon[5];
 
     Skill battleSkill = new Skill();
-    Item battleItem = new Item();
+//    Item battleItem = new Item();
     Trainer battleTrainer = new Trainer();
     Scanner scan = new Scanner(System.in);
 
 
     public boolean isTrainer;
     public int oppoPokeNum;
-    public int myPokeNum;
+    public int myPokeNum=0;
     public int turnstack;
-    public int num;
+    public int num=0;
     public int turnNumb=0;
 
+    public BattlePanel(){
+        Battle1.setSize(400,600);
+        Battle1.add(battlepanel);
+        Battle1.getContentPane().setLayout(null);
+        Battle1.setVisible(true);
+        goBaattle(1,19);
+    }
     public void setmyPocketmon(){
         System.out.println("현재 보유 포켓몬은 " + battleTrainer.CountPocketmon() + "마리");
         for (int i = 0; i < battleTrainer.CountPocketmon(); i++) {
@@ -104,198 +111,227 @@ public class BattlePanel {
 
     }
     public void setOppoPocketmon(int rangeF, int rangeB){
-        double num = 0;
-        int j=0;
+        int num = 0;
+        int j;
         while (true) {      // 포켓몬 마리수 1~6마리랜덤 설정
-            num = (Math.random() * 10);
-            if(num<6 && num>=0) {
-                System.out.println("적 포켓몬 마리수 = " + (int) num);
+            num = (int)(Math.random() * 10);
+            if(num<6 && num>0) {
+                System.out.println("적 포켓몬 마리수 = " + num);
 //                        double ranNum = (int) (Math.random() * 10);
 //                    System.out.println("랜덤 숫자 = " + ranNum);
                 break;
             }
         }
+        System.out.println(" 랜덤 전 num 체크 =" + num);
         // 랜덤 수 만큼 포켓몬 생성
-        for (int i = 0; i <= num; i++) {
+        for (int i = 0; i < num; i++) {
             oppos[i] = new Pocketmon();
+            System.out.println("for문은 오셨나");
         }
 
 
         // 포켓몬 랜덤 배정
-        for (int i = 0; i <= num; i++) {
+        for (int i = 0; i < num; i++) {
 
                 j = (int) (Math.random() * 19); // 해당 인덱스 안에서 포켓몬 랜덤 배정
-            if(j>=rangeF && j<=rangeB) {
+            System.out.println("j는 몇인고" + j);
                 switch (j) {
                     case 0: {
                         //파이리
-                        myPoke[i] = new Charmender();
+                        oppos[i] = new Charmender();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
                     }
                     case 1: {
                         //리자드
-                        myPoke[i] = new Charizard();
+                        oppos[i] = new Charizard();
+                        System.out.println("케이스1");
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
                     }
                     case 2: {
                         //리자몽
 
-                        myPoke[i] = new Charmeleon();
+                        oppos[i] = new Charmeleon();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 3: {
                         //꼬부기
-                        myPoke[i] = new Kkobook();
+                        System.out.println("케이스3");
+                        oppos[i] = new Kkobook();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 4: {
                         //어니부기
 
-                        myPoke[i] = new Earnybook();
+                        oppos[i] = new Earnybook();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 5: {
                         //거북왕
-                        myPoke[i] = new Kingbook();
+                        oppos[i] = new Kingbook();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
 
                     }
                     case 6: {
                         //이상해씨
-                        myPoke[i] = new Esangssi();
+                        oppos[i] = new Esangssi();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 7: {
+                        System.out.println("케이스7");
                         //이상해풀
-                        myPoke[i] = new Esangpool();
+                        oppos[i] = new Esangpool();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 8: {
                         //이상해꽃
-                        myPoke[i] = new Esangkkot();
+                        oppos[i] = new Esangkkot();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 9: {
                         //피카츄
-                        myPoke[i] = new Pikachu();
+                        oppos[i] = new Pikachu();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 10: {
                         //라이츄
-                        myPoke[i] = new Raichu();
+                        oppos[i] = new Raichu();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 11: {
                         //구구
-                        myPoke[i] = new Googoo();
+                        oppos[i] = new Googoo();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 12: {
                         //피존
-                        myPoke[i] = new Pidgeon();
+                        oppos[i] = new Pidgeon();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 13: {
                         //피존투
-                        myPoke[i] = new Pidgeontwo();
+                        oppos[i] = new Pidgeontwo();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 14: {
                         //꼬렛
-                        myPoke[i] = new Rattata();
+                        oppos[i] = new Rattata();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 15: {
                         //레트라
 
-                        myPoke[i] = new Raticate();
+                        oppos[i] = new Raticate();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 16: {
                         //꼬마돌
-                        myPoke[i] = new Kkomastone();
+                        oppos[i] = new Kkomastone();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 17: {
                         //데구리
-                        myPoke[i] = new Deguri();
+                        oppos[i] = new Deguri();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 18: {
                         //딱구리
-                        myPoke[i] = new Ddakguri();
+                        oppos[i] = new Ddakguri();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 19: {
                         //롱스톤
-                        myPoke[i] = new Longstone();
+                        oppos[i] = new Longstone();
+                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
-                }
+
             }
         }
     }
-    public void changePoketmon(int num){
-
+    public void changePoketmon(Pocketmon p, int num){
 
         if (num==1) { //내 포켓몬 변경
-            System.out.println("보유중인 포켓몬");
-            for(int i=0;i<myPoke.length;i++){
-                if(myPoke[i].exist&&(myPoke[i].hp!=0)){
-                    System.out.println(i + "번 : " + myPoke[i].name + "   hp = " + myPoke[i].hp);
+//            for(int i=0;i<myPoke.length;i++){
+                if(p.exist&&(p.hp!=0)){
+                    System.out.println(p.name + " 의  hp = " + p.hp);
                 }
-            }
+//            }
 
             while(true){
+
             int next = scan.nextInt();
+            if(myPoke[next]!=null){
             if(myPoke[next].exist&&(myPoke[next].hp!=0)){
                 myPokeNum= next;
                 break;
-            } }
-
+            } }else {
+                System.out.println("change pocketmon test");
+            }}
         }
         else if(num==2) { //상대 포켓몬 변경
             oppoPokeNum++;
             num=0;
         }
-
-
     }
     public void useItem(Pocketmon pocketmon, Pocketmon oppo){
 
+    }
+    public void setMyPoke(Pocketmon t, int i){
+        t = myPoke[i];
     }
 
     public void goBaattle(int rangeF, int rangeB) {
 
         setmyPocketmon();
-//        setOppoPocketmon(rangeF, rangeB);
+        setOppoPocketmon(rangeF, rangeB);
 
-        if(myPoke[myPokeNum].hp==0){
-            changePoketmon(1);
-        }
 
        //배틀 시작
         while (true) {
         turnstack =0;
 
+        if(myPoke[myPokeNum].hp==0){
+            changePoketmon(myPoke[myPokeNum],1);
+        }if(oppos[oppoPokeNum].hp==0){
+            changePoketmon(myPoke[myPokeNum],2);
+            }
 
             ////////////////내턴//////////////////
             System.out.println("행동을 선택");
@@ -316,10 +352,10 @@ public class BattlePanel {
                 break;
 
             }else if(choiceNum==2){//포켓몬변경
-                changePoketmon(1);
+                changePoketmon(myPoke[myPokeNum],1);
 
             } else if (choiceNum==3) {//아이템사용
-                System.out.println(battleItem.itemlist3);
+                System.out.println(Item.itemlist3);
                 useItem(myPoke[myPokeNum], oppos[oppoPokeNum]);
 
 
@@ -332,6 +368,12 @@ public class BattlePanel {
             if((oppos[0].hp+oppos[1].hp+oppos[2].hp+oppos[3].hp+oppos[4].hp+oppos[5].hp)==0 ||
                     myPoke[0].hp+myPoke[1].hp+myPoke[2].hp+myPoke[3].hp+myPoke[4].hp+myPoke[5].hp==0){
                 break;
+            }
+
+            if(myPoke[myPokeNum].hp==0){
+                changePoketmon(myPoke[myPokeNum],1);
+            }if(oppos[oppoPokeNum].hp==0){
+                changePoketmon(myPoke[myPokeNum],2);
             }
 
             /////////////////상대턴///////////////////

@@ -1,10 +1,7 @@
 package Main;
 
 import Shop.ShopPanel2;
-import pocketmon.Charmender;
-import pocketmon.Esangssi;
-import pocketmon.Kkobook;
-import pocketmon.Pocketmon;
+import pocketmon.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -12,6 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class GamePanel extends JPanel implements Runnable{
 
@@ -51,23 +49,62 @@ public class GamePanel extends JPanel implements Runnable{
         gameThread.start();
     }
         int cnt = 0;
-        int startPoke;
         public void run () {
 
             //첫 포켓몬 고르기
             System.out.println("1 : 이상해씨");
             System.out.println("2 : 파이리");
             System.out.println("3 : 꼬부기");
+
+            System.out.println(" 첫번째 포켓몬을 선택하세요.");
+            Scanner scan = new Scanner(System.in);
+            int startPoke = scan.nextInt();
+
             switch (startPoke){
                 case 1: {
-                    Esangssi firstpoke = new Esangssi();
-
+                    FirstPocketmon firstpoke = new FirstPocketmon();
+                    Esangssi esang = new Esangssi();
+                    firstpoke.hp = esang.hp;
+                    firstpoke.type = esang.type;
+                    firstpoke.attack = esang.attack;
+                    firstpoke.defence = esang.defence;
+                    firstpoke.maxPP = esang.maxPP;
+                    firstpoke.PP = esang.PP;
+                    firstpoke.skill = esang.skill;
+                    firstpoke.name = esang.name;
+                    FirstPocketmon.exist = true;
+                    System.out.println("이상해씨를 선택했습니다!");
+                    break;
                 }
                 case 2: {
-                    Charmender firstpoke = new Charmender();
+                    FirstPocketmon firstpoke = new FirstPocketmon();
+                    Charmender esang = new Charmender();
+                    firstpoke.hp = esang.hp;
+                    firstpoke.type = esang.type;
+                    firstpoke.attack = esang.attack;
+                    firstpoke.defence = esang.defence;
+                    firstpoke.maxPP = esang.maxPP;
+                    firstpoke.PP = esang.PP;
+                    firstpoke.name = esang.name;
+                    firstpoke.skill = esang.skill;
+                    FirstPocketmon.exist = true;
+                    System.out.println("파이리를 선택했습니다!");
+                    break;
                 }
                 case 3: {
-                    Kkobook firstpoke = new Kkobook();
+                    FirstPocketmon firstpoke = new FirstPocketmon();
+                    Kkobook esang = new Kkobook();
+                    firstpoke.hp = esang.hp;
+                    firstpoke.type = esang.type;
+                    firstpoke.attack = esang.attack;
+                    firstpoke.defence = esang.defence;
+                    firstpoke.maxPP = esang.maxPP;
+                    firstpoke.PP = esang.PP;
+                    firstpoke.name = esang.name;
+                    firstpoke.skill = esang.skill;
+                    FirstPocketmon.exist = true;
+                    System.out.println("꼬부기를 선탁했습니다. ");
+                    break;
                 }
             }
 
@@ -104,7 +141,7 @@ public class GamePanel extends JPanel implements Runnable{
             ////왼쪽으로 이탈하여 상점으로 들어갑니다 !!!
         if (playerX < 0) {
             System.out.println("왼쪽으로 이탈");
-            synchronized (this){
+//            synchronized (this){
                 getThreadState();
 //            new ShopPanel(); //Shop 윈도우에 진입하는 goShop(); 실행[객체 생성없이 다른 클래스의 메서드 실행법?] [생성자는 실행되는데, goShop()은 Static 아니면 실행이 안되네?
                                 // 아직도 얘는 막혀있음
@@ -121,18 +158,21 @@ public class GamePanel extends JPanel implements Runnable{
             keyH.rightPressed = false;
                 System.out.println("벗어난 if문 끝자락의 tmp" + Pocketmon.tmp);
                 //창이 2개 생셩할수도 있는 case아직 미헤결
-            }
+//            }
         }
 
 
 
         ////아래로 이탈하여
         else if (playerY < 0) {
-            System.out.println("아래로 이탈");
-            System.out.println("다시 왔을때 hp는 ? =" + Pocketmon.tmp);
-            Pocketmon charmender = new Pocketmon();
-            System.out.println("여기서 charmender 받으려면? 객체 hp = " + charmender.hp);
-            playerY = 0;
+            System.out.println("위로 이탈");
+            playerY = 30;
+
+            new BattlePanel();
+            keyH.upPressed = false;
+            keyH.downPressed = false;
+            keyH.leftPressed = false;
+            keyH.rightPressed = false;
         }
 
 
@@ -147,8 +187,9 @@ public class GamePanel extends JPanel implements Runnable{
 
 
         else if (playerY > 528) {
-            System.out.println("위로 이탈");
-            playerY = 528;
+            System.out.println("아래로 이탈");
+            playerY = 500;
+
         }
     }
 

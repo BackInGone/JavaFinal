@@ -124,10 +124,11 @@ public class BattlePanel {
         }
         System.out.println(" 랜덤 전 num 체크 =" + num);
         // 랜덤 수 만큼 포켓몬 생성
-        for (int i = 0; i < num; i++) {
-            oppos[i] = new Pocketmon();
-            System.out.println("for문은 오셨나");
-        }
+//        for (int i = 0; i < num; i++) {
+//            oppos[i]= new Pocketmon();
+//            oppos[i].hp = i*100;
+//            System.out.println("for문은 오셨나");
+//        }
 
 
         // 포켓몬 랜덤 배정
@@ -139,13 +140,18 @@ public class BattlePanel {
                     case 0: {
                         //파이리
                         oppos[i] = new Charmender();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
                     }
                     case 1: {
                         //리자드
                         oppos[i] = new Charizard();
-                        System.out.println("케이스1");
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
                     }
@@ -153,14 +159,19 @@ public class BattlePanel {
                         //리자몽
 
                         oppos[i] = new Charmeleon();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 3: {
                         //꼬부기
-                        System.out.println("케이스3");
                         oppos[i] = new Kkobook();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -169,6 +180,9 @@ public class BattlePanel {
                         //어니부기
 
                         oppos[i] = new Earnybook();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -176,6 +190,9 @@ public class BattlePanel {
                     case 5: {
                         //거북왕
                         oppos[i] = new Kingbook();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -184,14 +201,19 @@ public class BattlePanel {
                     case 6: {
                         //이상해씨
                         oppos[i] = new Esangssi();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
                     }
                     case 7: {
-                        System.out.println("케이스7");
                         //이상해풀
                         oppos[i] = new Esangpool();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -199,6 +221,9 @@ public class BattlePanel {
                     case 8: {
                         //이상해꽃
                         oppos[i] = new Esangkkot();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -206,6 +231,9 @@ public class BattlePanel {
                     case 9: {
                         //피카츄
                         oppos[i] = new Pikachu();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -213,6 +241,9 @@ public class BattlePanel {
                     case 10: {
                         //라이츄
                         oppos[i] = new Raichu();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -220,6 +251,9 @@ public class BattlePanel {
                     case 11: {
                         //구구
                         oppos[i] = new Googoo();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -227,6 +261,9 @@ public class BattlePanel {
                     case 12: {
                         //피존
                         oppos[i] = new Pidgeon();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -234,6 +271,9 @@ public class BattlePanel {
                     case 13: {
                         //피존투
                         oppos[i] = new Pidgeontwo();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -241,6 +281,9 @@ public class BattlePanel {
                     case 14: {
                         //꼬렛
                         oppos[i] = new Rattata();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -249,6 +292,9 @@ public class BattlePanel {
                         //레트라
 
                         oppos[i] = new Raticate();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -256,6 +302,9 @@ public class BattlePanel {
                     case 16: {
                         //꼬마돌
                         oppos[i] = new Kkomastone();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -263,6 +312,9 @@ public class BattlePanel {
                     case 17: {
                         //데구리
                         oppos[i] = new Deguri();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -270,6 +322,9 @@ public class BattlePanel {
                     case 18: {
                         //딱구리
                         oppos[i] = new Ddakguri();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 
@@ -277,6 +332,9 @@ public class BattlePanel {
                     case 19: {
                         //롱스톤
                         oppos[i] = new Longstone();
+                        System.out.println(oppos[i].hp);
+                        oppos[i].takeDamage(40);
+                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
                         System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
                         break;
 

@@ -39,6 +39,7 @@ public class Pocketmon {
         if (hp < 0) {
             hp = 0;
         }
+
     }
 
     public boolean setParalyzed(){

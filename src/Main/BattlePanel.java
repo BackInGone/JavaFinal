@@ -30,9 +30,47 @@ public class BattlePanel {
     public int turnstack;
     public int num=0;
     public int turnNumb=0;
-    public void setPocketmonArray(int i, Pocketmon[] p, Pocketmon t){
-        oppos = p;
-        oppos[i] = t;
+    public void copyField(Pocketmon c, Pocketmon v){
+
+        c.exist = v.exist;
+        c.index = v.index;
+        c.level = v.level;
+        c.exp = v.exp;
+        c.hp = v.hp;
+        c.attack = v.attack;
+        c.defence = v.defence;
+        c.accuracy = v.accuracy;
+        c.type = v.type;
+        c.name = v.name;
+        c.depth = v.depth;
+        c.hpgrow = v.hpgrow;
+        c.attackgrow = v.attackgrow;
+        c.defencegrow = v.defencegrow;
+        c.isPoisoned = v.isPoisoned;
+        c.isParalyzed = v.isParalyzed;
+        c.maxPP = v.maxPP;
+        c.PP = v.PP;
+        c.skill = v.skill;
+//        public int level;
+//        public int exp;
+//        public int hp;
+//        public int attack;
+//        public int defence;
+//        public int accuracy;
+//        public String type;
+//        public String name;
+//        public int depth;
+//
+//        public float hpgrow;
+//        public float attackgrow;
+//        public float defencegrow;
+//        public boolean isParalyzed;
+//        public boolean isPoisoned;
+//
+//        public int[] maxPP = new int[4];
+//        public int[] PP = new int[4];
+//        public int[] skill = new int[4];
+
     }
 //    public Pocketmon[] setPocketmonArray(Pocketmon[] p){
 //
@@ -144,28 +182,40 @@ public class BattlePanel {
 
         // 포켓몬 랜덤 배정
         for (int i = 0; i < num; i++) {
+            System.out.println();
+            System.out.println();
             System.out.println("for문 들어와서 oppos들" + oppos[i].hp);
 
                 j = (int) (Math.random() * 4); // 해당 인덱스 안에서 포켓몬 랜덤 배정
             System.out.println("j는 몇인고" + j);
             if(j==0){
                  Charmender c = new Charmender();
-                 c.hp = oppos[i].hp;
+                 oppos[i].hp = c.hp ;
+                 oppos[i].name = c.name ;
+
 //                ((Charmender)oppos[i]).hp= oppos[i].hp;
 //                System.out.println("if로 테스트 해보는 파이리 출동" + ((Charmender)oppos[i]).hp);
                 System.out.println("if로 테스트 해보는 파이리 c객체의 출동" +c.hp );
-                System.out.println("if로 테스트 해보는 파이리 출동" + ((Charmender)oppos[i]).name);
+                System.out.println("if로 테스트 해보는 파이리 c객체의 출동" +c.name );
+                System.out.println("if로 테스트 해보는 파이리 배열 출동" + (oppos[i]).hp);
+                System.out.println("if로 테스트 해보는 파이리 배열 출동" + (oppos[i]).name);
+//                System.out.println("if로 테스트 해보는 파이리 출동" + ((Charmender)oppos[i]).name);
             }else if(j==1){
-                oppos[i]= new Charizard();
-                ((Charizard)oppos[i]).hp= oppos[i].hp;
+//                oppos[i]= new Charizard();
+//                ((Charizard)oppos[i]).hp= oppos[i].hp;
+                copyField(new Charmeleon(), oppos[i]);
                 System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).hp);
                 System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).name);
+                System.out.println("if로 테스트 해보는 리자드 배열 출동" + (oppos[i]).hp);
+                System.out.println("if로 테스트 해보는 리자드 배열 출동" + (oppos[i]).name);
 
             } else if (j==2) {
-                oppos[i]= new Charmeleon();
+//                oppos[i]= new Charmeleon();
 //                ((Charmeleon)oppos[i]).hp= oppos[i].hp;
-                System.out.println("if로 테스트 해보는 리자몽 출동" + ((Charmeleon)oppos[i]).hp);
-                System.out.println("if로 테스트 해보는 리자몽 출동" + ((Charmeleon)oppos[i]).name);
+                Charmeleon c = new Charmeleon();
+                copyField(c, oppos[i]);
+                System.out.println("if로 테스트 해보는 리자몽 출동" + (oppos[i]).hp);
+                System.out.println("if로 테스트 해보는 리자몽 출동" + (oppos[i]).name);
             } else if (j==3) {
                 oppos[i]= new Kkobook();
                 System.out.println("if로 테스트 해보는 꼬부기 출동" + oppos[i].hp);
@@ -174,8 +224,8 @@ public class BattlePanel {
             switch (j) {
                     case 0: {
                         //파이리
-                        setPocketmonArray(i, oppos, new Charmender());
-                        oppos[i] = new Charmender();
+                        Charmender a = new Charmender();
+                        copyField(a, oppos[i]);
                         System.out.println(oppos[i].hp);
                         oppos[i].takeDamage(40);
                         System.out.println(new Charmender().hp);
@@ -185,7 +235,8 @@ public class BattlePanel {
                     }
                     case 1: {
                         //리자드
-                        setPocketmonArray(i, oppos, new Charizard());
+                        Charizard b = new Charizard();
+                        copyField(b, oppos[i]);
 
 //                        oppos[i] = new Charizard();
                         System.out.println(oppos[i].hp);
@@ -196,8 +247,8 @@ public class BattlePanel {
                     }
                     case 2: {
                         //리자몽
-                        setPocketmonArray(i, oppos, new Charmeleon());
-//                        oppos[i] = new Charmeleon();
+                        Charmeleon c = new Charmeleon();
+                        copyField(c, oppos[i]);
                         System.out.println(oppos[i].hp);
                         oppos[i].takeDamage(40);
                         System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
@@ -411,13 +462,38 @@ public class BattlePanel {
 
     }
     public void setMyPoke(Pocketmon t, int i){
-        t = myPoke[i];
+
+        oppos[i] = t;
+        System.out.println("in setMyPoke =" + t.hp);
+        System.out.println("in setMyPoke =" + t.name);
+        System.out.println("in setMyPoke =" + oppos[i].name);
+        System.out.println("in setMyPoke =" + oppos[i].name);
     }
 
     public void goBaattle(int rangeF, int rangeB) {
 
         setmyPocketmon();
         setOppoPocketmon(rangeF, rangeB);
+        Pocketmon s = new Pocketmon();
+        setMyPoke(s, 0);
+        setMyPoke(s, 1);
+        setMyPoke(s, 2);
+        System.out.println("setmypoke 나오자마자 체크" + oppos[0].hp);
+        System.out.println("setmypoke 나오자마자 체크" + oppos[1].hp);
+        System.out.println("setmypoke 나오자마자 체크" + oppos[0].name);
+        System.out.println("setmypoke 나오자마자 체크" + oppos[1].name);
+        Pocketmon[] oppos = new Pocketmon[5];
+        oppos[0] = new Charmender();
+        oppos[1] = new Charizard();
+        oppos[2] = new Charmeleon();
+        oppos[3] = s;
+
+        System.out.println("setOppo 나와서 객체를 정리해보자!");
+        for (int i = 0; i < oppos.length; i++) {
+            System.out.println(i + "번쨰 hp + "+ oppos[i].hp);
+            System.out.println(i + "번쨰 name + "+ oppos[i].name);
+        }
+
 
 
        //배틀 시작

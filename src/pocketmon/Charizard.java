@@ -1,5 +1,8 @@
 package pocketmon;
 
 public class Charizard extends Charmeleon {
-    public String name = "Charizard";
+    public Charizard(){
+    String name = "Charizard";
+        this.name = "Charized";
+    }
 }

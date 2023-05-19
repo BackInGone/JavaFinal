@@ -32,25 +32,27 @@ public class BattlePanel {
     public int turnNumb=0;
     public void copyField(Pocketmon c, Pocketmon v){
 
-        c.exist = v.exist;
-        c.index = v.index;
-        c.level = v.level;
-        c.exp = v.exp;
-        c.hp = v.hp;
-        c.attack = v.attack;
-        c.defence = v.defence;
-        c.accuracy = v.accuracy;
-        c.type = v.type;
-        c.name = v.name;
-        c.depth = v.depth;
-        c.hpgrow = v.hpgrow;
-        c.attackgrow = v.attackgrow;
-        c.defencegrow = v.defencegrow;
-        c.isPoisoned = v.isPoisoned;
-        c.isParalyzed = v.isParalyzed;
-        c.maxPP = v.maxPP;
-        c.PP = v.PP;
-        c.skill = v.skill;
+        System.out.println("Copy 들어오고 v한번 출력" + v.name + v.hp);
+        System.out.println("Copy 들어오고 c한번 출력" + c.name + c.hp);
+        v.exist = c.exist;
+        v.index = c.index;
+        v.level = c.level;
+        v.exp = c.exp;
+        v.hp = c.hp;
+        v.attack = c.attack;
+        v.defence = c.defence;
+        v.accuracy = c.accuracy;
+        v.type = c.type;
+        v.name = c.name;
+        v.depth = c.depth;
+        v.hpgrow = c.hpgrow;
+        v.attackgrow = c.attackgrow;
+        v.defencegrow = c.defencegrow;
+        v.isPoisoned = c.isPoisoned;
+        v.isParalyzed = c.isParalyzed;
+        v.maxPP = c.maxPP;
+        v.PP = c.PP;
+        v.skill = c.skill;
 //        public int level;
 //        public int exp;
 //        public int hp;
@@ -70,6 +72,9 @@ public class BattlePanel {
 //        public int[] maxPP = new int[4];
 //        public int[] PP = new int[4];
 //        public int[] skill = new int[4];
+        System.out.println("Copy 나가기 전 v 한번 출력" + v.name + v.hp);
+        System.out.println("Copy 나가기 전 c 한번 출력" + c.name + c.hp);
+
 
     }
 //    public Pocketmon[] setPocketmonArray(Pocketmon[] p){
@@ -189,23 +194,38 @@ public class BattlePanel {
                 j = (int) (Math.random() * 4); // 해당 인덱스 안에서 포켓몬 랜덤 배정
             System.out.println("j는 몇인고" + j);
             if(j==0){
-                 Charmender c = new Charmender();
-                 oppos[i].hp = c.hp ;
-                 oppos[i].name = c.name ;
+                 Charmender a = new Charmender();
+
+                if (array[0] instanceof SubClass1) {
+                    SubClass1 obj1 = (SubClass1) array[0];
+                    // obj1에 대한 SubClass1의 필드를 사용합니다.
+                }
+
+                if (array[1] instanceof SubClass2) {
+                    SubClass2 obj2 = (SubClass2) array[1];
+                    // obj2에 대한 SubClass2의 필드를 사용합니다.
+                }
 
 //                ((Charmender)oppos[i]).hp= oppos[i].hp;
 //                System.out.println("if로 테스트 해보는 파이리 출동" + ((Charmender)oppos[i]).hp);
-                System.out.println("if로 테스트 해보는 파이리 c객체의 출동" +c.hp );
-                System.out.println("if로 테스트 해보는 파이리 c객체의 출동" +c.name );
-                System.out.println("if로 테스트 해보는 파이리 배열 출동" + (oppos[i]).hp);
-                System.out.println("if로 테스트 해보는 파이리 배열 출동" + (oppos[i]).name);
+                System.out.println("if로 테스트 해보는 파이리 c객체의 출동" +a.hp );
+                System.out.println("if로 테스트 해보는 파이리 c객체의 출동" +a.name );
+                oppos[i] = a;
+                System.out.println("a를 대입해보고 파이리 oppos = " + oppos[i].hp);
+                System.out.println("a를 대입해보고 파이리 oppos = " + oppos[i].name);
+                System.out.println("a를 대입해보고 파이리  a = " + a.hp);
+                System.out.println("a를 대입해보고 파이리  a = " + a.name);
+
+                copyField(a, oppos[i]);
+                System.out.println("copy method 후 파이리 배열 출동" + (oppos[i]).hp);
+                System.out.println("copy method 후 파이리 배열 출동" + (oppos[i]).name);
 //                System.out.println("if로 테스트 해보는 파이리 출동" + ((Charmender)oppos[i]).name);
             }else if(j==1){
 //                oppos[i]= new Charizard();
 //                ((Charizard)oppos[i]).hp= oppos[i].hp;
                 copyField(new Charmeleon(), oppos[i]);
-                System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).hp);
-                System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).name);
+//                System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).hp);
+//                System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).name);
                 System.out.println("if로 테스트 해보는 리자드 배열 출동" + (oppos[i]).hp);
                 System.out.println("if로 테스트 해보는 리자드 배열 출동" + (oppos[i]).name);
 

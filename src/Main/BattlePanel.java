@@ -74,6 +74,7 @@ public class BattlePanel {
 //        public int[] skill = new int[4];
         System.out.println("Copy 나가기 전 v 한번 출력" + v.name + v.hp);
         System.out.println("Copy 나가기 전 c 한번 출력" + c.name + c.hp);
+//        System.out.println("내부에서 다운캐스팅 후 v" + v.name + v.hp);
 
 
     }
@@ -196,15 +197,15 @@ public class BattlePanel {
             if(j==0){
                  Charmender a = new Charmender();
 
-                if (array[0] instanceof SubClass1) {
-                    SubClass1 obj1 = (SubClass1) array[0];
-                    // obj1에 대한 SubClass1의 필드를 사용합니다.
-                }
-
-                if (array[1] instanceof SubClass2) {
-                    SubClass2 obj2 = (SubClass2) array[1];
-                    // obj2에 대한 SubClass2의 필드를 사용합니다.
-                }
+//                if (array[0] instanceof SubClass1) {
+//                    SubClass1 obj1 = (SubClass1) array[0];
+//                    // obj1에 대한 SubClass1의 필드를 사용합니다.
+//                }
+//
+//                if (array[1] instanceof SubClass2) {
+//                    SubClass2 obj2 = (SubClass2) array[1];
+//                    // obj2에 대한 SubClass2의 필드를 사용합니다.
+//                }
 
 //                ((Charmender)oppos[i]).hp= oppos[i].hp;
 //                System.out.println("if로 테스트 해보는 파이리 출동" + ((Charmender)oppos[i]).hp);
@@ -213,6 +214,8 @@ public class BattlePanel {
                 oppos[i] = a;
                 System.out.println("a를 대입해보고 파이리 oppos = " + oppos[i].hp);
                 System.out.println("a를 대입해보고 파이리 oppos = " + oppos[i].name);
+                System.out.println(oppos[i] == a);
+                System.out.println(oppos[i] instanceof Charmender);
                 System.out.println("a를 대입해보고 파이리  a = " + a.hp);
                 System.out.println("a를 대입해보고 파이리  a = " + a.name);
 
@@ -220,14 +223,28 @@ public class BattlePanel {
                 System.out.println("copy method 후 파이리 배열 출동" + (oppos[i]).hp);
                 System.out.println("copy method 후 파이리 배열 출동" + (oppos[i]).name);
 //                System.out.println("if로 테스트 해보는 파이리 출동" + ((Charmender)oppos[i]).name);
+                oppos[i].setFieldtoCharmen();
+                System.out.println("setFieldCharmen 으로 바꾼 후 출력 " + oppos[i].hp);
+                System.out.println("setFieldCharmen 으로 바꾼 후 출력 " + oppos[i].name);
+                battleSkill.doSkill(oppos[i],oppos[i].skill[1]);
+                System.out.println(" 스킬1 사용 후 hp 출동" + oppos[i].hp);
+                battleSkill.doSkill(oppos[i],oppos[i].skill[2]);
+                System.out.println(" 스킬2 사용 후 hp 출동" + oppos[i].hp);
             }else if(j==1){
 //                oppos[i]= new Charizard();
 //                ((Charizard)oppos[i]).hp= oppos[i].hp;
                 copyField(new Charmeleon(), oppos[i]);
 //                System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).hp);
 //                System.out.println("if로 테스트 해보는 리자드 출동" + ((Charizard)oppos[i]).name);
-                System.out.println("if로 테스트 해보는 리자드 배열 출동" + (oppos[i]).hp);
-                System.out.println("if로 테스트 해보는 리자드 배열 출동" + (oppos[i]).name);
+                System.out.println("copyfield로 테스트 해보는 리자드 배열 출동" + (oppos[i]).hp);
+                System.out.println("copyfield로 테스트 해보는 리자드 배열 출동" + (oppos[i]).name);
+                System.out.println("copyfield로 테스트 해보는 리자드 배열 출동" + (oppos[i]).level);
+                System.out.println("copyfield로 테스트 해보는 리자드 배열 출동" + (oppos[i]).type);
+                battleSkill.doSkill(oppos[i],oppos[i].skill[1]);
+                System.out.println("copyfield로 테스트 해보는 스킬1 사용 후 배열 출동" + oppos[i].hp);
+                battleSkill.doSkill(oppos[i],oppos[i].skill[2]);
+                System.out.println("copyfield로 테스트 해보는 스킬1 사용 후 배열 출동" + oppos[i].hp);
+                System.out.println("copyfield로 테스트 해보는 리자드 배열 출동" + (oppos[i]).name);
 
             } else if (j==2) {
 //                oppos[i]= new Charmeleon();
@@ -241,216 +258,216 @@ public class BattlePanel {
                 System.out.println("if로 테스트 해보는 꼬부기 출동" + oppos[i].hp);
                 System.out.println("if로 테스트 해보는 꼬부기 출동" + oppos[i].name);
             }
-            switch (j) {
-                    case 0: {
-                        //파이리
-                        Charmender a = new Charmender();
-                        copyField(a, oppos[i]);
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(new Charmender().hp);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-                    }
-                    case 1: {
-                        //리자드
-                        Charizard b = new Charizard();
-                        copyField(b, oppos[i]);
-
-//                        oppos[i] = new Charizard();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-                    }
-                    case 2: {
-                        //리자몽
-                        Charmeleon c = new Charmeleon();
-                        copyField(c, oppos[i]);
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 3: {
-                        //꼬부기
-                        oppos[i] = new Kkobook();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 4: {
-                        //어니부기
-
-                        oppos[i] = new Earnybook();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 5: {
-                        //거북왕
-                        oppos[i] = new Kingbook();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-
-                    }
-                    case 6: {
-                        //이상해씨
-                        oppos[i] = new Esangssi();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 7: {
-                        //이상해풀
-                        oppos[i] = new Esangpool();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 8: {
-                        //이상해꽃
-                        oppos[i] = new Esangkkot();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 9: {
-                        //피카츄
-                        oppos[i] = new Pikachu();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 10: {
-                        //라이츄
-                        oppos[i] = new Raichu();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 11: {
-                        //구구
-                        oppos[i] = new Googoo();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 12: {
-                        //피존
-                        oppos[i] = new Pidgeon();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 13: {
-                        //피존투
-                        oppos[i] = new Pidgeontwo();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 14: {
-                        //꼬렛
-                        oppos[i] = new Rattata();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 15: {
-                        //레트라
-
-                        oppos[i] = new Raticate();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 16: {
-                        //꼬마돌
-                        oppos[i] = new Kkomastone();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 17: {
-                        //데구리
-                        oppos[i] = new Deguri();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 18: {
-                        //딱구리
-                        oppos[i] = new Ddakguri();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-                    case 19: {
-                        //롱스톤
-                        oppos[i] = new Longstone();
-                        System.out.println(oppos[i].hp);
-                        oppos[i].takeDamage(40);
-                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
-                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
-                        break;
-
-                    }
-
-            }
+//            switch (j) {
+//                    case 0: {
+//                        //파이리
+//                        Charmender a = new Charmender();
+//                        copyField(a, oppos[i]);
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(new Charmender().hp);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//                    }
+//                    case 1: {
+//                        //리자드
+//                        Charizard b = new Charizard();
+//                        copyField(b, oppos[i]);
+//
+////                        oppos[i] = new Charizard();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//                    }
+//                    case 2: {
+//                        //리자몽
+//                        Charmeleon c = new Charmeleon();
+//                        copyField(c, oppos[i]);
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 3: {
+//                        //꼬부기
+//                        oppos[i] = new Kkobook();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 4: {
+//                        //어니부기
+//
+//                        oppos[i] = new Earnybook();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 5: {
+//                        //거북왕
+//                        oppos[i] = new Kingbook();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//
+//                    }
+//                    case 6: {
+//                        //이상해씨
+//                        oppos[i] = new Esangssi();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 7: {
+//                        //이상해풀
+//                        oppos[i] = new Esangpool();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 8: {
+//                        //이상해꽃
+//                        oppos[i] = new Esangkkot();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 9: {
+//                        //피카츄
+//                        oppos[i] = new Pikachu();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 10: {
+//                        //라이츄
+//                        oppos[i] = new Raichu();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 11: {
+//                        //구구
+//                        oppos[i] = new Googoo();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 12: {
+//                        //피존
+//                        oppos[i] = new Pidgeon();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 13: {
+//                        //피존투
+//                        oppos[i] = new Pidgeontwo();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 14: {
+//                        //꼬렛
+//                        oppos[i] = new Rattata();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 15: {
+//                        //레트라
+//
+//                        oppos[i] = new Raticate();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 16: {
+//                        //꼬마돌
+//                        oppos[i] = new Kkomastone();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 17: {
+//                        //데구리
+//                        oppos[i] = new Deguri();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 18: {
+//                        //딱구리
+//                        oppos[i] = new Ddakguri();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//                    case 19: {
+//                        //롱스톤
+//                        oppos[i] = new Longstone();
+//                        System.out.println(oppos[i].hp);
+//                        oppos[i].takeDamage(40);
+//                        System.out.println(i+"번째 포켓몬 hp = " + oppos[i].hp);
+//                        System.out.println(i+"번째 포켓몬 =" + oppos[i].name);
+//                        break;
+//
+//                    }
+//
+//            }
         }
     }
     public void changePoketmon(Pocketmon p, int num){
@@ -481,32 +498,12 @@ public class BattlePanel {
     public void useItem(Pocketmon pocketmon, Pocketmon oppo){
 
     }
-    public void setMyPoke(Pocketmon t, int i){
-
-        oppos[i] = t;
-        System.out.println("in setMyPoke =" + t.hp);
-        System.out.println("in setMyPoke =" + t.name);
-        System.out.println("in setMyPoke =" + oppos[i].name);
-        System.out.println("in setMyPoke =" + oppos[i].name);
-    }
 
     public void goBaattle(int rangeF, int rangeB) {
 
         setmyPocketmon();
         setOppoPocketmon(rangeF, rangeB);
-        Pocketmon s = new Pocketmon();
-        setMyPoke(s, 0);
-        setMyPoke(s, 1);
-        setMyPoke(s, 2);
-        System.out.println("setmypoke 나오자마자 체크" + oppos[0].hp);
-        System.out.println("setmypoke 나오자마자 체크" + oppos[1].hp);
-        System.out.println("setmypoke 나오자마자 체크" + oppos[0].name);
-        System.out.println("setmypoke 나오자마자 체크" + oppos[1].name);
-        Pocketmon[] oppos = new Pocketmon[5];
-        oppos[0] = new Charmender();
-        oppos[1] = new Charizard();
-        oppos[2] = new Charmeleon();
-        oppos[3] = s;
+
 
         System.out.println("setOppo 나와서 객체를 정리해보자!");
         for (int i = 0; i < oppos.length; i++) {
@@ -582,4 +579,7 @@ public class BattlePanel {
 
     }
 
+    public void setMyPoke(Pocketmon oppos, int count) {
+
+    }
 }

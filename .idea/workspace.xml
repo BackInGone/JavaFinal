@@ -9,6 +9,22 @@
       <change beforePath="$PROJECT_DIR$/src/Main/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/Charizard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Charizard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/Charmeleon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Charmeleon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Charmender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Charmender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Ddakguri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Ddakguri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Deguri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Deguri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Earnybook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Earnybook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Esangkkot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Esangkkot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Esangpool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Esangpool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Esangssi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Esangssi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Googoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Googoo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Kingbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Kingbook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Kkobook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Kkobook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Kkomastone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Kkomastone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pidgeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pidgeon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pidgeontwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pidgeontwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Raichu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Raichu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +156,7 @@
       <workItem from="1683726680319" duration="49482000" />
       <workItem from="1683908084586" duration="1525000" />
       <workItem from="1683923470226" duration="38709000" />
-      <workItem from="1684093986356" duration="99428000" />
+      <workItem from="1684093986356" duration="118608000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>
@@ -401,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684450250026</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="First">
+      <created>1684517451903</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1684517451903</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

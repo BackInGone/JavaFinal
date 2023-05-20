@@ -2,7 +2,7 @@ package pocketmon;
 
 public class Esangkkot extends Esangpool {
 
-    Esangkkot(int level) {
+    public Esangkkot(int level) {
         super(level);
         this.hp = 500;
         this.level = level;

@@ -1,7 +1,7 @@
 package pocketmon;
 
 public class Raichu extends Pikachu{
-    Raichu(int level) {
+    public Raichu(int level) {
         super(level);
         this.hp = 400;
         this.level = level;

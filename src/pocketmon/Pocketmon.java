@@ -77,7 +77,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoCharizard(){
-        Charizard c = new Charizard();
+        Charizard c = new Charizard(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -99,7 +99,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoCharmeleon(){
-        Charmeleon c = new Charmeleon();
+        Charmeleon c = new Charmeleon(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -121,7 +121,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoKkobook(){
-        Kkobook c = new Kkobook();
+        Kkobook c = new Kkobook(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -143,7 +143,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoEarny(){
-        Earnybook c = new Earnybook();
+        Earnybook c = new Earnybook(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -165,7 +165,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoKingbook(){
-        Kingbook c = new Kingbook();
+        Kingbook c = new Kingbook(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -187,7 +187,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoEssangssi(){
-        Esangssi c = new Esangssi();
+        Esangssi c = new Esangssi(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -209,7 +209,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoEssangpool(){
-        Esangpool c = new Esangpool();
+        Esangpool c = new Esangpool(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -231,7 +231,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoEssankkot(){
-        Esangkkot c = new Esangkkot();
+        Esangkkot c = new Esangkkot(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -253,7 +253,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoPikachu(){
-        Pikachu c = new Pikachu();
+        Pikachu c = new Pikachu(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -275,7 +275,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoRaichu(){
-        Raichu c = new Raichu();
+        Raichu c = new Raichu(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -297,7 +297,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoGoogoo(){
-        Googoo c = new Googoo();
+        Googoo c = new Googoo(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -319,7 +319,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoPidgeon(){
-        Pidgeon c = new Pidgeon();
+        Pidgeon c = new Pidgeon(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -341,7 +341,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoPidgeontwo(){
-        Pidgeontwo c = new Pidgeontwo();
+        Pidgeontwo c = new Pidgeontwo(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -363,7 +363,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoRattata(){
-        Rattata c = new Rattata();
+        Rattata c = new Rattata(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -385,7 +385,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoRaticate(){
-        Raticate c = new Raticate();
+        Raticate c = new Raticate(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -407,7 +407,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoKkomastone(){
-        Kkomastone c = new Kkomastone();
+        Kkomastone c = new Kkomastone(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -429,7 +429,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoDeguri(){
-        Deguri c = new Deguri();
+        Deguri c = new Deguri(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -451,7 +451,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoDdakguri(){
-        Ddakguri c = new Ddakguri();
+        Ddakguri c = new Ddakguri(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;
@@ -473,7 +473,7 @@ public class Pocketmon {
         this.skill = c.skill;
     }
     public void setFieldtoLongstone(){
-        Longstone c = new Longstone();
+        Longstone c = new Longstone(level);
         this.exist = c.exist;
         this.index = c.index;
         this.level = c.level;

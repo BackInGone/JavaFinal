@@ -7,9 +7,9 @@ public class ThirdPocketmon extends Pocketmon{
     public static int level;
     public static  int exp;
     public static int hp;
-    public static int attack;
-    public static int defence;
-    public static int accuracy;
+    public static float attack;
+    public static float defence;
+    public static float accuracy;
     public static String type;
     public static String name;
     public static int depth;

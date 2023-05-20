@@ -1,7 +1,7 @@
 package pocketmon;
 
 public class Earnybook extends Kkobook {
-    Earnybook(int level) {
+    public Earnybook(int level) {
         super(level);
         this.hp = 250;
         this.level = level;

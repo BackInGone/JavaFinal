@@ -1,7 +1,7 @@
 package pocketmon;
 
 public class Esangssi extends Pocketmon{
-    Esangssi(int level) {
+    public Esangssi(int level) {
         this.hp = 150;
         this.level = level;
         this.attack = 1F;

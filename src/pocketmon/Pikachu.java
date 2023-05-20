@@ -1,9 +1,9 @@
 package pocketmon;
 
 public class Pikachu extends Pocketmon{
-    Pikachu(int level) {
+    public Pikachu(int level) {
 
-        this.hp = 159;
+        this.hp = 150;
         this.level = level;
         this.attack = 1F;
         this.defence = 1F;

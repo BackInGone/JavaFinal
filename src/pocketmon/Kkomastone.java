@@ -1,7 +1,7 @@
 package pocketmon;
 
 public class Kkomastone extends Pocketmon {
-    Kkomastone(int level) {
+    public Kkomastone(int level) {
         this.hp = 100;
         this.level = level;
         this.attack = 1.1F;

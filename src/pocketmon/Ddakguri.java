@@ -2,7 +2,7 @@ package pocketmon;
 
 public class Ddakguri extends Deguri{
 
-        Ddakguri(int level) {
+        public Ddakguri(int level) {
             super(level);
             this.hp = 600;
             this.level = level;

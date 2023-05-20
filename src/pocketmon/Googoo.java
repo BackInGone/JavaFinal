@@ -1,7 +1,7 @@
 package pocketmon;
 
 public class Googoo extends Pocketmon{
-    Googoo(int level) {
+    public Googoo(int level) {
         this.hp = 100;
         this.level = level;
         this.attack = 1F;

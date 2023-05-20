@@ -2,7 +2,7 @@ package pocketmon;
 
 public class Kkobook extends Pocketmon{
 
-    Kkobook(int level) {
+    public Kkobook(int level) {
         this.hp = 150;
         this.level = level;
         this.attack = 1.1F;

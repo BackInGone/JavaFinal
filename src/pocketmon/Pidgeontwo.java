@@ -1,7 +1,7 @@
 package pocketmon;
 
 public class Pidgeontwo extends Pidgeon{
-    Pidgeontwo(int level) {
+    public Pidgeontwo(int level) {
         super(level);
         this.hp = 400;
         this.level = level;

@@ -60,10 +60,10 @@ public class GamePanel extends JPanel implements Runnable{
             Scanner scan = new Scanner(System.in);
             int startPoke = scan.nextInt();
 
-            switch (startPoke){
+           /**/ switch (startPoke){
                 case 1: {
                     FirstPocketmon firstpoke = new FirstPocketmon();
-                    Esangssi esang = new Esangssi();
+                    Esangssi esang = new Esangssi(5);
                     firstpoke.hp = esang.hp;
                     firstpoke.type = esang.type;
                     firstpoke.attack = esang.attack;
@@ -78,7 +78,7 @@ public class GamePanel extends JPanel implements Runnable{
                 }
                 case 2: {
                     FirstPocketmon firstpoke = new FirstPocketmon();
-                    Charmender esang = new Charmender();
+                    Charmender esang = new Charmender(5);
                     firstpoke.hp = esang.hp;
                     firstpoke.type = esang.type;
                     firstpoke.attack = esang.attack;
@@ -93,7 +93,7 @@ public class GamePanel extends JPanel implements Runnable{
                 }
                 case 3: {
                     FirstPocketmon firstpoke = new FirstPocketmon();
-                    Kkobook esang = new Kkobook();
+                    Kkobook esang = new Kkobook(5);
                     firstpoke.hp = esang.hp;
                     firstpoke.type = esang.type;
                     firstpoke.attack = esang.attack;

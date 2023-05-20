@@ -1,7 +1,7 @@
 package pocketmon;
 
 public class Deguri extends Kkomastone {
-    Deguri(int level) {
+    public Deguri(int level) {
         super(level);
         this.hp = 300;
         this.level = level;

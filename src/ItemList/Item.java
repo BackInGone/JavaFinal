@@ -35,7 +35,10 @@ public class Item {
 
        public static HashMap<String, Integer> itemlist3 = new HashMap<String, Integer>();
 
-        public void makeitemlist (HashMap<String, Integer> list, int key) {
+    public Item() throws InterruptedException {
+    }
+
+    public void makeitemlist (HashMap<String, Integer> list, int key) {
             list.put("potion", 1);
             list.put("superpotion", 2);
             list.put("monsterball", 3);

@@ -64,29 +64,33 @@ public class GamePanel extends JPanel implements Runnable{
                 case 1: {
                     FirstPocketmon firstpoke = new FirstPocketmon();
                     Esangssi esang = new Esangssi(5);
-                    firstpoke.hp = esang.hp;
-                    firstpoke.type = esang.type;
-                    firstpoke.attack = esang.attack;
-                    firstpoke.defence = esang.defence;
-                    firstpoke.maxPP = esang.maxPP;
-                    firstpoke.PP = esang.PP;
-                    firstpoke.skill = esang.skill;
-                    firstpoke.name = esang.name;
+                    FirstPocketmon.hp = esang.hp;
+                    FirstPocketmon.type = esang.type;
+                    FirstPocketmon.attack = esang.attack;
+                    FirstPocketmon.defence = esang.defence;
+                    FirstPocketmon.maxPP = esang.maxPP;
+                    FirstPocketmon.PP = esang.PP;
+                    FirstPocketmon.skill = esang.skill;
+                    FirstPocketmon.name = esang.name;
+                    FirstPocketmon.level = esang.level;
+
                     FirstPocketmon.exist = true;
+
                     System.out.println("이상해씨를 선택했습니다!");
                     break;
                 }
                 case 2: {
                     FirstPocketmon firstpoke = new FirstPocketmon();
                     Charmender esang = new Charmender(5);
-                    firstpoke.hp = esang.hp;
-                    firstpoke.type = esang.type;
-                    firstpoke.attack = esang.attack;
-                    firstpoke.defence = esang.defence;
-                    firstpoke.maxPP = esang.maxPP;
-                    firstpoke.PP = esang.PP;
-                    firstpoke.name = esang.name;
-                    firstpoke.skill = esang.skill;
+                    FirstPocketmon.hp = esang.hp;
+                    FirstPocketmon.type = esang.type;
+                    FirstPocketmon.attack = esang.attack;
+                    FirstPocketmon.defence = esang.defence;
+                    FirstPocketmon.maxPP = esang.maxPP;
+                    FirstPocketmon.PP = esang.PP;
+                    FirstPocketmon.name = esang.name;
+                    FirstPocketmon.skill = esang.skill;
+                    FirstPocketmon.level = esang.level;
                     FirstPocketmon.exist = true;
                     System.out.println("파이리를 선택했습니다!");
                     break;
@@ -94,19 +98,32 @@ public class GamePanel extends JPanel implements Runnable{
                 case 3: {
                     FirstPocketmon firstpoke = new FirstPocketmon();
                     Kkobook esang = new Kkobook(5);
-                    firstpoke.hp = esang.hp;
-                    firstpoke.type = esang.type;
-                    firstpoke.attack = esang.attack;
-                    firstpoke.defence = esang.defence;
-                    firstpoke.maxPP = esang.maxPP;
-                    firstpoke.PP = esang.PP;
-                    firstpoke.name = esang.name;
-                    firstpoke.skill = esang.skill;
+                    FirstPocketmon.hp = esang.hp;
+                    FirstPocketmon.type = esang.type;
+                    FirstPocketmon.attack = esang.attack;
+                    FirstPocketmon.defence = esang.defence;
+                    FirstPocketmon.maxPP = esang.maxPP;
+                    FirstPocketmon.PP = esang.PP;
+                    FirstPocketmon.name = esang.name;
+                    FirstPocketmon.skill = esang.skill;
+                    FirstPocketmon.level = esang.level;
                     FirstPocketmon.exist = true;
                     System.out.println("꼬부기를 선탁했습니다. ");
                     break;
                 }
             }
+                SecondPocketmon sec = new SecondPocketmon();
+                Pikachu f = new Pikachu(5);
+            SecondPocketmon.hp = f.hp;
+            SecondPocketmon.type = f.type;
+            SecondPocketmon.attack = f.attack;
+            SecondPocketmon.defence = f.defence;
+            SecondPocketmon.maxPP = f.maxPP;
+            SecondPocketmon.PP = f.PP;
+            SecondPocketmon.name = f.name;
+            SecondPocketmon.skill = f.skill;
+            SecondPocketmon.level = f.level;
+            SecondPocketmon.exist = true;
 
 
 

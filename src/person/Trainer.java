@@ -14,6 +14,18 @@ public class Trainer extends Person {
         List<Pocketmon> availablePokemon = new ArrayList<Pocketmon>(); //해보고 싶었는데
 
 
+        FirstPocketmon a = new FirstPocketmon();
+        SecondPocketmon b = new SecondPocketmon();
+        ThirdPocketmon c = new ThirdPocketmon();
+        FourthPocketmon d = new FourthPocketmon();
+        FifthPocketmon e = new FifthPocketmon();
+        SixthPocketmon f = new SixthPocketmon();
+        public void setTrainerPoke(){
+            for (int i = 0; i < 6; i++) {
+                myPokeList[i] = 'a';
+                int code = 65;}
+        }
+        static char[] myPokeList = new char[6];
 
 
 

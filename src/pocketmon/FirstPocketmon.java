@@ -17,8 +17,9 @@ public class FirstPocketmon extends Pocketmon{
 
     public static float hpgrow;
     public static float attackgrow;
-    public static float dependgrow;
+    public static float defencegrow;
     public static boolean isParalyzed;
+    public static boolean isPoisoned;
 
     public static int[] maxPP = new int[4];
     public static int[] PP = new int[4];

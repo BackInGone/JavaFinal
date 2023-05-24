@@ -494,5 +494,31 @@ public class Pocketmon {
         this.PP = c.PP;
         this.skill = c.skill;
     }
+    public void setFieldtoFirst(){
+        this.exist = FirstPocketmon.exist;
+        this.index = FirstPocketmon.index;
+        this.level = FirstPocketmon.level;
+        this.exp = FirstPocketmon.exp;
+        this.hp = FirstPocketmon.hp;
+        this.attack = FirstPocketmon.attack;
+        this.defence = FirstPocketmon.defence;
+        this.accuracy = FirstPocketmon.accuracy;
+        this.type = FirstPocketmon.type;
+        this.name = FirstPocketmon.name;
+        this.depth = FirstPocketmon.depth;
+        this.hpgrow = FirstPocketmon.hpgrow;
+        this.attackgrow = FirstPocketmon.attackgrow;
+        this.defencegrow = FirstPocketmon.defencegrow;
+        this.isPoisoned = FirstPocketmon.isPoisoned;
+        this.isParalyzed = FirstPocketmon.isParalyzed;
+        this.maxPP = FirstPocketmon.maxPP;
+        this.PP = FirstPocketmon.PP;
+        this.skill = FirstPocketmon.skill;
+    }
+    public void setFieldtoSecond(){}
+    public void setFieldtoThird(){}
+    public void setFieldtoFourth(){}
+    public void setFieldtoFifth(){}
+    public void setFieldtoSixth(){}
     }
 

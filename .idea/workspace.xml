@@ -5,31 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pocketmon/BattlePoke.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemList/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ItemList/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ItemList/ItemList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Ddakguri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Ddakguri.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Deguri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Deguri.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Earnybook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Earnybook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Esangkkot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Esangkkot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Esangpool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Esangpool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Esangssi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Esangssi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/person/Trainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/person/Trainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/FifthPocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/FifthPocketmon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/FirstPocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/FirstPocketmon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/FourthPocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/FourthPocketmon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Googoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Googoo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Kingbook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Kingbook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Kkobook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Kkobook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Kkomastone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Kkomastone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Longstone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Longstone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pidgeon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pidgeon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pidgeontwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pidgeontwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Raichu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Raichu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Raticate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Raticate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Rattata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Rattata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/SecondPocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/SecondPocketmon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/SixthPocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/SixthPocketmon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/ThirdPocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/ThirdPocketmon.java" afterDir="false" />
@@ -164,7 +150,7 @@
       <workItem from="1683726680319" duration="49482000" />
       <workItem from="1683908084586" duration="1525000" />
       <workItem from="1683923470226" duration="38709000" />
-      <workItem from="1684093986356" duration="133889000" />
+      <workItem from="1684093986356" duration="188329000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>
@@ -439,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684589009868</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="First">
+      <created>1684618537338</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1684618537338</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

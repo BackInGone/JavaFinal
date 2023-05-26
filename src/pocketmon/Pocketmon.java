@@ -190,9 +190,16 @@ public class Pocketmon {
     public boolean setParalyzed(int depth){
 
         int possible = (int)(Math.random()*10);
-        if(possible>7){
-        isParalyzed=true;}else{isParalyzed=false;}
-        return isParalyzed;
+        if(isParalyzed){return true;}
+        else {
+            if (possible > 7) {
+                isParalyzed = true;
+                System.out.println("상대방이 감전되었다!");
+            } else {
+                isParalyzed = false;
+            }
+            return isParalyzed;
+        }
     }
 
 
@@ -772,6 +779,29 @@ public class Pocketmon {
         this.PP = SixthPocketmon.PP;
         this.skill = SixthPocketmon.skill;
         BattlePoke.current = 'f';
+    }
+    public void setFieldtoBattle(BattlePoke p){
+
+        this.exist = BattlePoke.exist;
+        this.index = BattlePoke.index;
+        this.level = BattlePoke.level;
+        this.exp = BattlePoke.exp;
+        this.hp = BattlePoke.hp;
+        this.attack = BattlePoke.attack;
+        this.defence = BattlePoke.defence;
+        this.accuracy = BattlePoke.accuracy;
+        this.type = BattlePoke.type;
+        this.name = BattlePoke.name;
+        this.depth = BattlePoke.depth;
+        this.hpgrow = BattlePoke.hpgrow;
+        this.attackgrow = BattlePoke.attackgrow;
+        this.defencegrow = BattlePoke.defencegrow;
+        this.isPoisoned = BattlePoke.isPoisoned;
+        this.isParalyzed = BattlePoke.isParalyzed;
+        this.maxPP = BattlePoke.maxPP;
+        this.PP = BattlePoke.PP;
+        this.skill = BattlePoke.skill;
+        BattlePoke.current = ' ';
     }
     }
 

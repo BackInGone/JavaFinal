@@ -187,14 +187,14 @@ public class Pocketmon {
 
     }
 
-    public boolean setParalyzed(){
-        isParalyzed=true;
+    public boolean setParalyzed(int depth){
+
+        int possible = (int)(Math.random()*10);
+        if(possible>7){
+        isParalyzed=true;}else{isParalyzed=false;}
         return isParalyzed;
     }
 
-    public int ParalyzeDepth(int depth){
-        return depth;
-    }
 
     public void setPoison(){}
     public void setBurned(){}

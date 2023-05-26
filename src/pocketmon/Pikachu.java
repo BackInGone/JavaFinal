@@ -16,6 +16,10 @@ public class Pikachu extends Pocketmon{
         this.maxPP = maxPP;
         this.PP = PP;
         this.skill = skill;
+        this.maxPP[1] = 20;
+        this.maxPP[2] = 15;
+        this.skill[1] = 1;
+        this.skill[2] = 4;
     }
 
 

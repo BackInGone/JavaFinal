@@ -85,12 +85,10 @@ public class Skill {
     }   //3
     public void electricshock(Pocketmon opponent) {     //4
         opponent.takeDamage(60);
-        opponent.setParalyzed();
-        opponent.ParalyzeDepth(30);
+        opponent.setParalyzed(30);
     }   //4
     public void electromagnetic(Pocketmon opponent) {
-        opponent.setParalyzed();
-        opponent.ParalyzeDepth(100);
+        opponent.setParalyzed(100);
     }     //5
     public void ember(Pocketmon opponent) {
         opponent.takeDamage(60);

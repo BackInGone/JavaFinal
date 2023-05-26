@@ -632,12 +632,12 @@ public class BattlePanel {
         }
     }
     public boolean contains(String[] available, String value){
-        for(String element : available){
-            if(element.equals(value)){
+
+        for (int i = 0; i < available.length; i++) {
+            if(available[i].equals(value)){
                 return true;
-            } else {
-                break;}
-            }return false;
+            }
+        }return false;
     }
 
     public void oppoFaintCheck(Pocketmon t){

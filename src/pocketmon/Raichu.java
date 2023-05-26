@@ -13,8 +13,13 @@ public class Raichu extends Pikachu{
         this.hpgrow = 1.015F;
         this.attackgrow = 1.02F;
         this.defencegrow = 1.015F;
-        this.maxPP = maxPP;
+        this.maxPP[1] = 20;
+        this.maxPP[2] = 15;
+        this.maxPP[3] = 10;
         this.PP = PP;
         this.skill = skill;
+        this.skill[1] = 1;
+        this.skill[2] = 4;
+        this.skill[3] = 5;
     }
 }

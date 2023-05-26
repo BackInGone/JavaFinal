@@ -31,6 +31,7 @@ public class BattlePanel {
     Scanner scan = new Scanner(System.in);
 
 
+
     public boolean isTrainer;
     public int oppoPokeNum;
     public int myPokeNum=0;
@@ -66,7 +67,6 @@ public class BattlePanel {
         return count;
     }
 
-
     public BattlePanel() throws InterruptedException {
 
         //if(트레이너 끼리 일때)
@@ -81,13 +81,20 @@ public class BattlePanel {
             goBaattle(rangeF,rangeB, battleLevel);
             rangeF = (int) (Math.random() * 3);
             rangeB = (int) (Math.random() * 20);
+            Battle1.dispose();
+            Battle1.setVisible(false);
+        GamePanel.playerY =40;
         }
+
 
         Battle1.setSize(400,600);
         Battle1.add(battlepanel);
         Battle1.getContentPane().setLayout(null);
         Battle1.setVisible(true);
     }
+
+
+
     public void setmyPocketmon(){
 
         System.out.println("현재 보유 포켓몬은 " + CountPocketmon() + "마리");
@@ -112,10 +119,12 @@ public class BattlePanel {
                 battlePoke.maxPP = a.maxPP;
                 battlePoke.PP = a.PP;
                 battlePoke.skill = a.skill;
+
+                battlePoke.current = 'a';
             }
             System.out.println(battlePoke.name+ "["+battlePoke.level+"]" + "[HP = " + battlePoke.hp + "]" );
         }
-        if(b.exist){
+        else if(b.exist){
             if(b.hp!=0){
                 battlePoke.exist = b.exist;
                 battlePoke.index = b.index;
@@ -135,10 +144,12 @@ public class BattlePanel {
                 battlePoke.isParalyzed = b.isParalyzed;
                 battlePoke.maxPP = b.maxPP;
                 battlePoke.PP = b.PP;
-                battlePoke.skill = b.skill;}
+                battlePoke.skill = b.skill;
+                battlePoke.current = 'b';
+            }
             System.out.println(b.name+ "["+b.level+"]" + "[HP = " + b.hp + "]" );
         }
-        if(c.exist){
+        else if(c.exist){
             if(c.hp!=0){
             battlePoke.exist = c.exist;
             battlePoke.index = c.index;
@@ -158,10 +169,12 @@ public class BattlePanel {
             battlePoke.isParalyzed = c.isParalyzed;
             battlePoke.maxPP = c.maxPP;
             battlePoke.PP = c.PP;
-            battlePoke.skill = c.skill;}
+            battlePoke.skill = c.skill;
+                battlePoke.current = 'c';
+            }
             System.out.println(c.name+ "["+c.level+"]" + "[HP = " + c.hp + "]" );
         }
-        if(d.exist){
+        else if(d.exist){
             if(d.hp!=0){
                 battlePoke.exist = d.exist;
                 battlePoke.index = d.index;
@@ -181,10 +194,12 @@ public class BattlePanel {
                 battlePoke.isParalyzed = d.isParalyzed;
                 battlePoke.maxPP = d.maxPP;
                 battlePoke.PP = d.PP;
-                battlePoke.skill = d.skill;}
+                battlePoke.skill = d.skill;
+                battlePoke.current = 'd';
+            }
                 System.out.println(d.name+ "["+d.level+"]" + "[HP = " + d.hp + "]" );
             }
-        if(e.exist){
+        else if(e.exist){
             if(e.hp!=0){
             battlePoke.exist = e.exist;
             battlePoke.index = e.index;
@@ -204,10 +219,12 @@ public class BattlePanel {
             battlePoke.isParalyzed = e.isParalyzed;
             battlePoke.maxPP = e.maxPP;
             battlePoke.PP = e.PP;
-            battlePoke.skill = e.skill;}
+            battlePoke.skill = e.skill;
+                battlePoke.current = 'e';
+            }
             System.out.println(e.name+ "["+e.level+"]" + "[HP = " + e.hp + "]" );
         }
-        if(f.exist){
+        else if(f.exist){
             if(f.hp!=0){
             battlePoke.exist = f.exist;
             battlePoke.index = f.index;
@@ -227,10 +244,15 @@ public class BattlePanel {
             battlePoke.isParalyzed = f.isParalyzed;
             battlePoke.maxPP = f.maxPP;
             battlePoke.PP = f.PP;
-            battlePoke.skill = f.skill;}
+            battlePoke.skill = f.skill;
+                battlePoke.current = 'f';
+
+            }
             System.out.println(f.name+ "["+f.level+"]" + "[HP = " + f.hp + "]" );
         }
     }
+
+
     public void setOppoPocketmon(int rangeF, int rangeB, int batLevel){
 
         int i =0;
@@ -487,32 +509,140 @@ public class BattlePanel {
                        }
                 else {continue;}
             }
+        for (int j = num; j < 6; j++) {
+            oppos[j] = new Pocketmon();
+            oppos[j].hp = 0;
+        }
         }
 
 
-    public void changePoketmon(Pocketmon p, int num){
+    public void changePoketmon(int num){
+
+        String[] avaiable = new String[6];
+        int index=0;
 
         if (num==1) { //내 포켓몬 변경
-//            for(int i=0;i<myPoke.length;i++){
-                if(p.exist&&(p.hp!=0)){
-                    System.out.println(p.name + " 의  hp = " + p.hp);
+                if(battlePoke.exist&&(battlePoke.hp!=0)){  // 가능한 내 포켓몬 리스트 출력
+        if(a.exist){
+            System.out.println(a.name + "HP = " + a.hp + "Level = " + a.level);
+        }if(b.exist){
+            System.out.println(b.name + "HP = " + b.hp + "Level = " + b.level);
+        }if(c.exist){
+            System.out.println(c.name + "HP = " + c.hp + "Level = " + c.level);
+        }if(d.exist){
+            System.out.println(d.name + "HP = " + d.hp + "Level = " + d.level);
+        }if(e.exist){
+            System.out.println(e.name + "HP = " + e.hp + "Level = " + e.level);
+        }if(f.exist){
+            System.out.println(f.name + "HP = " + f.hp + "Level = " + f.level);
+        }}
+
+                    for (int i = 0; i < 6; i++) {
+
+                    switch (index){
+                        case 0 :
+                        if(a.exist){
+                            avaiable[index] = a.name;
+                            index++;
+                    } case 1 :
+                            if(b.exist){
+                                avaiable[index] = b.name;
+                                index++;
+                    } case 2 :
+                            if(c.exist){
+                                avaiable[index] = c.name;
+                                index++;
+                    } case 3: if(d.exist){
+                            avaiable[index] = d.name;
+                            index++;
+                    } case 4: if(e.exist){
+                            avaiable[index] = e.name;
+                            index++;
+                    } case 5: if(f.exist){
+                            avaiable[index] = f.name;
+                            index++;
+                    }
                 }
-//            }
+                    }
+            System.out.println("최종 가능한 포켓몬들 ");
+            for (int i = 0; i < 6; i++) {
+                System.out.println(avaiable[i]);
+            }
+
+
 
             while(true){
+                System.out.println("바꿀 포켓몬을 입력하세요 ");
+            String  next = scan.next();
+            if(contains(avaiable, next)){
+                System.out.println("컨테인은 왔지? next 는" + next);
+                if (next.equals(a.name)){
+                    battlePoke.setFieldtoFirst();
+                    System.out.println("a 포켓몬 출력");
+                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
+                    break;
+                }if (next.equals(b.name)){
+                    battlePoke.setFieldtoSecond();
+                    System.out.println("b 포켓몬 출력");
+                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
 
-            int next = scan.nextInt();
-            if(myPoke[next]!=null){
-            if(myPoke[next].exist&&(myPoke[next].hp!=0)){
-                myPokeNum= next;
-                break;
-            } }else {
-                System.out.println("change pocketmon test");
-            }}
+                    break;
+                }else if (c.name.equals(next)){
+                    battlePoke.setFieldtoThird(battlePoke);
+                    System.out.println("c 포켓몬 출력");
+                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
+
+                    break;
+
+                }else if (d.name.equals(next)){
+                    battlePoke.setFieldtoFourth(battlePoke);
+                    System.out.println("d 포켓몬 출력");
+                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
+
+                    break;
+
+                }else if (e.name.equals(next)){
+                    battlePoke.setFieldtoFifth(battlePoke);
+                    System.out.println("e 포켓몬 출력");
+                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
+
+                    break;
+
+                }else if (f.name.equals(next)){
+                    battlePoke.setFieldtoSixth(battlePoke);
+                    System.out.println("f 포켓몬 출력");
+                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
+
+                    break;
+                }                }
+            else{continue;}
+            }
+
+
         }
+
+
+
+
+
+
         else if(num==2) { //상대 포켓몬 변경
             oppoPokeNum++;
             num=0;
+        }
+    }
+    public boolean contains(String[] available, String value){
+        for(String element : available){
+            if(element.equals(value)){
+                return true;
+            } else {
+                break;}
+            }return false;
+    }
+
+    public void oppoFaintCheck(Pocketmon t){
+        if(t.hp==0) {
+            oppoPokeNum++;
         }
     }
     public void useItem(Pocketmon pocketmon, Pocketmon oppo){
@@ -528,19 +658,19 @@ public class BattlePanel {
         setmyPocketmon();
         setOppoPocketmon(rangeF, rangeB, Level);
 
+//
+//        System.out.println("setOppo 나와서 객체를 정리해보자!");
+//        for (int i = 0; i < oppos.length; i++) {
+//            if (oppos[i] != null) {
+//                System.out.println(i + "번쨰 hp + " + oppos[i].hp);
+//                System.out.println(i + "번쨰 name + " + oppos[i].name);
+//            } else {
+//                System.out.println(i + "번째 포켓몬 없음");
+//            }
+//        }
 
-        System.out.println("setOppo 나와서 객체를 정리해보자!");
-        for (int i = 0; i < oppos.length; i++) {
-            if (oppos[i]!=null){
-            System.out.println(i + "번쨰 hp + "+ oppos[i].hp);
-            System.out.println(i + "번쨰 name + "+ oppos[i].name);
-        } else {
-                System.out.println(i + "번째 포켓몬 없음");
-            }}
 
-
-
-       //배틀 시작
+        //배틀 시작
         String art = """ 
                  ________   ________   _________   _________   ___        _______       \s
                 |\\   __  \\ |\\   __  \\ |\\___   ___\\|\\___   ___\\|\\  \\      |\\  ___ \\      \s
@@ -561,21 +691,22 @@ public class BattlePanel {
                                                                                         \s                """;
         for (int i = 0; i < art.length(); i++) {
             System.out.print(art.charAt(i));
-            Thread.sleep(2);
+            Thread.sleep(1);
         }
 
-
-
-
-
-
-
-
-        while (true) {
+        while (((FirstPocketmon.hp + SecondPocketmon.hp +ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp +SixthPocketmon.hp) > 0)
+              && ((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) > 0))
+        {
             System.out.println("\n\n\n");
-        turnstack =0;
-            System.out.println("mypokenum = " + battlePoke);
-            System.out.println(battlePoke+ " 번째 내 포켓몬 상태 체크 =" + battlePoke.name + "레벨" + battlePoke.level);
+            System.out.println("\n\n\n");
+
+
+            while ((FirstPocketmon.hp + SecondPocketmon.hp +ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp +SixthPocketmon.hp) > 0) {//내턴 반복문
+                System.out.println("\n\n\n");
+                System.out.println("\n\n\n");
+                turnstack = 0;
+                System.out.println("mypokenum = " + battlePoke.index);
+                System.out.println(battlePoke.index + " 번째 내 포켓몬 상태 체크 =" + battlePoke.name + "레벨" + battlePoke.level + "현재 HP = [" + battlePoke.hp + "]");
 //            System.out.println(battlePokeNum+ " 번째 내 포켓몬 HP =" + battlePoke.level);
 //            System.out.println(battlePokeNum+ " 번째 내 포켓몬 LEVEL =" + battlePoke.hp);
 //        if(myPoke[myPokeNum].hp==0){
@@ -584,63 +715,112 @@ public class BattlePanel {
 //            changePoketmon(myPoke[myPokeNum],2);
 //            }
 
-            ////////////////내턴//////////////////
-            System.out.println("행동을 선택");
-            System.out.println("1. 기술사용");
-            System.out.println("2. 포켓몬변경");
-            System.out.println("3. 아이템사용");
-            System.out.println("4. 나가기");
-          int choiceNum =  scan.nextInt();
+                ////////////////내턴//////////////////
+                System.out.println("행동을 선택");
+                System.out.println("1. 기술사용");
+                System.out.println("2. 포켓몬변경");
+                System.out.println("3. 아이템사용");
+                System.out.println("4. 나가기");
+                int choiceNum = scan.nextInt();
 
 
+                /////////////////////////////기술사용/////////////////////////////
+                if (choiceNum >= 1 && choiceNum <= 4) {
+                } else {
+                    System.out.println("다시 입력");
+                    continue;
+                }
+                if (choiceNum == 1) {//기술사용
+                    System.out.println("무슨 기술을 사용하시겠어요?");
+                    for (int i = 1; i <= 4; i++) {
+                        System.out.println(battlePoke.skill[i]);
 
-          if(choiceNum>=1 && choiceNum<=4) {}
-            else {System.out.println("다시 입력");}
-            if(choiceNum==1){//기술사용
-                int selectSkill = scan.nextInt();
-                battleSkill.doSkill(oppos[oppoPokeNum], myPoke[myPokeNum].skill[selectSkill]);
-                System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
-                break;
+                    }
+                    int selectSkill = scan.nextInt();
+                    if (battlePoke.PP[1] == 0 && battlePoke.PP[2] == 0 && battlePoke.PP[3] == 0 && battlePoke.PP[4] == 0) {
+                        battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[0]);
+                        oppoFaintCheck(oppos[oppoPokeNum]);  //상대 포켓몬 죽으면 다음으로
+                        break;
+                    } else {
+                        if (battlePoke.PP[selectSkill] <= 0) {
+                            System.out.println("PP가 없습니다.");
+                            continue;
+                        } else {
+                            battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[selectSkill]);
+                            System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
+                            battlePoke.PP[selectSkill] -= 1;
+                            oppoFaintCheck(oppos[oppoPokeNum]);  //상대포켓몬 죽으면 다음으로
+                            break;
 
-            }else if(choiceNum==2){//포켓몬변경
-                changePoketmon(myPoke[myPokeNum],1);
-
-            } else if (choiceNum==3) {//아이템사용
-                System.out.println(Item.itemlist3);
-                useItem(myPoke[myPokeNum], oppos[oppoPokeNum]);
-
-
-            } else{ //나가기
-                if (isTrainer){
-                    System.out.println("배틀중에 도망갈 수 없습니다.");
+                        }
+                    }
                 }
 
+
+                /////////////////////////////포켓몬변경//////////////////////////
+                else if (choiceNum == 2) {
+                    changePoketmon(1);
+
+                }
+
+
+                ////////////////////////////아이템사용////////////////////////////
+                else if (choiceNum == 3) {//아이템사용
+                    System.out.println(Item.itemlist3);
+                    useItem(battlePoke, oppos[oppoPokeNum]);
+
+
+                    ///////////////////////////나가기/////////////////////////////////
+                } else { //나가기
+                    if (isTrainer) {
+                        System.out.println("배틀중에 도망갈 수 없습니다.");
+                    }
+                    else {
+                        Battle1.setVisible(false);
+                        break;}
+
+                }
+
+
+
+                if ((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) == 0 ||
+                        a.hp + b.hp + c.hp + d.hp + e.hp + f.hp == 0) {
+                    break;
+                }
+
+                if (battlePoke.hp == 0) {
+//                    changePoketmon();
+                }
+                if (oppos[oppoPokeNum].hp == 0) {
+                    changePoketmon(2);
+                }
             }
-            if((oppos[0].hp+oppos[1].hp+oppos[2].hp+oppos[3].hp+oppos[4].hp+oppos[5].hp)==0 ||
-                    myPoke[0].hp+myPoke[1].hp+myPoke[2].hp+myPoke[3].hp+myPoke[4].hp+myPoke[5].hp==0){
-                break;
-            }
-
-            if(myPoke[myPokeNum].hp==0){
-                changePoketmon(myPoke[myPokeNum],1);
-            }if(oppos[oppoPokeNum].hp==0){
-                changePoketmon(myPoke[myPokeNum],2);
-            }
-
-            /////////////////상대턴///////////////////
 
 
+                /////////////////상대턴///////////////////
 
+            if((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) > 0)
+            {
+                int skillnum = (int) (Math.random() * 4);
+                while (skillnum >= 1 && skillnum < 5) {
+                    System.out.println("skillnum = " + skillnum);
+                    battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
+                    System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
+                    oppoFaintCheck(oppos[oppoPokeNum]);
+
+                    break;
+                }
+            } else{
+                System.out.println("더이상 적은 쓸 수 있는 포켓몬이 없다. ");
+                break;}
+
+//            if((FirstPocketmon.hp <= 0 || SecondPocketmon.hp <= 0 || ThirdPocketmon.hp <= 0 || FourthPocketmon.hp <= 0 || FifthPocketmon.hp <= 0 || SixthPocketmon.hp <= 0)){
+//        Battle1.setVisible(false);
+//        Battle1.dispose();
+//                break;
+//            }
         }
 
-
-
-        //적
-        //
-
     }
 
-    public void setMyPoke(Pocketmon oppos, int count) {
-
-    }
 }

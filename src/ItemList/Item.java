@@ -141,16 +141,6 @@ public class Item {
                 if (count == 6) { //내 리스트가 꽉차있다면 PC로
                     itemCenter.storePoketmon(oppos);
                 } else { //안곽차있다면 내 리스트로
-                    itemBattle.setMyPoke(oppos, count);
-//            oppos.hp = my.hp;
-//            oppos.name = my.name;
-//            oppos.type = my.type;
-//            oppos.level = my.level;
-//            oppos.hpgrow = my.hpgrow;
-//            oppos.accuracy = my.accuracy;
-//            oppos.attackgrow = my.attackgrow;
-//            oppos.defencegrow = my.defencegrow;
-//            my.exp=0;
                 }
             } else {
                 System.out.println("볼에서 탈출했다.");
@@ -206,16 +196,6 @@ public class Item {
             if (count == 6) { //내 리스트가 꽉차있다면 PC로
                 itemCenter.storePoketmon(oppos);
             } else { //안곽차있다면 내 리스트로
-                itemBattle.setMyPoke(oppos, count);
-//            oppos.hp = my.hp;
-//            oppos.name = my.name;
-//            oppos.type = my.type;
-//            oppos.level = my.level;
-//            oppos.hpgrow = my.hpgrow;
-//            oppos.accuracy = my.accuracy;
-//            oppos.attackgrow = my.attackgrow;
-//            oppos.defencegrow = my.defencegrow;
-//            my.exp=0;
             }
         } else {
             System.out.println("볼에서 탈출했다. ");

@@ -24,9 +24,9 @@ public class GamePanel extends JPanel implements Runnable{
 
         public static Thread gameThread = new Thread();
         KeyHandler keyH = new KeyHandler();
-        int playerX = 100;
-        int playerY = 100;
-        int playerSpeed = 10;
+        static int playerX = 100;
+        static int playerY = 100;
+        static int playerSpeed = 10;
 
         public int dispose1 = 0;
 //        GamePanel gamePanel = new GamePanel();
@@ -181,11 +181,10 @@ public class GamePanel extends JPanel implements Runnable{
 
 
         ////아래로 이탈하여
-        else if (playerY < 0) {
+        else if (playerY < 5) {
+            playerY =50;
             System.out.println("위로 이탈");
-            playerY = 30;
-
-            new BattlePanel();
+            BattlePanel startbattle = new BattlePanel();
             keyH.upPressed = false;
             keyH.downPressed = false;
             keyH.leftPressed = false;

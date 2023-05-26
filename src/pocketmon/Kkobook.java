@@ -14,7 +14,13 @@ public class Kkobook extends Pocketmon{
         this.attackgrow = 1.01F;
         this.defencegrow = 1.01F;
         this.maxPP = maxPP;
+        this.maxPP[1] = 20;
+        this.maxPP[2] = 10;
+        this.maxPP[3] = 8;
         this.PP = PP;
         this.skill = skill;
+        this.skill[1] = 1;
+        this.skill[2] = 6;
+        this.skill[3] = 7;
     }
 }

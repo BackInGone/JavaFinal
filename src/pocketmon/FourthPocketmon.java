@@ -19,9 +19,9 @@ public class FourthPocketmon extends Pocketmon{
     public static boolean isParalyzed;
     public static boolean isPoisoned;
 
-    public static int[] maxPP = new int[4];
-    public static int[] PP = new int[4];
-    public static int[] skill = new int[4];
+    public static int[] maxPP = new int[5];
+    public static int[] PP = new int[5];
+    public static int[] skill = new int[5];
 
 
 

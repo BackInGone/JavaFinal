@@ -1,5 +1,8 @@
 package skill;
 
+import Battle.Battle;
+import Main.BattlePanel;
+import pocketmon.BattlePoke;
 import pocketmon.Pocketmon;
 
 public class Skill {
@@ -11,8 +14,12 @@ public class Skill {
     boolean feature;
     int skillnum;
     int depth;
+    BattlePoke skillInBattlePoke = new BattlePoke();
 
     Thread poisonthread = new Thread();
+
+    public Skill() throws InterruptedException {
+    }
 
     public void useSkill(Pocketmon t, int skillnum){
         System.out.println("useSkill 들어오고 t.hp = " + t.hp);
@@ -20,16 +27,19 @@ public class Skill {
     }
 
      public void doSkill(Pocketmon t, int skillNum) {
-         System.out.println("doskill 들어오고 t.hp = " + t.hp);
+         System.out.println("doskill 들어오고 상대방 hp = " + t.hp);
         switch (skillNum) {
             case 0: {
-                System.out.println("case0 들어오고 t.hp = " + t.hp);
+                System.out.println("case0 들어오고 상대방 hp = " + t.hp);
                 nothing(t);
+                System.out.println("case0사용 후 상대방 hp =" + t.hp);
                 break;}
             case 1: {
-                System.out.println("case1 들어오고 t.hp = " + t.hp);
+                System.out.println("case1 들어오고 상대방.hp = " + t.hp);
                 tackle(t);
-                break;}
+                System.out.println("case1사용 후 상대방 hp =" + t.hp);
+
+                }
             case 2: {hardening(t); break;}
             case 3: {sandwind(t); break;}
             case 4: {electricshock(t); break;}
@@ -43,6 +53,13 @@ public class Skill {
             case 12: {vinewhip(t);break;}
             case 13: {petaldance(t);break;}
             case 14: {solarbeam(t);break;}
+            case 15: {thunder(t);break;}
+            case 16: {wingattack(t);break;}
+            case 17: {torando(t);break;}
+            case 18: {bite(t);break;}
+            case 19: {crush(t);break;}
+            case 20: {rockslice(t);break;}
+            case 21: {stoneshower(t);break;}
 
             }
         }
@@ -53,7 +70,8 @@ public class Skill {
     //Skilllist
     public void nothing(Pocketmon opponent) { //0
         System.out.println("nothing 들어오고 t.hp = " + opponent.hp);
-        opponent.takeDamage(20);
+        skillInBattlePoke.takeDamage(20);
+        opponent.takeDamage(30);
     } //0
     public void tackle(Pocketmon opponent) { //1
         System.out.println("tackle 들어오고 t.hp = " + opponent.hp);
@@ -80,28 +98,49 @@ public class Skill {
     }               //6
     public void fireball(Pocketmon opponent) {
         opponent.takeDamage(80);
-    }            //7
+    }     //7
     public void fireblast(Pocketmon opponent) {
         opponent.takeDamage(100);
-    }           //8
+    }   //8
     public void watergun(Pocketmon opponent) {
         opponent.takeDamage(60);
-    }            //9
+    }     //9
     public void bubblebeam(Pocketmon opponent) {
         opponent.takeDamage(80);
-    }          //10
+    }   //10
     public void hydropump(Pocketmon opponent) {
         opponent.takeDamage(100);
-    }           //11
+    }   //11
     public void vinewhip(Pocketmon opponent) {
         opponent.takeDamage(60);
-    }            //12
+    }     //12
     public void petaldance(Pocketmon opponent) {
         opponent.takeDamage(80);
-    }          //13
+    }   //13
     public void solarbeam(Pocketmon opponent) {
         opponent.takeDamage(100);
-    }       //14
+    }   //14
+    public void thunder(Pocketmon opponent) {
+        opponent.takeDamage(100);
+    }   //15
+    public void wingattack(Pocketmon opponent) {
+        opponent.takeDamage(50);
+    }   //16
+    public void torando(Pocketmon opponent) {
+        opponent.takeDamage(80);
+    }   //17
+    public void bite(Pocketmon opponent) {
+        opponent.takeDamage(50);
+    }   //18
+    public void crush(Pocketmon opponent) {
+        opponent.takeDamage(70);
+    }   //19
+    public void rockslice(Pocketmon opponent) {
+        opponent.takeDamage(60);
+    }   //20
+    public void stoneshower(Pocketmon opponent) {
+        opponent.takeDamage(90);
+    }   //21
 
 
  /*           public void paralyze() {

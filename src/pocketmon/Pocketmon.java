@@ -690,118 +690,234 @@ public class Pocketmon {
         BattlePoke.skill = SecondPocketmon.skill;
         BattlePoke.current = 'b';
     }
-    public void setFieldtoThird(BattlePoke p){
-        this.exist = ThirdPocketmon.exist;
-        this.index = ThirdPocketmon.index;
-        this.level = ThirdPocketmon.level;
-        this.exp = ThirdPocketmon.exp;
-        this.hp = ThirdPocketmon.hp;
-        this.attack = ThirdPocketmon.attack;
-        this.defence = ThirdPocketmon.defence;
-        this.accuracy = ThirdPocketmon.accuracy;
-        this.type = ThirdPocketmon.type;
-        this.name = ThirdPocketmon.name;
-        this.depth = ThirdPocketmon.depth;
-        this.hpgrow = ThirdPocketmon.hpgrow;
-        this.attackgrow = ThirdPocketmon.attackgrow;
-        this.defencegrow = ThirdPocketmon.defencegrow;
-        this.isPoisoned = ThirdPocketmon.isPoisoned;
-        this.isParalyzed = ThirdPocketmon.isParalyzed;
-        this.maxPP = ThirdPocketmon.maxPP;
-        this.PP = ThirdPocketmon.PP;
-        this.skill = ThirdPocketmon.skill;
+    public void setFieldtoThird(){
+        BattlePoke.exist = ThirdPocketmon.exist;
+        BattlePoke.index = ThirdPocketmon.index;
+        BattlePoke.level = ThirdPocketmon.level;
+        BattlePoke.exp = ThirdPocketmon.exp;
+        BattlePoke.hp = ThirdPocketmon.hp;
+        BattlePoke.attack = ThirdPocketmon.attack;
+        BattlePoke.defence = ThirdPocketmon.defence;
+        BattlePoke.accuracy = ThirdPocketmon.accuracy;
+        BattlePoke.type = ThirdPocketmon.type;
+        BattlePoke.name = ThirdPocketmon.name;
+        BattlePoke.depth = ThirdPocketmon.depth;
+        BattlePoke.hpgrow = ThirdPocketmon.hpgrow;
+        BattlePoke.attackgrow = ThirdPocketmon.attackgrow;
+        BattlePoke.defencegrow = ThirdPocketmon.defencegrow;
+        BattlePoke.isPoisoned = ThirdPocketmon.isPoisoned;
+        BattlePoke.isParalyzed = ThirdPocketmon.isParalyzed;
+        BattlePoke.maxPP = ThirdPocketmon.maxPP;
+        BattlePoke.PP = ThirdPocketmon.PP;
+        BattlePoke.skill = ThirdPocketmon.skill;
         BattlePoke.current = 'c';}
-    public void setFieldtoFourth(BattlePoke p){
+    public void setFieldtoFourth(){
 
-        this.exist = FourthPocketmon.exist;
-        this.index = FourthPocketmon.index;
-        this.level = FourthPocketmon.level;
-        this.exp = FourthPocketmon.exp;
-        this.hp = FourthPocketmon.hp;
-        this.attack = FourthPocketmon.attack;
-        this.defence = FourthPocketmon.defence;
-        this.accuracy = FourthPocketmon.accuracy;
-        this.type = FourthPocketmon.type;
-        this.name = FourthPocketmon.name;
-        this.depth = FourthPocketmon.depth;
-        this.hpgrow = FourthPocketmon.hpgrow;
-        this.attackgrow = FourthPocketmon.attackgrow;
-        this.defencegrow = FourthPocketmon.defencegrow;
-        this.isPoisoned = FourthPocketmon.isPoisoned;
-        this.isParalyzed = FourthPocketmon.isParalyzed;
-        this.maxPP = FourthPocketmon.maxPP;
-        this.PP = FourthPocketmon.PP;
-        this.skill = FourthPocketmon.skill;
+        BattlePoke.exist = FourthPocketmon.exist;
+        BattlePoke.index = FourthPocketmon.index;
+        BattlePoke.level = FourthPocketmon.level;
+        BattlePoke.exp = FourthPocketmon.exp;
+        BattlePoke.hp = FourthPocketmon.hp;
+        BattlePoke.attack = FourthPocketmon.attack;
+        BattlePoke.defence = FourthPocketmon.defence;
+        BattlePoke.accuracy = FourthPocketmon.accuracy;
+        BattlePoke.type = FourthPocketmon.type;
+        BattlePoke.name = FourthPocketmon.name;
+        BattlePoke.depth = FourthPocketmon.depth;
+        BattlePoke.hpgrow = FourthPocketmon.hpgrow;
+        BattlePoke.attackgrow = FourthPocketmon.attackgrow;
+        BattlePoke.defencegrow = FourthPocketmon.defencegrow;
+        BattlePoke.isPoisoned = FourthPocketmon.isPoisoned;
+        BattlePoke.isParalyzed = FourthPocketmon.isParalyzed;
+        BattlePoke.maxPP = FourthPocketmon.maxPP;
+        BattlePoke.PP = FourthPocketmon.PP;
+        BattlePoke.skill = FourthPocketmon.skill;
         BattlePoke.current = 'd';
     }
-    public void setFieldtoFifth(BattlePoke p){
+    public void setFieldtoFifth(){
 
-        this.exist = FifthPocketmon.exist;
-        this.index = FifthPocketmon.index;
-        this.level = FifthPocketmon.level;
-        this.exp = FifthPocketmon.exp;
-        this.hp = FifthPocketmon.hp;
-        this.attack = FifthPocketmon.attack;
-        this.defence = FifthPocketmon.defence;
-        this.accuracy = FifthPocketmon.accuracy;
-        this.type = FifthPocketmon.type;
-        this.name = FifthPocketmon.name;
-        this.depth = FifthPocketmon.depth;
-        this.hpgrow = FifthPocketmon.hpgrow;
-        this.attackgrow = FifthPocketmon.attackgrow;
-        this.defencegrow = FifthPocketmon.defencegrow;
-        this.isPoisoned = FifthPocketmon.isPoisoned;
-        this.isParalyzed = FifthPocketmon.isParalyzed;
-        this.maxPP = FifthPocketmon.maxPP;
-        this.PP = FifthPocketmon.PP;
-        this.skill = FifthPocketmon.skill;
+        BattlePoke.exist = FifthPocketmon.exist;
+        BattlePoke.index = FifthPocketmon.index;
+        BattlePoke.level = FifthPocketmon.level;
+        BattlePoke.exp = FifthPocketmon.exp;
+        BattlePoke.hp = FifthPocketmon.hp;
+        BattlePoke.attack = FifthPocketmon.attack;
+        BattlePoke.defence = FifthPocketmon.defence;
+        BattlePoke.accuracy = FifthPocketmon.accuracy;
+        BattlePoke.type = FifthPocketmon.type;
+        BattlePoke.name = FifthPocketmon.name;
+        BattlePoke.depth = FifthPocketmon.depth;
+        BattlePoke.hpgrow = FifthPocketmon.hpgrow;
+        BattlePoke.attackgrow = FifthPocketmon.attackgrow;
+        BattlePoke.defencegrow = FifthPocketmon.defencegrow;
+        BattlePoke.isPoisoned = FifthPocketmon.isPoisoned;
+        BattlePoke.isParalyzed = FifthPocketmon.isParalyzed;
+        BattlePoke.maxPP = FifthPocketmon.maxPP;
+        BattlePoke.PP = FifthPocketmon.PP;
+        BattlePoke.skill = FifthPocketmon.skill;
         BattlePoke.current = 'e';
     }
-    public void setFieldtoSixth(BattlePoke p){
+    public void setFieldtoSixth(){
 
-        this.exist = SixthPocketmon.exist;
-        this.index = SixthPocketmon.index;
-        this.level = SixthPocketmon.level;
-        this.exp = SixthPocketmon.exp;
-        this.hp = SixthPocketmon.hp;
-        this.attack = SixthPocketmon.attack;
-        this.defence = SixthPocketmon.defence;
-        this.accuracy = SixthPocketmon.accuracy;
-        this.type = SixthPocketmon.type;
-        this.name = SixthPocketmon.name;
-        this.depth = SixthPocketmon.depth;
-        this.hpgrow = SixthPocketmon.hpgrow;
-        this.attackgrow = SixthPocketmon.attackgrow;
-        this.defencegrow = SixthPocketmon.defencegrow;
-        this.isPoisoned = SixthPocketmon.isPoisoned;
-        this.isParalyzed = SixthPocketmon.isParalyzed;
-        this.maxPP = SixthPocketmon.maxPP;
-        this.PP = SixthPocketmon.PP;
-        this.skill = SixthPocketmon.skill;
+        BattlePoke.exist = SixthPocketmon.exist;
+        BattlePoke.index = SixthPocketmon.index;
+        BattlePoke.level = SixthPocketmon.level;
+        BattlePoke.exp = SixthPocketmon.exp;
+        BattlePoke.hp = SixthPocketmon.hp;
+        BattlePoke.attack = SixthPocketmon.attack;
+        BattlePoke.defence = SixthPocketmon.defence;
+        BattlePoke.accuracy = SixthPocketmon.accuracy;
+        BattlePoke.type = SixthPocketmon.type;
+        BattlePoke.name = SixthPocketmon.name;
+        BattlePoke.depth = SixthPocketmon.depth;
+        BattlePoke.hpgrow = SixthPocketmon.hpgrow;
+        BattlePoke.attackgrow = SixthPocketmon.attackgrow;
+        BattlePoke.defencegrow = SixthPocketmon.defencegrow;
+        BattlePoke.isPoisoned = SixthPocketmon.isPoisoned;
+        BattlePoke.isParalyzed = SixthPocketmon.isParalyzed;
+        BattlePoke.maxPP = SixthPocketmon.maxPP;
+        BattlePoke.PP = SixthPocketmon.PP;
+        BattlePoke.skill = SixthPocketmon.skill;
         BattlePoke.current = 'f';
     }
-    public void setFieldtoBattle(BattlePoke p){
+    public void setBattletoFirst(){
 
-        this.exist = BattlePoke.exist;
-        this.index = BattlePoke.index;
-        this.level = BattlePoke.level;
-        this.exp = BattlePoke.exp;
-        this.hp = BattlePoke.hp;
-        this.attack = BattlePoke.attack;
-        this.defence = BattlePoke.defence;
-        this.accuracy = BattlePoke.accuracy;
-        this.type = BattlePoke.type;
-        this.name = BattlePoke.name;
-        this.depth = BattlePoke.depth;
-        this.hpgrow = BattlePoke.hpgrow;
-        this.attackgrow = BattlePoke.attackgrow;
-        this.defencegrow = BattlePoke.defencegrow;
-        this.isPoisoned = BattlePoke.isPoisoned;
-        this.isParalyzed = BattlePoke.isParalyzed;
-        this.maxPP = BattlePoke.maxPP;
-        this.PP = BattlePoke.PP;
-        this.skill = BattlePoke.skill;
+        FirstPocketmon.exist = BattlePoke.exist;
+        FirstPocketmon.index = BattlePoke.index;
+        FirstPocketmon.level = BattlePoke.level;
+        FirstPocketmon.exp = BattlePoke.exp;
+        FirstPocketmon.hp = BattlePoke.hp;
+        FirstPocketmon.attack = BattlePoke.attack;
+        FirstPocketmon.defence = BattlePoke.defence;
+        FirstPocketmon.accuracy = BattlePoke.accuracy;
+        FirstPocketmon.type = BattlePoke.type;
+        FirstPocketmon.name = BattlePoke.name;
+        FirstPocketmon.depth = BattlePoke.depth;
+        FirstPocketmon.hpgrow = BattlePoke.hpgrow;
+        FirstPocketmon.attackgrow = BattlePoke.attackgrow;
+        FirstPocketmon.defencegrow = BattlePoke.defencegrow;
+        FirstPocketmon.isPoisoned = BattlePoke.isPoisoned;
+        FirstPocketmon.isParalyzed = BattlePoke.isParalyzed;
+        FirstPocketmon.maxPP = BattlePoke.maxPP;
+        FirstPocketmon.PP = BattlePoke.PP;
+        FirstPocketmon.skill = BattlePoke.skill;
         BattlePoke.current = ' ';
     }
+    public void setBattletoSeoncd(){
+
+        SecondPocketmon.exist = BattlePoke.exist;
+        SecondPocketmon.index = BattlePoke.index;
+        SecondPocketmon.level = BattlePoke.level;
+        SecondPocketmon.exp = BattlePoke.exp;
+        SecondPocketmon.hp = BattlePoke.hp;
+        SecondPocketmon.attack = BattlePoke.attack;
+        SecondPocketmon.defence = BattlePoke.defence;
+        SecondPocketmon.accuracy = BattlePoke.accuracy;
+        SecondPocketmon.type = BattlePoke.type;
+        SecondPocketmon.name = BattlePoke.name;
+        SecondPocketmon.depth = BattlePoke.depth;
+        SecondPocketmon.hpgrow = BattlePoke.hpgrow;
+        SecondPocketmon.attackgrow = BattlePoke.attackgrow;
+        SecondPocketmon.defencegrow = BattlePoke.defencegrow;
+        SecondPocketmon.isPoisoned = BattlePoke.isPoisoned;
+        SecondPocketmon.isParalyzed = BattlePoke.isParalyzed;
+        SecondPocketmon.maxPP = BattlePoke.maxPP;
+        SecondPocketmon.PP = BattlePoke.PP;
+        SecondPocketmon.skill = BattlePoke.skill;
+        BattlePoke.current = ' ';
+    }
+    public void setBattletoThird(){
+
+        ThirdPocketmon.exist = BattlePoke.exist;
+        ThirdPocketmon.index = BattlePoke.index;
+        ThirdPocketmon.level = BattlePoke.level;
+        ThirdPocketmon.exp = BattlePoke.exp;
+        ThirdPocketmon.hp = BattlePoke.hp;
+        ThirdPocketmon.attack = BattlePoke.attack;
+        ThirdPocketmon.defence = BattlePoke.defence;
+        ThirdPocketmon.accuracy = BattlePoke.accuracy;
+        ThirdPocketmon.type = BattlePoke.type;
+        ThirdPocketmon.name = BattlePoke.name;
+        ThirdPocketmon.depth = BattlePoke.depth;
+        ThirdPocketmon.hpgrow = BattlePoke.hpgrow;
+        ThirdPocketmon.attackgrow = BattlePoke.attackgrow;
+        ThirdPocketmon.defencegrow = BattlePoke.defencegrow;
+        ThirdPocketmon.isPoisoned = BattlePoke.isPoisoned;
+        ThirdPocketmon.isParalyzed = BattlePoke.isParalyzed;
+        ThirdPocketmon.maxPP = BattlePoke.maxPP;
+        ThirdPocketmon.PP = BattlePoke.PP;
+        ThirdPocketmon.skill = BattlePoke.skill;
+        BattlePoke.current = ' ';
+    }
+    public void setBattletoFourth(){
+
+        FourthPocketmon.exist = BattlePoke.exist;
+        FourthPocketmon.index = BattlePoke.index;
+        FourthPocketmon.level = BattlePoke.level;
+        FourthPocketmon.exp = BattlePoke.exp;
+        FourthPocketmon.hp = BattlePoke.hp;
+        FourthPocketmon.attack = BattlePoke.attack;
+        FourthPocketmon.defence = BattlePoke.defence;
+        FourthPocketmon.accuracy = BattlePoke.accuracy;
+        FourthPocketmon.type = BattlePoke.type;
+        FourthPocketmon.name = BattlePoke.name;
+        FourthPocketmon.depth = BattlePoke.depth;
+        FourthPocketmon.hpgrow = BattlePoke.hpgrow;
+        FourthPocketmon.attackgrow = BattlePoke.attackgrow;
+        FourthPocketmon.defencegrow = BattlePoke.defencegrow;
+        FourthPocketmon.isPoisoned = BattlePoke.isPoisoned;
+        FourthPocketmon.isParalyzed = BattlePoke.isParalyzed;
+        FourthPocketmon.maxPP = BattlePoke.maxPP;
+        FourthPocketmon.PP = BattlePoke.PP;
+        FourthPocketmon.skill = BattlePoke.skill;
+        BattlePoke.current = ' ';
+    }
+    public void setBattletoFifth(){
+
+        FifthPocketmon.exist = BattlePoke.exist;
+        FifthPocketmon.index = BattlePoke.index;
+        FifthPocketmon.level = BattlePoke.level;
+        FifthPocketmon.exp = BattlePoke.exp;
+        FifthPocketmon.hp = BattlePoke.hp;
+        FifthPocketmon.attack = BattlePoke.attack;
+        FifthPocketmon.defence = BattlePoke.defence;
+        FifthPocketmon.accuracy = BattlePoke.accuracy;
+        FifthPocketmon.type = BattlePoke.type;
+        FifthPocketmon.name = BattlePoke.name;
+        FifthPocketmon.depth = BattlePoke.depth;
+        FifthPocketmon.hpgrow = BattlePoke.hpgrow;
+        FifthPocketmon.attackgrow = BattlePoke.attackgrow;
+        FifthPocketmon.defencegrow = BattlePoke.defencegrow;
+        FifthPocketmon.isPoisoned = BattlePoke.isPoisoned;
+        FifthPocketmon.isParalyzed = BattlePoke.isParalyzed;
+        FifthPocketmon.maxPP = BattlePoke.maxPP;
+        FifthPocketmon.PP = BattlePoke.PP;
+        FifthPocketmon.skill = BattlePoke.skill;
+        BattlePoke.current = ' ';
+    }
+    public void setBattletoSixth(){
+
+        SixthPocketmon.exist = BattlePoke.exist;
+        SixthPocketmon.index = BattlePoke.index;
+        SixthPocketmon.level = BattlePoke.level;
+        SixthPocketmon.exp = BattlePoke.exp;
+        SixthPocketmon.hp = BattlePoke.hp;
+        SixthPocketmon.attack = BattlePoke.attack;
+        SixthPocketmon.defence = BattlePoke.defence;
+        SixthPocketmon.accuracy = BattlePoke.accuracy;
+        SixthPocketmon.type = BattlePoke.type;
+        SixthPocketmon.name = BattlePoke.name;
+        SixthPocketmon.depth = BattlePoke.depth;
+        SixthPocketmon.hpgrow = BattlePoke.hpgrow;
+        SixthPocketmon.attackgrow = BattlePoke.attackgrow;
+        SixthPocketmon.defencegrow = BattlePoke.defencegrow;
+        SixthPocketmon.isPoisoned = BattlePoke.isPoisoned;
+        SixthPocketmon.isParalyzed = BattlePoke.isParalyzed;
+        SixthPocketmon.maxPP = BattlePoke.maxPP;
+        SixthPocketmon.PP = BattlePoke.PP;
+        SixthPocketmon.skill = BattlePoke.skill;
+        BattlePoke.current = ' ';
+    }
+
     }
 

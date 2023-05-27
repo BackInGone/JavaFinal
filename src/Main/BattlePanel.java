@@ -793,24 +793,24 @@ public class BattlePanel {
             num=0;
         }
     }
-    public boolean contains(String[] available, String value) {
+    public boolean contains(String[] available, String value) {//todo 개판이다. 0으로 죽은 아이 리스트로 나옴. 그렇게 틀린애, 맞은애 둘다 고르면 계속 바꿀 포켓몬 입력으로 무한 반복
         System.out.println("contain 내부에서 available");
         for (int i = 0; i < 6; i++) {
             System.out.println(available[i]);
-        }
-        boolean returnal = false;
+        } boolean returnn = false;
         for (int i = 0; i < available.length; i++) {
-            if (available[i] == null) {available[i]= "null";}
+            if (available[i] == null) {
+                System.out.println("여기 available 은 비어있네");
+                returnn= false;}
             else
                 if (available[i].equals(value)) {
-                    returnal= true;
-                } else {
-                    returnal= false;
-                }
+                    System.out.println("포함 체크");
+                    returnn= true;
 
-        }
-        System.out.println("contain 나가기 전 returnal 확인 = " + returnal);
-        return returnal;
+                } 
+
+        } 
+        return returnn;
     }
 
     public void oppoFaintCheck(Pocketmon t){

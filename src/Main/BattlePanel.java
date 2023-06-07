@@ -516,9 +516,9 @@ public class BattlePanel {
         }
 
 
+        String[] avaiable = new String[6];
     public void changePoketmon(int num){
 
-        String[] avaiable = new String[6];
         int index=0;
 
         if (num==1) { //내 포켓몬 변경 //todo 맞고나서 변경하면, 그상태 그대로 안나오고 a 기존 상태 출력됨
@@ -598,13 +598,13 @@ public class BattlePanel {
                     while (true) {
                         System.out.println("바꿀 포켓몬을 입력하세요 ");
                         String next = scan.next();
-                            if(next == battlePoke.name) {
+                            if(next.equals(battlePoke.name)) {
 
                                     System.out.println("현재 포켓몬을 제외한 포켓몬을 고르세요.");
                                 continue;
                             }
                         if (contains(avaiable, next)) {
-                                if (next.equals(a.name)) {
+                                if (next.equals(FirstPocketmon.name)) {
 
 
                                     switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
@@ -634,7 +634,7 @@ public class BattlePanel {
                                     System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
                                     break;
                                 }
-                                if (next.equals(b.name)) {
+                                if (next.equals(SecondPocketmon.name)) {
                                     switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
                                         case 'a':
                                             battlePoke.setBattletoFirst();
@@ -661,7 +661,7 @@ public class BattlePanel {
                                     System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
 
                                     break;
-                                } else if (c.name.equals(next)) {
+                                } else if (next.equals(ThirdPocketmon.name)) {
                                     switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
                                         case 'a':
                                             battlePoke.setBattletoFirst();
@@ -689,7 +689,7 @@ public class BattlePanel {
 
                                     break;
 
-                                } else if (d.name.equals(next)) {
+                                } else if (next.equals(FourthPocketmon.name)) {
                                     switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
                                         case 'a':
                                             battlePoke.setBattletoFirst();
@@ -717,7 +717,7 @@ public class BattlePanel {
 
                                     break;
 
-                                } else if (e.name.equals(next)) {
+                                } else if (next.equals(FifthPocketmon.name)) {
                                     switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
                                         case 'a':
                                             battlePoke.setBattletoFirst();
@@ -745,7 +745,7 @@ public class BattlePanel {
 
                                     break;
 
-                                } else if (f.name.equals(next)) {
+                                } else if (next.equals(SixthPocketmon.name)) {
                                     switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
                                         case 'a':
                                             battlePoke.setBattletoFirst();
@@ -959,6 +959,7 @@ public class BattlePanel {
                 }
 
                 if (battlePoke.hp == 0) {
+                    battlePoke.current = ' ';
                     changePoketmon(1);
                 }
                 if (oppos[oppoPokeNum].hp == 0) {
@@ -997,7 +998,9 @@ public class BattlePanel {
                         battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
                         System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
                         oppoFaintCheck(oppos[oppoPokeNum]);
-
+                        if (battlePoke.hp <= 0) {
+                            changePoketmon(1);
+                        }
                         break;
                     }
                 }

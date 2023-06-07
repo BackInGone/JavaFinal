@@ -801,7 +801,7 @@ public class Pocketmon {
         FirstPocketmon.maxPP = BattlePoke.maxPP;
         FirstPocketmon.PP = BattlePoke.PP;
         FirstPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = ' ';
+        BattlePoke.current = 'a';
     }
     public void setBattletoSeoncd(){
 
@@ -824,7 +824,7 @@ public class Pocketmon {
         SecondPocketmon.maxPP = BattlePoke.maxPP;
         SecondPocketmon.PP = BattlePoke.PP;
         SecondPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = ' ';
+        BattlePoke.current = 'b';
     }
     public void setBattletoThird(){
 
@@ -847,7 +847,7 @@ public class Pocketmon {
         ThirdPocketmon.maxPP = BattlePoke.maxPP;
         ThirdPocketmon.PP = BattlePoke.PP;
         ThirdPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = ' ';
+        BattlePoke.current = 'c';
     }
     public void setBattletoFourth(){
 
@@ -870,7 +870,7 @@ public class Pocketmon {
         FourthPocketmon.maxPP = BattlePoke.maxPP;
         FourthPocketmon.PP = BattlePoke.PP;
         FourthPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = ' ';
+        BattlePoke.current = 'd';
     }
     public void setBattletoFifth(){
 
@@ -893,7 +893,7 @@ public class Pocketmon {
         FifthPocketmon.maxPP = BattlePoke.maxPP;
         FifthPocketmon.PP = BattlePoke.PP;
         FifthPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = ' ';
+        BattlePoke.current = 'e';
     }
     public void setBattletoSixth(){
 
@@ -916,7 +916,7 @@ public class Pocketmon {
         SixthPocketmon.maxPP = BattlePoke.maxPP;
         SixthPocketmon.PP = BattlePoke.PP;
         SixthPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = ' ';
+        BattlePoke.current = 'f';
     }
 
     }

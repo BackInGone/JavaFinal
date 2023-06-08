@@ -101,7 +101,7 @@ public class GamePanel extends JPanel implements Runnable{
                     FirstPocketmon.hp = esang.hp;
                     FirstPocketmon.type = esang.type;
                     FirstPocketmon.attack = esang.attack;
-                    FirstPocketmon.defence = esang.defence;
+                    FirstPocketmon.defence = esang.defencue;
                     FirstPocketmon.maxPP = esang.maxPP;
                     FirstPocketmon.PP = esang.PP;
                     FirstPocketmon.name = esang.name;

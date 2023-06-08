@@ -522,20 +522,7 @@ public class BattlePanel {
         int index=0;
 
         if (num==1) { //내 포켓몬 변경 //todo 맞고나서 변경하면, 그상태 그대로 안나오고 a 기존 상태 출력됨
-//                if(battlePoke.exist&&(battlePoke.hp>0)){  // 가능한 내 포켓몬 리스트 출력
-//        if(a.exist){
-//            System.out.println(a.name + "HP = " + a.hp + "Level = " + a.level);
-//        }if(b.exist){
-//            System.out.println(b.name + "HP = " + b.hp + "Level = " + b.level);
-//        }if(c.exist){
-//            System.out.println(c.name + "HP = " + c.hp + "Level = " + c.level);
-//        }if(d.exist){
-//            System.out.println(d.name + "HP = " + d.hp + "Level = " + d.level);
-//        }if(e.exist){
-//            System.out.println(e.name + "HP = " + e.hp + "Level = " + e.level);
-//        }if(f.exist){
-//            System.out.println(f.name + "HP = " + f.hp + "Level = " + f.level);
-//        }}
+
 
                     for (int i = 0; i < 6; i++) {
                         switch (index) {

@@ -7,7 +7,7 @@
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/BattlePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +145,7 @@
       <workItem from="1685132630159" duration="23415000" />
       <workItem from="1686005785620" duration="4456000" />
       <workItem from="1686108823759" duration="4681000" />
+      <workItem from="1686189200211" duration="8793000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1678809472780</created>

@@ -60,6 +60,21 @@ public class BattlePanel {
         v.skill = c.skill;
 
     }
+    public void meFaintCheck(){
+        if (battlePoke.current == 'a') {
+            battlePoke.setBattletoFirst();
+        }if (battlePoke.current == 'b') {
+            battlePoke.setBattletoSeoncd();
+        }if (battlePoke.current == 'c') {
+            battlePoke.setBattletoThird();
+        }if (battlePoke.current == 'd') {
+            battlePoke.setBattletoFourth();
+        }if (battlePoke.current == 'e') {
+            battlePoke.setBattletoFifth();
+        }if (battlePoke.current == 'f') {
+            battlePoke.setBattletoSixth();
+        }
+    }
 
     public int CountPocketmon(){
         int count = (FirstPocketmon.exist ? 1 : 0) + (SecondPocketmon.exist? 1 : 0) +
@@ -576,10 +591,17 @@ public class BattlePanel {
                         }
 
                     }
+
+
+
+
                     System.out.println("현재 가능한 포켓몬들 ");
                     for (int i = 0; i < 6; i++) {
                         System.out.println(avaiable[i]);
                     } //todo 이 이후에 싸우는 도중 바꾸려고 변경 누르면, 싸우던 포켓몬은 null 로 출력됨
+
+
+
 
 
                     while (true) {
@@ -589,182 +611,43 @@ public class BattlePanel {
 
                                     System.out.println("현재 포켓몬을 제외한 포켓몬을 고르세요.");
                                 continue;
-                            }
-                        if (contains(avaiable, next)) {
-                                if (next.equals(FirstPocketmon.name)) {
-
-
-                                    switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
-                                        case 'a':
-                                            battlePoke.setBattletoFirst();
-                                            break;
-                                        case 'b':
-                                            battlePoke.setBattletoSeoncd();
-                                            break;
-                                        case 'c':
-                                            battlePoke.setBattletoThird();
-                                            break;
-                                        case 'd':
-                                            battlePoke.setBattletoFourth();
-                                            break;
-                                        case 'e':
-                                            battlePoke.setBattletoFifth();
-                                            break;
-                                        case 'f':
-                                            battlePoke.setBattletoSixth();
-                                            break;
-                                    }//기존포켓몬은 그상태로 리스트로
-
+                            }else if (contains(avaiable, next)) {
+                                if (next.equals(FirstPocketmon.name)&&(battlePoke.current!='a')&&FirstPocketmon.hp!=0) {
 
                                     battlePoke.setFieldtoFirst();
-                                    System.out.println("a 포켓몬 출력");
-                                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
+                                    System.out.println(FirstPocketmon.name+"a 포켓몬 출격");
                                     break;
                                 }
-                                if (next.equals(SecondPocketmon.name)) {
-                                    switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
-                                        case 'a':
-                                            battlePoke.setBattletoFirst();
-                                            break;
-                                        case 'b':
-                                            battlePoke.setBattletoSeoncd();
-                                            break;
-                                        case 'c':
-                                            battlePoke.setBattletoThird();
-                                            break;
-                                        case 'd':
-                                            battlePoke.setBattletoFourth();
-                                            break;
-                                        case 'e':
-                                            battlePoke.setBattletoFifth();
-                                            break;
-                                        case 'f':
-                                            battlePoke.setBattletoSixth();
-                                            break;
-                                    }//기존포켓몬은 그상태로 리스트로
+                                else if (next.equals(SecondPocketmon.name)&&(battlePoke.current!='b'&&SecondPocketmon.hp!=0)) {
 
                                     battlePoke.setFieldtoSecond();
-                                    System.out.println("b 포켓몬 출력");
-                                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
-
+                                    System.out.println(SecondPocketmon.name+"b 포켓몬 출격");
                                     break;
-                                } else if (next.equals(ThirdPocketmon.name)) {
-                                    switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
-                                        case 'a':
-                                            battlePoke.setBattletoFirst();
-                                            break;
-                                        case 'b':
-                                            battlePoke.setBattletoSeoncd();
-                                            break;
-                                        case 'c':
-                                            battlePoke.setBattletoThird();
-                                            break;
-                                        case 'd':
-                                            battlePoke.setBattletoFourth();
-                                            break;
-                                        case 'e':
-                                            battlePoke.setBattletoFifth();
-                                            break;
-                                        case 'f':
-                                            battlePoke.setBattletoSixth();
-                                            break;
-                                    }//기존포켓몬은 그상태로 리스트로
+                                } else if (next.equals(ThirdPocketmon.name)&&(battlePoke.current!='c')) {
 
                                     battlePoke.setFieldtoThird();
-                                    System.out.println("c 포켓몬 출력");
-                                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
-
+                                    System.out.println(ThirdPocketmon.name +"c 포켓몬 출격");
                                     break;
-
-                                } else if (next.equals(FourthPocketmon.name)) {
-                                    switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
-                                        case 'a':
-                                            battlePoke.setBattletoFirst();
-                                            break;
-                                        case 'b':
-                                            battlePoke.setBattletoSeoncd();
-                                            break;
-                                        case 'c':
-                                            battlePoke.setBattletoThird();
-                                            break;
-                                        case 'd':
-                                            battlePoke.setBattletoFourth();
-                                            break;
-                                        case 'e':
-                                            battlePoke.setBattletoFifth();
-                                            break;
-                                        case 'f':
-                                            battlePoke.setBattletoSixth();
-                                            break;
-                                    }//기존포켓몬은 그상태로 리스트로
+                                }else  if (next.equals(FourthPocketmon.name)&&(battlePoke.current!='d')) {
 
                                     battlePoke.setFieldtoFourth();
-                                    System.out.println("d 포켓몬 출력");
-                                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
-
+                                    System.out.println(FourthPocketmon.name + "d 포켓몬 출격");
                                     break;
-
-                                } else if (next.equals(FifthPocketmon.name)) {
-                                    switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
-                                        case 'a':
-                                            battlePoke.setBattletoFirst();
-                                            break;
-                                        case 'b':
-                                            battlePoke.setBattletoSeoncd();
-                                            break;
-                                        case 'c':
-                                            battlePoke.setBattletoThird();
-                                            break;
-                                        case 'd':
-                                            battlePoke.setBattletoFourth();
-                                            break;
-                                        case 'e':
-                                            battlePoke.setBattletoFifth();
-                                            break;
-                                        case 'f':
-                                            battlePoke.setBattletoSixth();
-                                            break;
-                                    }//기존포켓몬은 그상태로 리스트로
+                                }else  if (next.equals(FifthPocketmon.name)&&(battlePoke.current!='e')) {
 
                                     battlePoke.setFieldtoFifth();
-                                    System.out.println("e 포켓몬 출력");
-                                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
-
+                                    System.out.println(FifthPocketmon.name + "e 포켓몬 출격");
                                     break;
-
-                                } else if (next.equals(SixthPocketmon.name)) {
-                                    switch (battlePoke.current) {    //기존 포켓몬은 그상태로 리스트로
-                                        case 'a':
-                                            battlePoke.setBattletoFirst();
-                                            break;
-                                        case 'b':
-                                            battlePoke.setBattletoSeoncd();
-                                            break;
-                                        case 'c':
-                                            battlePoke.setBattletoThird();
-                                            break;
-                                        case 'd':
-                                            battlePoke.setBattletoFourth();
-                                            break;
-                                        case 'e':
-                                            battlePoke.setBattletoFifth();
-                                            break;
-                                        case 'f':
-                                            battlePoke.setBattletoSixth();
-                                            break;
-                                    }//기존포켓몬은 그상태로 리스트로
+                                } else if (next.equals(SixthPocketmon.name)&&(battlePoke.current!='f')) {
 
                                     battlePoke.setFieldtoSixth();
-                                    System.out.println("f 포켓몬 출력");
-                                    System.out.println(battlePoke.name + "HP = " + battlePoke.hp + "Level = " + battlePoke.level);
-
+                                    System.out.println(SixthPocketmon.name+"f 포켓몬 출격");
                                     break;
                                 }
 
-
-                        } else {
-                            continue;
-                        }
+                                System.out.println("여까진 오냐");
+                        }//바꿀 포켓몬 타이핑 체크
+                        System.out.println("여까진 오냐2");
 
 
                 }
@@ -781,24 +664,23 @@ public class BattlePanel {
         }
     }
     public boolean contains(String[] available, String value) {//todo 개판이다. 0으로 죽은 아이 리스트로 나옴. 그렇게 틀린애, 맞은애 둘다 고르면 계속 바꿀 포켓몬 입력으로 무한 반복
-        System.out.println("contain 내부에서 available");
-        for (int i = 0; i < 6; i++) {
-            System.out.println(available[i]);
-        } boolean returnn = false;
+        boolean returnn = false;
         for (int i = 0; i < available.length; i++) {
             if (available[i] == null) {
-                System.out.println("여기 available 은 비어있네");
-                returnn= false;}
+                System.out.println(i+"번째 available 은 비어있네");
+             }
             else
                 if (available[i].equals(value)) {
-                    System.out.println("포함 체크");
-                    returnn= true;
-
-                } 
+                    System.out.println(i+"번째"+ available[i] + "는 포함 체크");
+                             }
 
         } 
         return returnn;
     }
+
+
+
+
 
     public void oppoFaintCheck(Pocketmon t){
         if(t.hp==0) {
@@ -946,7 +828,7 @@ public class BattlePanel {
                 }
 
                 if (battlePoke.hp == 0) {
-                    battlePoke.current = ' ';
+                    meFaintCheck();
                     changePoketmon(1);
                 }
                 if (oppos[oppoPokeNum].hp == 0) {
@@ -973,6 +855,11 @@ public class BattlePanel {
                             System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
                             oppoFaintCheck(oppos[oppoPokeNum]);
 
+                            if (battlePoke.hp <= 0) { //기절체크
+                                meFaintCheck();
+                                changePoketmon(1);
+                            }
+
                             break;
                         }
                      else {
@@ -985,7 +872,9 @@ public class BattlePanel {
                         battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
                         System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
                         oppoFaintCheck(oppos[oppoPokeNum]);
-                        if (battlePoke.hp <= 0) {
+
+                        if (battlePoke.hp <= 0) { //기절체크
+                            meFaintCheck();
                             changePoketmon(1);
                         }
                         break;

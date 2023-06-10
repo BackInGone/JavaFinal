@@ -27,39 +27,55 @@ public class Skill {
     }
 
      public void doSkill(Pocketmon t, int skillNum) {
-         System.out.println("doskill 들어오고 상대방 hp = " + t.hp);
         switch (skillNum) {
             case 0: {
-                System.out.println("case0 들어오고 상대방 hp = " + t.hp);
                 nothing(t);
-                System.out.println("case0사용 후 상대방 hp =" + t.hp);
+                System.out.println("발버둥치기!");
                 break;}
             case 1: {
-                System.out.println("case1 들어오고 상대방.hp = " + t.hp);
                 tackle(t);
-                System.out.println("case1사용 후 상대방 hp =" + t.hp);
-
-                }
-            case 2: {hardening(t); break;}
-            case 3: {sandwind(t); break;}
-            case 4: {electricshock(t); break;}
-            case 5: {electromagnetic(t);break; }
-            case 6: {ember(t);break;}
-            case 7: {fireball(t);break;}
-            case 8: {fireblast(t);break;}
-            case 9: {watergun(t);break;}
-            case 10: {bubblebeam(t);break;}
-            case 11: {hydropump(t);break;}
-            case 12: {vinewhip(t);break;}
-            case 13: {petaldance(t);break;}
-            case 14: {solarbeam(t);break;}
-            case 15: {thunder(t);break;}
-            case 16: {wingattack(t);break;}
-            case 17: {torando(t);break;}
-            case 18: {bite(t);break;}
-            case 19: {crush(t);break;}
-            case 20: {rockslice(t);break;}
-            case 21: {stoneshower(t);break;}
+                System.out.println("몸통박치기");
+                break;}
+            case 2: {hardening(t);
+                System.out.println("단단해지기!"); break;}
+            case 3: {sandwind(t);
+                System.out.println("모래바람!");break;}
+            case 4: {electricshock(t);
+                System.out.println("전기충격!");break;}
+            case 5: {electromagnetic(t);
+                System.out.println("전자기파!");break; }
+            case 6: {ember(t);
+                System.out.println("불꽃!");break;}
+            case 7: {fireball(t);
+                System.out.println("파이어볼!");break;}
+            case 8: {fireblast(t);
+                System.out.println("화염방사!");break;}
+            case 9: {watergun(t);
+                System.out.println("물대포!");break;}
+            case 10: {bubblebeam(t);
+                System.out.println("거품광선!");;}
+            case 11: {hydropump(t);
+                System.out.println("하이드로펌프!");break;}
+            case 12: {vinewhip(t);
+                System.out.println("덩쿨채찍!");;}
+            case 13: {petaldance(t);
+                System.out.println("꽃입 댄스!");break;}
+            case 14: {solarbeam(t);
+                System.out.println("솔라빔!");break;}
+            case 15: {thunder(t);
+                System.out.println("번개~!");break;}
+            case 16: {wingattack(t);
+                System.out.println("날개치기!");break;}
+            case 17: {torando(t);
+                System.out.println("회오리공격!");break;}
+            case 18: {bite(t);
+                System.out.println("물기!");break;}
+            case 19: {crush(t);
+                System.out.println("깨물어부수기!");break;}
+            case 20: {rockslice(t);
+                System.out.println("락슬라이스!");break;}
+            case 21: {stoneshower(t);
+                System.out.println("스톤샤워!");break;}
 
             }
         }
@@ -69,12 +85,10 @@ public class Skill {
 
     //Skilllist
     public void nothing(Pocketmon opponent) { //0
-        System.out.println("nothing 들어오고 t.hp = " + opponent.hp);
         skillInBattlePoke.takeDamage(20);
         opponent.takeDamage(30);
     } //0
     public void tackle(Pocketmon opponent) { //1
-        System.out.println("tackle 들어오고 t.hp = " + opponent.hp);
         opponent.takeDamage(40);
     }   //1
     public void hardening(Pocketmon opponent) {    //2

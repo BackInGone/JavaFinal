@@ -801,7 +801,7 @@ public class Pocketmon {
         FirstPocketmon.maxPP = BattlePoke.maxPP;
         FirstPocketmon.PP = BattlePoke.PP;
         FirstPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = 'a';
+        BattlePoke.current = ' ';
     }
     public void setBattletoSeoncd(){
 
@@ -824,7 +824,7 @@ public class Pocketmon {
         SecondPocketmon.maxPP = BattlePoke.maxPP;
         SecondPocketmon.PP = BattlePoke.PP;
         SecondPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = 'b';
+        BattlePoke.current = ' ';
     }
     public void setBattletoThird(){
 
@@ -847,7 +847,7 @@ public class Pocketmon {
         ThirdPocketmon.maxPP = BattlePoke.maxPP;
         ThirdPocketmon.PP = BattlePoke.PP;
         ThirdPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = 'c';
+        BattlePoke.current = ' ';
     }
     public void setBattletoFourth(){
 
@@ -870,7 +870,7 @@ public class Pocketmon {
         FourthPocketmon.maxPP = BattlePoke.maxPP;
         FourthPocketmon.PP = BattlePoke.PP;
         FourthPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = 'd';
+        BattlePoke.current = ' ';
     }
     public void setBattletoFifth(){
 
@@ -893,7 +893,7 @@ public class Pocketmon {
         FifthPocketmon.maxPP = BattlePoke.maxPP;
         FifthPocketmon.PP = BattlePoke.PP;
         FifthPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = 'e';
+        BattlePoke.current = ' ';
     }
     public void setBattletoSixth(){
 
@@ -916,7 +916,30 @@ public class Pocketmon {
         SixthPocketmon.maxPP = BattlePoke.maxPP;
         SixthPocketmon.PP = BattlePoke.PP;
         SixthPocketmon.skill = BattlePoke.skill;
-        BattlePoke.current = 'f';
+        BattlePoke.current = ' ';
+    }
+
+    public void setBattleVoid(){
+        BattlePoke.exist = false;
+        BattlePoke.index = 0;
+        BattlePoke.level = 0;
+        BattlePoke.exp = 0;
+        BattlePoke.hp = 0;
+        BattlePoke.attack = 0;
+        BattlePoke.defence = 0;
+        BattlePoke.accuracy = 0;
+        BattlePoke.type = null;
+        BattlePoke.name = null;
+        BattlePoke.depth = 0;
+        BattlePoke.hpgrow = 0;
+        BattlePoke.attackgrow = 0;
+        BattlePoke.defencegrow = 0;
+        BattlePoke.isPoisoned = false;
+        BattlePoke.isParalyzed =false;
+        BattlePoke.maxPP = null;
+        BattlePoke.PP = null;
+        BattlePoke.skill = null;
+        BattlePoke.current = ' ';
     }
 
     }

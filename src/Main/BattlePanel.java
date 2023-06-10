@@ -60,21 +60,7 @@ public class BattlePanel {
         v.skill = c.skill;
 
     }
-    public void meFaintCheck(){
-        if (battlePoke.current == 'a') {
-            battlePoke.setBattletoFirst();
-        }if (battlePoke.current == 'b') {
-            battlePoke.setBattletoSeoncd();
-        }if (battlePoke.current == 'c') {
-            battlePoke.setBattletoThird();
-        }if (battlePoke.current == 'd') {
-            battlePoke.setBattletoFourth();
-        }if (battlePoke.current == 'e') {
-            battlePoke.setBattletoFifth();
-        }if (battlePoke.current == 'f') {
-            battlePoke.setBattletoSixth();
-        }
-    }
+
 
     public int CountPocketmon(){
         int count = (FirstPocketmon.exist ? 1 : 0) + (SecondPocketmon.exist? 1 : 0) +
@@ -605,15 +591,25 @@ public class BattlePanel {
 
 
                     while (true) {
+                        if((FirstPocketmon.hp + SecondPocketmon.hp + ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp + SixthPocketmon.hp)==0 )
+                        {break;}
                         System.out.println("바꿀 포켓몬을 입력하세요 ");
                         String next = scan.next();
+                        System.out.println("입력한 값은 ="+ next);
                             if(next.equals(battlePoke.name)) {
 
                                     System.out.println("현재 포켓몬을 제외한 포켓몬을 고르세요.");
                                 continue;
                             }else if (contains(avaiable, next)) {
-                                if (next.equals(FirstPocketmon.name)&&(battlePoke.current!='a')&&FirstPocketmon.hp!=0) {
-
+                                if (next.equals(FirstPocketmon.name)) {
+                                    if (next.equals(battlePoke.name)){ //현재 포켓몬이면
+                                        System.out.println("현재 포켓몬과는 바꿀 수 없지요");
+                                        continue;
+                                         }
+                                    if (FirstPocketmon.hp==0){//hp가 0이면
+                                        System.out.println("첫번째 포켓몬의 hp가 없습니다.");
+                                        continue;
+                                    }
                                     battlePoke.setFieldtoFirst();
                                     System.out.println(FirstPocketmon.name+"a 포켓몬 출격");
                                     break;
@@ -651,6 +647,7 @@ public class BattlePanel {
 
 
                 }
+            System.out.println("while break 하셨고");
         }
 
 
@@ -672,19 +669,67 @@ public class BattlePanel {
             else
                 if (available[i].equals(value)) {
                     System.out.println(i+"번째"+ available[i] + "는 포함 체크");
-                             }
-
-        } 
+                    returnn =true;
+                    }
+        }
         return returnn;
     }
 
 
+    public void meFaintCheck(){
+        System.out.println("meFaintCheck 들어옴");
+        if (battlePoke.hp <= 0) {
+
+
+            if (battlePoke.current == 'a') {
+                System.out.println(battlePoke.current + "번째 포켓몬 기절");
+                battlePoke.setBattletoFirst();
+                battlePoke.current = ' ';
+                battlePoke.setBattleVoid();
+            }
+            else if (battlePoke.current == 'b') {
+                System.out.println(battlePoke.current + "번째 포켓몬 기절");
+                battlePoke.setBattletoSeoncd();
+                battlePoke.current = ' ';
+                battlePoke.setBattleVoid();
+
+            }
+            else if (battlePoke.current == 'c') {
+                System.out.println(battlePoke.current + "번째 포켓몬 기절");
+                battlePoke.setBattletoThird();
+                battlePoke.current = ' ';
+                battlePoke.setBattleVoid();
+
+            }
+            else if (battlePoke.current == 'd') {
+                System.out.println(battlePoke.current + "번째 포켓몬 기절");
+                battlePoke.current = ' ';
+                System.out.println(battlePoke.current + "번째 포켓몬 기절");
+                battlePoke.setBattletoFourth();
+                battlePoke.setBattleVoid();
+            }
+            else if (battlePoke.current == 'e') {
+                System.out.println(battlePoke.current + "번째 포켓몬 기절");
+                battlePoke.current = ' ';
+                battlePoke.setBattletoFifth();
+                battlePoke.setBattleVoid();
+            }
+            else if (battlePoke.current == 'f') {
+                System.out.println(battlePoke.current + "번째 포켓몬 기절");
+                battlePoke.current = ' ';
+                battlePoke.setBattletoSixth();
+                battlePoke.setBattleVoid();
+            }
+        }
+    }
 
 
 
     public void oppoFaintCheck(Pocketmon t){
-        if(t.hp==0) {
+        if(t.hp<=0) {
+            System.out.println("상대방의 " + oppos[oppoPokeNum].name + " 이 기절했다.");
             oppoPokeNum++;
+            System.out.println("상대방의 포켓몬이 " + oppos[oppoPokeNum].name + "으로 변경됐다.");
         }
     }
     public void useItem(Pocketmon pocketmon, Pocketmon oppo){
@@ -765,17 +810,23 @@ public class BattlePanel {
                         System.out.println(battlePoke.skill[i]);
 
                     }
-                    int selectSkill = scan.nextInt();
+                    int selectSkill = scan.nextInt(); //스킬 사용
+                    System.out.println(battlePoke.skill[selectSkill] + "사용");
+
                     if (battlePoke.PP[1] == 0 && battlePoke.PP[2] == 0 && battlePoke.PP[3] == 0 && battlePoke.PP[4] == 0) {
+                        //1. 모든 스킬의 PP가 없을때
+                            System.out.println("PP가 없어서 발버둥쳤다.");
                         battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[0]);
                         oppoFaintCheck(oppos[oppoPokeNum]);  //상대 포켓몬 죽으면 다음으로
+                        meFaintCheck();
                         break;
-                    } else {
-                        if (battlePoke.PP[selectSkill] <= 0) {
-                            System.out.println("PP가 없습니다.");
+                    } else { //어딘가 PP는 남아있고 스킬사용 턴
+
+                        if (battlePoke.PP[selectSkill] <= 0) { //어딘가 PP는 남았지만, 고른 스킬은 남은 PP가 없을때
+                            System.out.println("해당 스킬의 PP가 없습니다. ");
                             continue;
-                        } else {
-                            if(battlePoke.isParalyzed) {
+                        } else { //마비여부 체크하며 스킬 사용
+                            if(battlePoke.isParalyzed) { //마비 되었을때
                                 int possible = (int)(Math.random()*10);
                                 if(possible<4){                                battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[selectSkill]);
                                     System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
@@ -785,9 +836,16 @@ public class BattlePanel {
                                 else if(possible>4){
                                     System.out.println("마비되서 움직일 수 없다.");}
 
-                            } else if(battlePoke.isParalyzed == false)
-                            {System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
+                            } else if(battlePoke.isParalyzed == false) //마비 되지 않은 정상 스킬 사용
+                            {
+                                battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[selectSkill]);
+                                System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
                                 battlePoke.PP[selectSkill] -= 1;
+                                if (oppos[oppoPokeNum].hp <=0) {
+                                    System.out.println("상대방의 기절으로 faint check go");
+                                    oppoFaintCheck(oppos[oppoPokeNum]);
+
+                                }
                                 oppoFaintCheck(oppos[oppoPokeNum]);  //상대포켓몬 죽으면 다음으로
                                 break;}
 
@@ -850,13 +908,18 @@ public class BattlePanel {
                 while (skillnum >= 1 && skillnum < 5) {
                     if (oppos[oppoPokeNum].isParalyzed) { //마비되었을때
                         if (possible < 7) {
-                            System.out.println("skillnum = " + skillnum);
+                            System.out.println("상대방의 사용스킬 = " + oppos[oppoPokeNum].skill);
                             battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
-                            System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
+                            System.out.println("상대방의 공격으로 내 HP =" + battlePoke.hp);
+                            if (oppos[oppoPokeNum].hp <=0) {
+                                System.out.println("상대방의 기절으로 faint check go");
                             oppoFaintCheck(oppos[oppoPokeNum]);
+
+                            }
 
                             if (battlePoke.hp <= 0) { //기절체크
                                 meFaintCheck();
+
                                 changePoketmon(1);
                             }
 
@@ -872,6 +935,11 @@ public class BattlePanel {
                         battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
                         System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
                         oppoFaintCheck(oppos[oppoPokeNum]);
+                        if (oppos[oppoPokeNum].hp <=0) {
+                            System.out.println("상대방의 기절으로 faint check go");
+                            oppoFaintCheck(oppos[oppoPokeNum]);
+
+                        }
 
                         if (battlePoke.hp <= 0) { //기절체크
                             meFaintCheck();
@@ -886,6 +954,8 @@ public class BattlePanel {
 
             turnstack++;
         }
+        System.out.println("가장 큰 반복문 탈출");
+
 
     }
 

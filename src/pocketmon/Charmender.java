@@ -14,10 +14,19 @@ public class Charmender extends Pocketmon{
         this.hpgrow = 1.01F;
         this.attackgrow = 1.01F;
         this.defencegrow = 1.01F;
+
         this.maxPP = maxPP;
         this.maxPP[1] = 20;
         this.maxPP[2] = 10;
+        this.maxPP[3] = 0;
+        this.maxPP[4] = 0;
+
         this.PP = PP;
+        this.PP[1] = maxPP[1];
+        this.PP[2] = maxPP[2];
+        this.PP[3] = maxPP[3];
+        this.PP[4] = maxPP[4];
+
         this.skill = skill;
         this.skill[1] = 1;
         this.skill[2] = 6;

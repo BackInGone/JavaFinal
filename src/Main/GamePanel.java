@@ -181,10 +181,10 @@ public class GamePanel extends JPanel implements Runnable{
 
 
         ////아래로 이탈하여
-        else if (playerY < 5) {
-            playerY =50;
+        else if (playerY < 2) {
+            playerY = 60;    //todo 다시 돌아오지도 않고.
             System.out.println("위로 이탈");
-            BattlePanel startbattle = new BattlePanel();
+            new BattlePanel();
             keyH.upPressed = false;
             keyH.downPressed = false;
             keyH.leftPressed = false;

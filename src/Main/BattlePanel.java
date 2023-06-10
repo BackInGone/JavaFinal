@@ -735,7 +735,7 @@ public class BattlePanel {
     public void useItem(Pocketmon pocketmon, Pocketmon oppo){
 
     }
-
+    //todo 배틀이 끝났을때 콘솔창 비우면서, 이 객체가 비워져야 하는 기능.
     public void goBaattle(int rangeF, int rangeB, int Level) throws InterruptedException {
         System.out.println("rangeF" + rangeF);
         System.out.println("rangeB" + rangeB);

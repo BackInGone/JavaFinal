@@ -71,6 +71,12 @@ public class BattlePanel {
     public BattlePanel() throws InterruptedException {
 
         //if(트레이너 끼리 일때)
+
+        Battle1.setSize(400,600);
+        Battle1.add(battlepanel);
+        Battle1.getContentPane().setLayout(null);
+        Battle1.setVisible(true);
+        GamePanel.playerY =80;
         //if(야생포켓몬일때)
         int rangeF;
         int rangeB;
@@ -83,15 +89,11 @@ public class BattlePanel {
             rangeF = (int) (Math.random() * 3);
             rangeB = (int) (Math.random() * 20);
             Battle1.dispose();
+            GamePanel.playerY = 70;
+            System.out.println("배틀 종료합니다. ");
             Battle1.setVisible(false);
-        GamePanel.playerY =40;
         }
 
-
-        Battle1.setSize(400,600);
-        Battle1.add(battlepanel);
-        Battle1.getContentPane().setLayout(null);
-        Battle1.setVisible(true);
     }
 
 
@@ -512,7 +514,7 @@ public class BattlePanel {
             }
         for (int j = num; j < 6; j++) {
             oppos[j] = new Pocketmon();
-            oppos[j].hp = 0;
+            oppos[j].hp = 0; //todo ?
         }
         }
 
@@ -592,21 +594,23 @@ public class BattlePanel {
 
                     while (true) {
                         if((FirstPocketmon.hp + SecondPocketmon.hp + ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp + SixthPocketmon.hp)==0 )
-                        {break;}
+                        {
+                            System.out.println("가능한 포켓몬이 없습니다.");
+                            break;}
                         System.out.println("바꿀 포켓몬을 입력하세요 ");
                         String next = scan.next();
                         System.out.println("입력한 값은 ="+ next);
-                            if(next.equals(battlePoke.name)) {
+                            if(next.equals(battlePoke.name)) { //현재포켓몬과 변경 입력 체크
 
                                     System.out.println("현재 포켓몬을 제외한 포켓몬을 고르세요.");
                                 continue;
-                            }else if (contains(avaiable, next)) {
+                            }
+
+
+                            else if (contains(avaiable, next)) {// 현재 포켓몬이 아닌경우
+
                                 if (next.equals(FirstPocketmon.name)) {
-                                    if (next.equals(battlePoke.name)){ //현재 포켓몬이면
-                                        System.out.println("현재 포켓몬과는 바꿀 수 없지요");
-                                        continue;
-                                         }
-                                    if (FirstPocketmon.hp==0){//hp가 0이면
+                                    if (FirstPocketmon.hp==0){//hp가 0인 포켓몬이 프린팅 된 경우
                                         System.out.println("첫번째 포켓몬의 hp가 없습니다.");
                                         continue;
                                     }
@@ -647,6 +651,7 @@ public class BattlePanel {
 
 
                 }
+            System.out.println("");
             System.out.println("while break 하셨고");
         }
 
@@ -727,9 +732,15 @@ public class BattlePanel {
 
     public void oppoFaintCheck(Pocketmon t){
         if(t.hp<=0) {
+            if(oppoPokeNum>=6){
+                System.out.println("더이상 상대방의 포켓몬이 없다. ");
+                oppoPokeNum=6;
+            }
+            else{
             System.out.println("상대방의 " + oppos[oppoPokeNum].name + " 이 기절했다.");
-            oppoPokeNum++;
+                oppoPokeNum++;
             System.out.println("상대방의 포켓몬이 " + oppos[oppoPokeNum].name + "으로 변경됐다.");
+            }
         }
     }
     public void useItem(Pocketmon pocketmon, Pocketmon oppo){
@@ -737,6 +748,8 @@ public class BattlePanel {
     }
     //todo 배틀이 끝났을때 콘솔창 비우면서, 이 객체가 비워져야 하는 기능.
     public void goBaattle(int rangeF, int rangeB, int Level) throws InterruptedException {
+        GamePanel.playerY = 70;
+
         System.out.println("rangeF" + rangeF);
         System.out.println("rangeB" + rangeB);
 
@@ -955,6 +968,7 @@ public class BattlePanel {
             turnstack++;
         }
         System.out.println("가장 큰 반복문 탈출");
+        GamePanel.playerY = 70;
 
 
     }

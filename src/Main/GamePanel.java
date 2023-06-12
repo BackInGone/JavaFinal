@@ -181,8 +181,8 @@ public class GamePanel extends JPanel implements Runnable{
 
 
         ////아래로 이탈하여
-        else if (playerY < 2) {
-            playerY = 60;    //todo 다시 돌아오지도 않고.
+        else if (playerY <=5) {
+//            playerY = 20;    //todo 다시 돌아오지도 않고.
             System.out.println("위로 이탈");
             new BattlePanel();
             keyH.upPressed = false;
@@ -218,6 +218,11 @@ public class GamePanel extends JPanel implements Runnable{
             if (keyH.upPressed) {
                 System.out.println("uppressed");
                 playerY -= playerSpeed;
+                if(playerY<1){
+                    playerY=20;
+                    System.out.println("업탈출 이프 들어온나");
+
+                }
             } else if (keyH.downPressed) {
                 System.out.println("downpressed");
                 playerY += playerSpeed;

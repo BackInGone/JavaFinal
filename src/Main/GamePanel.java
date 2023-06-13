@@ -114,7 +114,7 @@ public class GamePanel extends JPanel implements Runnable{
             }
             SecondPocketmon sec = new SecondPocketmon();
                 Pikachu f = new Pikachu(5);
-           sec.setFieldtoPikachu(7);
+           sec.setFieldtoPikachu(sec, 7);
             ThirdPocketmon thd = new ThirdPocketmon();
             thd.setFieldtoRaichu(8);
 

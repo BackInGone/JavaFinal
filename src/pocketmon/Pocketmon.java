@@ -404,27 +404,27 @@ public class Pocketmon {
         this.PP = c.PP;
         this.skill = c.skill;
     }//8
-    public void setFieldtoPikachu(int level){
+    public void setFieldtoPikachu(Pocketmon t ,int level){
         Pikachu c = new Pikachu(level);
-        this.exist = c.exist;
-        this.index = c.index;
-        this.level = c.level;
-        this.exp = c.exp;
-        this.hp = c.hp;
-        this.attack = c.attack;
-        this.defence = c.defence;
-        this.accuracy = c.accuracy;
-        this.type = c.type;
-        this.name = c.name;
-        this.depth = c.depth;
-        this.hpgrow = c.hpgrow;
-        this.attackgrow = c.attackgrow;
-        this.defencegrow = c.defencegrow;
-        this.isPoisoned = c.isPoisoned;
-        this.isParalyzed = c.isParalyzed;
-        this.maxPP = c.maxPP;
-        this.PP = c.PP;
-        this.skill = c.skill;
+        t.exist = c.exist;
+        t.index = c.index;
+        t.level = c.level;
+        t.exp = c.exp;
+        t.hp = c.hp;
+        t.attack = c.attack;
+        t.defence = c.defence;
+        t.accuracy = c.accuracy;
+        t.type = c.type;
+        t.name = c.name;
+        t.depth = c.depth;
+        t.hpgrow = c.hpgrow;
+        t.attackgrow = c.attackgrow;
+        t.defencegrow = c.defencegrow;
+        t.isPoisoned = c.isPoisoned;
+        t.isParalyzed = c.isParalyzed;
+        t.maxPP = c.maxPP;
+        t.PP = c.PP;
+        t.skill = c.skill;
     }//9
     public void setFieldtoRaichu(int level){
         Raichu c = new Raichu(level);

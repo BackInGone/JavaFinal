@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/BattlePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/BattlePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,14 +150,7 @@
       <workItem from="1686371361010" duration="12409000" />
       <workItem from="1686459204551" duration="6023000" />
       <workItem from="1686540149987" duration="17179000" />
-      <workItem from="1686653408912" duration="5279000" />
-    </task>
-    <task id="LOCAL-00001" summary="First">
-      <created>1678809472780</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678809472781</updated>
+      <workItem from="1686653408912" duration="5805000" />
     </task>
     <task id="LOCAL-00002" summary="First">
       <created>1678816014921</created>
@@ -496,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686588817836</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="First">
+      <created>1686678212231</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1686678212231</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

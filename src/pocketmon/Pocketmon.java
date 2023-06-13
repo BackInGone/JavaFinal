@@ -404,7 +404,7 @@ public class Pocketmon {
         this.PP = c.PP;
         this.skill = c.skill;
     }//8
-    public void setFieldtoPikachu(){
+    public void setFieldtoPikachu(int level){
         Pikachu c = new Pikachu(level);
         this.exist = c.exist;
         this.index = c.index;
@@ -426,7 +426,7 @@ public class Pocketmon {
         this.PP = c.PP;
         this.skill = c.skill;
     }//9
-    public void setFieldtoRaichu(){
+    public void setFieldtoRaichu(int level){
         Raichu c = new Raichu(level);
         this.exist = c.exist;
         this.index = c.index;

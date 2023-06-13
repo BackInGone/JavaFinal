@@ -601,9 +601,12 @@ public class BattlePanel {
                         String next = scan.next();
                         System.out.println("입력한 값은 ="+ next);
                             if(next.equals(battlePoke.name)) { //현재포켓몬과 변경 입력 체크
+                                if((avaiable[0].equals(battlePoke.name))&&(avaiable[1]==null)){
+                                    System.out.println("더이상 바꿀 수 있는 포켓몬이 없습니다.");
+                                break;}
+                                else{System.out.println("현재 포켓몬을 제외한 포켓몬을 고르세요.");
+                                    continue;}
 
-                                    System.out.println("현재 포켓몬을 제외한 포켓몬을 고르세요.");
-                                continue;
                             }
 
 
@@ -750,226 +753,231 @@ public class BattlePanel {
     public void goBaattle(int rangeF, int rangeB, int Level) throws InterruptedException {
         GamePanel.playerY = 70;
 
-        System.out.println("rangeF" + rangeF);
-        System.out.println("rangeB" + rangeB);
-
-        System.out.println("\n\n\n\n\n");
-
-        setmyPocketmon();
-        setOppoPocketmon(rangeF, rangeB, Level);
-
-
-        //배틀 시작
-        String art = """ 
-                 ________   ________   _________   _________   ___        _______       \s
-                |\\   __  \\ |\\   __  \\ |\\___   ___\\|\\___   ___\\|\\  \\      |\\  ___ \\      \s
-                \\ \\  \\|\\ /_\\ \\  \\|\\  \\\\|___ \\  \\_|\\|___ \\  \\_|\\ \\  \\     \\ \\   __/|     \s
-                 \\ \\   __  \\\\ \\   __  \\    \\ \\  \\      \\ \\  \\  \\ \\  \\     \\ \\  \\_|/__   \s
-                  \\ \\  \\|\\  \\\\ \\  \\ \\  \\    \\ \\  \\      \\ \\  \\  \\ \\  \\____ \\ \\  \\_|\\ \\  \s
-                   \\ \\_______\\\\ \\__\\ \\__\\    \\ \\__\\      \\ \\__\\  \\ \\_______\\\\ \\_______\\ \s
-                    \\|_______| \\|__|\\|__|     \\|__|       \\|__|   \\|_______| \\|_______| \s
-                 ________   _________   ________   ________   _________        ___      \s
-                |\\   ____\\ |\\___   ___\\|\\   __  \\ |\\   __  \\ |\\___   ___\\     |\\  \\     \s
-                \\ \\  \\___|_\\|___ \\  \\_|\\ \\  \\|\\  \\\\ \\  \\|\\  \\\\|___ \\  \\_|     \\ \\  \\    \s
-                 \\ \\_____  \\    \\ \\  \\  \\ \\   __  \\\\ \\   _  _\\    \\ \\  \\       \\ \\  \\   \s
-                  \\|____|\\  \\    \\ \\  \\  \\ \\  \\ \\  \\\\ \\  \\\\  \\|    \\ \\  \\       \\ \\__\\  \s
-                    ____\\_\\  \\    \\ \\__\\  \\ \\__\\ \\__\\\\ \\__\\\\ _\\     \\ \\__\\       \\|__|  \s
-                   |\\_________\\    \\|__|   \\|__|\\|__| \\|__|\\|__|     \\|__|           ___\s
-                   \\|_________|                                                     |\\__\\
-                                                                                    \\|__|
-                                                                                        \s                """;
-        for (int i = 0; i < art.length(); i++) {
-            System.out.print(art.charAt(i));
-            Thread.sleep(1);
-        }
-
-        while (((FirstPocketmon.hp + SecondPocketmon.hp +ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp +SixthPocketmon.hp) > 0)
-              && ((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) > 0))
-        {
+        if((FirstPocketmon.hp + SecondPocketmon.hp +ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp +SixthPocketmon.hp) > 0) {
             System.out.println("\n\n\n");
             System.out.println("\n\n\n");
+            //배틀 시작
+            String art = """ 
+                     ________   ________   _________   _________   ___        _______       \s
+                    |\\   __  \\ |\\   __  \\ |\\___   ___\\|\\___   ___\\|\\  \\      |\\  ___ \\      \s
+                    \\ \\  \\|\\ /_\\ \\  \\|\\  \\\\|___ \\  \\_|\\|___ \\  \\_|\\ \\  \\     \\ \\   __/|     \s
+                     \\ \\   __  \\\\ \\   __  \\    \\ \\  \\      \\ \\  \\  \\ \\  \\     \\ \\  \\_|/__   \s
+                      \\ \\  \\|\\  \\\\ \\  \\ \\  \\    \\ \\  \\      \\ \\  \\  \\ \\  \\____ \\ \\  \\_|\\ \\  \s
+                       \\ \\_______\\\\ \\__\\ \\__\\    \\ \\__\\      \\ \\__\\  \\ \\_______\\\\ \\_______\\ \s
+                        \\|_______| \\|__|\\|__|     \\|__|       \\|__|   \\|_______| \\|_______| \s
+                     ________   _________   ________   ________   _________        ___      \s
+                    |\\   ____\\ |\\___   ___\\|\\   __  \\ |\\   __  \\ |\\___   ___\\     |\\  \\     \s
+                    \\ \\  \\___|_\\|___ \\  \\_|\\ \\  \\|\\  \\\\ \\  \\|\\  \\\\|___ \\  \\_|     \\ \\  \\    \s
+                     \\ \\_____  \\    \\ \\  \\  \\ \\   __  \\\\ \\   _  _\\    \\ \\  \\       \\ \\  \\   \s
+                      \\|____|\\  \\    \\ \\  \\  \\ \\  \\ \\  \\\\ \\  \\\\  \\|    \\ \\  \\       \\ \\__\\  \s
+                        ____\\_\\  \\    \\ \\__\\  \\ \\__\\ \\__\\\\ \\__\\\\ _\\     \\ \\__\\       \\|__|  \s
+                       |\\_________\\    \\|__|   \\|__|\\|__| \\|__|\\|__|     \\|__|           ___\s
+                       \\|_________|                                                     |\\__\\
+                                                                                        \\|__|
+                                                                                            \s                """;
+            for (int i = 0; i < art.length(); i++) {
+                System.out.print(art.charAt(i));
+                Thread.sleep(1);
+            }
 
 
-            while ((FirstPocketmon.hp + SecondPocketmon.hp +ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp +SixthPocketmon.hp) > 0) {//내턴 반복문
-                System.out.println("\n\n\n");
-                System.out.println("\n\n\n");
-                turnstack = 0;
-                System.out.println("mypokenum = " + battlePoke.index);
-                System.out.println(battlePoke.index + " 번째 내 포켓몬 상태 체크 =" + battlePoke.name + "레벨" + battlePoke.level + "현재 HP = [" + battlePoke.hp + "]");
+            System.out.println("rangeF" + rangeF);
+            System.out.println("rangeB" + rangeB);
 
-                if(battlePoke.hp<=0){
-                    changePoketmon(1); //TODO...  죽은 아이가 이제 안나와야 하고
-                }
+            System.out.println("\n\n\n\n\n");
+
+            setmyPocketmon();
+            setOppoPocketmon(rangeF, rangeB, Level);
 
 
-                ////////////////내턴//////////////////
-                System.out.println("행동을 선택");
-                System.out.println("1. 기술사용");
-                System.out.println("2. 포켓몬변경");
-                System.out.println("3. 아이템사용");
-                System.out.println("4. 나가기");
-                int choiceNum = scan.nextInt();
+            while (((FirstPocketmon.hp + SecondPocketmon.hp + ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp + SixthPocketmon.hp) > 0)
+                    && ((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) > 0)) {
 
 
-                /////////////////////////////기술사용/////////////////////////////
-                if (choiceNum >= 1 && choiceNum <= 4) {
-                } else {
-                    System.out.println("다시 입력");
-                    continue;
-                }
-                if (choiceNum == 1) {//기술사용
-                    System.out.println("무슨 기술을 사용하시겠어요?");
-                    for (int i = 1; i <= 4; i++) {
-                        System.out.println(battlePoke.skill[i]);
+                while ((FirstPocketmon.hp + SecondPocketmon.hp + ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp + SixthPocketmon.hp) > 0) {//내턴 반복문
+                    System.out.println("\n\n\n");
+                    System.out.println("\n\n\n");
+                    turnstack = 0;
+                    System.out.println("mypokenum = " + battlePoke.index);
+                    System.out.println(battlePoke.index + " 번째 내 포켓몬 상태 체크 =" + battlePoke.name + "레벨" + battlePoke.level + "현재 HP = [" + battlePoke.hp + "]");
 
+                    if (battlePoke.hp <= 0) {
+                        changePoketmon(1); //TODO...  죽은 아이가 이제 안나와야 하고
                     }
-                    int selectSkill = scan.nextInt(); //스킬 사용
-                    System.out.println(battlePoke.skill[selectSkill] + "사용");
 
-                    if (battlePoke.PP[1] == 0 && battlePoke.PP[2] == 0 && battlePoke.PP[3] == 0 && battlePoke.PP[4] == 0) {
-                        //1. 모든 스킬의 PP가 없을때
-                            System.out.println("PP가 없어서 발버둥쳤다.");
-                        battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[0]);
-                        oppoFaintCheck(oppos[oppoPokeNum]);  //상대 포켓몬 죽으면 다음으로
-                        meFaintCheck();
-                        break;
-                    } else { //어딘가 PP는 남아있고 스킬사용 턴
 
-                        if (battlePoke.PP[selectSkill] <= 0) { //어딘가 PP는 남았지만, 고른 스킬은 남은 PP가 없을때
-                            System.out.println("해당 스킬의 PP가 없습니다. ");
-                            continue;
-                        } else { //마비여부 체크하며 스킬 사용
-                            if(battlePoke.isParalyzed) { //마비 되었을때
-                                int possible = (int)(Math.random()*10);
-                                if(possible<4){                                battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[selectSkill]);
-                                    System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
-                                    battlePoke.PP[selectSkill] -= 1;
-                                    oppoFaintCheck(oppos[oppoPokeNum]);  //상대포켓몬 죽으면 다음으로
-                                    break;}
-                                else if(possible>4){
-                                    System.out.println("마비되서 움직일 수 없다.");}
+                    ////////////////내턴//////////////////
+                    System.out.println("행동을 선택");
+                    System.out.println("1. 기술사용");
+                    System.out.println("2. 포켓몬변경");
+                    System.out.println("3. 아이템사용");
+                    System.out.println("4. 나가기");
+                    int choiceNum = scan.nextInt();
 
-                            } else if(battlePoke.isParalyzed == false) //마비 되지 않은 정상 스킬 사용
-                            {
-                                battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[selectSkill]);
-                                System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
-                                battlePoke.PP[selectSkill] -= 1;
-                                if (oppos[oppoPokeNum].hp <=0) {
-                                    System.out.println("상대방의 기절으로 faint check go");
-                                    oppoFaintCheck(oppos[oppoPokeNum]);
 
-                                }
-                                oppoFaintCheck(oppos[oppoPokeNum]);  //상대포켓몬 죽으면 다음으로
-                                break;}
+                    /////////////////////////////기술사용/////////////////////////////
+                    if (choiceNum >= 1 && choiceNum <= 4) {
+                    } else {
+                        System.out.println("다시 입력");
+                        continue;
+                    }
+                    if (choiceNum == 1) {//기술사용
+                        System.out.println("무슨 기술을 사용하시겠어요?");
+                        for (int i = 1; i <= 4; i++) {
+                            System.out.println(battlePoke.skill[i]);
 
                         }
+                        int selectSkill = scan.nextInt(); //스킬 사용
+                        System.out.println(battlePoke.skill[selectSkill] + "사용");
+
+                        if (battlePoke.PP[1] == 0 && battlePoke.PP[2] == 0 && battlePoke.PP[3] == 0 && battlePoke.PP[4] == 0) {
+                            //1. 모든 스킬의 PP가 없을때
+                            System.out.println("PP가 없어서 발버둥쳤다.");
+                            battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[0]);
+                            oppoFaintCheck(oppos[oppoPokeNum]);  //상대 포켓몬 죽으면 다음으로
+                            meFaintCheck();
+                            break;
+                        } else { //어딘가 PP는 남아있고 스킬사용 턴
+
+                            if (battlePoke.PP[selectSkill] <= 0) { //어딘가 PP는 남았지만, 고른 스킬은 남은 PP가 없을때
+                                System.out.println("해당 스킬의 PP가 없습니다. ");
+                                continue;
+                            } else { //마비여부 체크하며 스킬 사용
+                                if (battlePoke.isParalyzed) { //마비 되었을때
+                                    int possible = (int) (Math.random() * 10);
+                                    if (possible < 4) {
+                                        battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[selectSkill]);
+                                        System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
+                                        battlePoke.PP[selectSkill] -= 1;
+                                        oppoFaintCheck(oppos[oppoPokeNum]);  //상대포켓몬 죽으면 다음으로
+                                        break;
+                                    } else if (possible > 4) {
+                                        System.out.println("마비되서 움직일 수 없다.");
+                                    }
+
+                                } else if (battlePoke.isParalyzed == false) //마비 되지 않은 정상 스킬 사용
+                                {
+                                    battleSkill.doSkill(oppos[oppoPokeNum], battlePoke.skill[selectSkill]);
+                                    System.out.println("changed oppos's hp = " + oppos[oppoPokeNum].hp);
+                                    battlePoke.PP[selectSkill] -= 1;
+                                    if (oppos[oppoPokeNum].hp <= 0) {
+                                        System.out.println("상대방의 기절으로 faint check go");
+                                        oppoFaintCheck(oppos[oppoPokeNum]);
+
+                                    }
+                                    oppoFaintCheck(oppos[oppoPokeNum]);  //상대포켓몬 죽으면 다음으로
+                                    break;
+                                }
+
+                            }
+                        }
+                    }
+
+
+                    /////////////////////////////포켓몬변경//////////////////////////
+                    else if (choiceNum == 2) {
+                        changePoketmon(1);
+
+                    }
+
+
+                    ////////////////////////////아이템사용////////////////////////////
+                    else if (choiceNum == 3) {//아이템사용
+                        System.out.println(Item.itemlist3);
+                        useItem(battlePoke, oppos[oppoPokeNum]);
+
+
+                        ///////////////////////////나가기/////////////////////////////////
+                    } else { //나가기
+                        if (isTrainer) {
+                            System.out.println("배틀중에 도망갈 수 없습니다.");
+                        } else {
+                            Battle1.setVisible(false);
+                            break;
+                        }
+
+                    }
+
+
+                    if ((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) == 0 ||
+                            a.hp + b.hp + c.hp + d.hp + e.hp + f.hp == 0) {
+                        break;
+                    }
+
+                    if (battlePoke.hp == 0) {
+                        meFaintCheck();
+                        changePoketmon(1);
+                    }
+                    if (oppos[oppoPokeNum].hp == 0) {
+                        changePoketmon(2);
                     }
                 }
-
-
-                /////////////////////////////포켓몬변경//////////////////////////
-                else if (choiceNum == 2) {
-                    changePoketmon(1);
-
-                }
-
-
-                ////////////////////////////아이템사용////////////////////////////
-                else if (choiceNum == 3) {//아이템사용
-                    System.out.println(Item.itemlist3);
-                    useItem(battlePoke, oppos[oppoPokeNum]);
-
-
-                    ///////////////////////////나가기/////////////////////////////////
-                } else { //나가기
-                    if (isTrainer) {
-                        System.out.println("배틀중에 도망갈 수 없습니다.");
-                    }
-                    else {
-                        Battle1.setVisible(false);
-                        break;}
-
-                }
-
-
-
-                if ((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) == 0 ||
-                        a.hp + b.hp + c.hp + d.hp + e.hp + f.hp == 0) {
-                    break;
-                }
-
-                if (battlePoke.hp == 0) {
-                    meFaintCheck();
-                    changePoketmon(1);
-                }
-                if (oppos[oppoPokeNum].hp == 0) {
-                    changePoketmon(2);
-                }
-            }
 
                 turnstack++;
 
 
-
-
                 /////////////////상대턴///////////////////
 
-            if((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) > 0)
-            {
-                int skillnum = (int) (Math.random() * 4);
-                int possible = (int) (Math.random() * 10);
-                while (skillnum >= 1 && skillnum < 5) {
-                    if (oppos[oppoPokeNum].isParalyzed) { //마비되었을때
-                        if (possible < 7) {
-                            System.out.println("상대방의 사용스킬 = " + oppos[oppoPokeNum].skill);
+                if ((oppos[0].hp + oppos[1].hp + oppos[2].hp + oppos[3].hp + oppos[4].hp + oppos[5].hp) > 0) {
+                    int skillnum = (int) (Math.random() * 4);
+                    int possible = (int) (Math.random() * 10);
+                    while (skillnum >= 1 && skillnum < 5) {
+                        if (oppos[oppoPokeNum].isParalyzed) { //마비되었을때
+                            if (possible < 7) {
+                                System.out.println("상대방의 사용스킬 = " + oppos[oppoPokeNum].skill);
+                                battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
+                                System.out.println("상대방의 공격으로 내 HP =" + battlePoke.hp);
+                                if (oppos[oppoPokeNum].hp <= 0) {
+                                    System.out.println("상대방의 기절으로 faint check go");
+                                    oppoFaintCheck(oppos[oppoPokeNum]);
+
+                                }
+
+                                if (battlePoke.hp <= 0) { //기절체크
+                                    meFaintCheck();
+
+                                    changePoketmon(1);
+                                }
+
+                                break;
+                            } else {
+                                System.out.println("마비되어 움직일 수 없다."
+                                );
+                                break;
+                            }
+                        } else {  // 마비 안되었을때
+                            System.out.println("skillnum = " + skillnum);
                             battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
-                            System.out.println("상대방의 공격으로 내 HP =" + battlePoke.hp);
-                            if (oppos[oppoPokeNum].hp <=0) {
-                                System.out.println("상대방의 기절으로 faint check go");
+                            System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
                             oppoFaintCheck(oppos[oppoPokeNum]);
+                            if (oppos[oppoPokeNum].hp <= 0) {
+                                System.out.println("상대방의 기절으로 faint check go");
+                                oppoFaintCheck(oppos[oppoPokeNum]);
 
                             }
 
                             if (battlePoke.hp <= 0) { //기절체크
                                 meFaintCheck();
-
                                 changePoketmon(1);
                             }
-
                             break;
                         }
-                     else {
-                        System.out.println("마비되어 움직일 수 없다."
-                        );
-                        break;
-                    }}
-                    else{  // 마비 안되었을때
-                        System.out.println("skillnum = " + skillnum);
-                        battleSkill.doSkill(battlePoke, oppos[oppoPokeNum].skill[skillnum]);
-                        System.out.println("내 아이가 맞았다! =" + battlePoke.hp);
-                        oppoFaintCheck(oppos[oppoPokeNum]);
-                        if (oppos[oppoPokeNum].hp <=0) {
-                            System.out.println("상대방의 기절으로 faint check go");
-                            oppoFaintCheck(oppos[oppoPokeNum]);
-
-                        }
-
-                        if (battlePoke.hp <= 0) { //기절체크
-                            meFaintCheck();
-                            changePoketmon(1);
-                        }
-                        break;
                     }
+                } else {
+                    System.out.println("더이상 적은 쓸 수 있는 포켓몬이 없다. ");
+                    break;
                 }
-            } else{
-                System.out.println("더이상 적은 쓸 수 있는 포켓몬이 없다. ");
-                break;}
 
-            turnstack++;
-        }
+                turnstack++;
+            }
         System.out.println("가장 큰 반복문 탈출");
-        GamePanel.playerY = 70;
-
+            Battle1.setVisible(false);
+            GamePanel.playerY = 30;
+        }else {
+            System.out.println("포켓몬을 없이는 배틀할 수 없단다.");
+            Battle1.setVisible(false);
+            GamePanel.playerY = 30;
+        }
 
     }
 

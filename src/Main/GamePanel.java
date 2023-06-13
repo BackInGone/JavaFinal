@@ -112,18 +112,13 @@ public class GamePanel extends JPanel implements Runnable{
                     break;
                 }
             }
-                SecondPocketmon sec = new SecondPocketmon();
+            SecondPocketmon sec = new SecondPocketmon();
                 Pikachu f = new Pikachu(5);
-            SecondPocketmon.hp = f.hp;
-            SecondPocketmon.type = f.type;
-            SecondPocketmon.attack = f.attack;
-            SecondPocketmon.defence = f.defence;
-            SecondPocketmon.maxPP = f.maxPP;
-            SecondPocketmon.PP = f.PP;
-            SecondPocketmon.name = f.name;
-            SecondPocketmon.skill = f.skill;
-            SecondPocketmon.level = f.level;
-            SecondPocketmon.exist = true;
+           sec.setFieldtoPikachu(7);
+            ThirdPocketmon thd = new ThirdPocketmon();
+            thd.setFieldtoRaichu(8);
+
+
 
 
 
@@ -182,9 +177,10 @@ public class GamePanel extends JPanel implements Runnable{
 
         ////아래로 이탈하여
         else if (playerY <=5) {
-//            playerY = 20;    //todo 다시 돌아오지도 않고.
+            playerY = 20;    //todo 다시 돌아오지도 않고.
             System.out.println("위로 이탈");
             new BattlePanel();
+            playerY = 20;    //todo 다시 돌아오지도 않고.
             keyH.upPressed = false;
             keyH.downPressed = false;
             keyH.leftPressed = false;
@@ -214,13 +210,18 @@ public class GamePanel extends JPanel implements Runnable{
 
 
 
-        public void moveCharacter(){
+        public void moveCharacter() throws InterruptedException {
             if (keyH.upPressed) {
                 System.out.println("uppressed");
                 playerY -= playerSpeed;
                 if(playerY<1){
                     playerY=20;
                     System.out.println("업탈출 이프 들어온나");
+                    new BattlePanel();
+                    keyH.upPressed = false;
+                    keyH.downPressed = false;
+                    keyH.leftPressed = false;
+                    keyH.rightPressed = false;
 
                 }
             } else if (keyH.downPressed) {

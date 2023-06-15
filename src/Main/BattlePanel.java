@@ -756,6 +756,8 @@ public class BattlePanel {
         if((FirstPocketmon.hp + SecondPocketmon.hp +ThirdPocketmon.hp + FourthPocketmon.hp + FifthPocketmon.hp +SixthPocketmon.hp) > 0) {
             System.out.println("\n\n\n");
             System.out.println("\n\n\n");
+            KeyHandler keyH = new KeyHandler();
+            keyH.downPressed = false;
             //배틀 시작
             String art = """ 
                      ________   ________   _________   _________   ___        _______       \s

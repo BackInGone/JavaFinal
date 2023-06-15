@@ -127,11 +127,8 @@ public class GamePanel extends JPanel implements Runnable{
 
             try {
                 gameThread.sleep(50);   // 천천히 움직이게 하기 위한 딜레이
-            cnt += 1;
                 update();
-//            System.out.println("update"+ cnt);
                 repaint();
-//            System.out.println("repaint"+ cnt);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -182,6 +179,7 @@ public class GamePanel extends JPanel implements Runnable{
             new BattlePanel();
             playerY = 20;    //todo 다시 돌아오지도 않고.
             keyH.upPressed = false;
+            keyH.downPressed = true;
             keyH.downPressed = false;
             keyH.leftPressed = false;
             keyH.rightPressed = false;
@@ -192,7 +190,9 @@ public class GamePanel extends JPanel implements Runnable{
 
         else if (playerX > 720) {
             System.out.println("오른쪽으로 이탈");
-            playerX = 720;
+            playerX = 700;
+
+
         }
 
 
@@ -214,16 +214,15 @@ public class GamePanel extends JPanel implements Runnable{
             if (keyH.upPressed) {
                 System.out.println("uppressed");
                 playerY -= playerSpeed;
-                if(playerY<1){
-                    playerY=20;
-                    System.out.println("업탈출 이프 들어온나");
-                    new BattlePanel();
-                    keyH.upPressed = false;
-                    keyH.downPressed = false;
-                    keyH.leftPressed = false;
-                    keyH.rightPressed = false;
-
-                }
+//                if(playerY<1){
+//                    playerY=20;
+//                    System.out.println("업탈출 이프 들어온나");
+//                    new BattlePanel();
+//                    keyH.upPressed = false;
+//                    keyH.downPressed = false;
+//                    keyH.leftPressed = false;
+//                    keyH.rightPressed = false;
+//                }
             } else if (keyH.downPressed) {
                 System.out.println("downpressed");
                 playerY += playerSpeed;

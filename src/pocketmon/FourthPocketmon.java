@@ -6,6 +6,8 @@ public class FourthPocketmon extends Pocketmon{
     public static int level;
     public static  int exp;
     public static int hp;
+    public static int hpMax;
+
     public static float  attack;
     public static float  defence;
     public static float  accuracy;

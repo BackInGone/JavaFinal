@@ -142,8 +142,8 @@ public class GamePanel extends JPanel implements Runnable{
             moveCharacter();
 //            System.out.println("dispose 변화 = " +  gamepanel.dispose1);
 
-
-            if(cnt % 200 == 0){
+            cnt++;
+            if(cnt % 400 == 0){
                 System.out.println("똑딱");
             }
 
@@ -191,6 +191,8 @@ public class GamePanel extends JPanel implements Runnable{
         else if (playerX > 720) {
             System.out.println("오른쪽으로 이탈");
             playerX = 700;
+            PocketmoncenterPanel center = new PocketmoncenterPanel();
+            center.recoverAll();
 
 
         }

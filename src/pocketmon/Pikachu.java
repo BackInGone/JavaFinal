@@ -5,7 +5,8 @@ public class Pikachu extends Pocketmon{
 
     public Pikachu(int level) {
 
-        this.hp = 150;
+        this.hpMax = (int)(150 + (this.level)*hpgrow);
+        this.hp = hpMax;
         this.level = level;
         this.attack = 1F;
         this.defence = 1F;

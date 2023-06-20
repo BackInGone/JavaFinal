@@ -171,9 +171,9 @@ public class ShopPanel2 {
                 public synchronized void actionPerformed(ActionEvent e) {
                     Shop2.dispose();
                     System.out.println("상점에서 나왔다.");
-                    System.out.println(Item.itemlist3);
+                    System.out.println(Item.itemlist);
 
-                        System.out.println(Item.itemlist3.values());
+                        System.out.println(Item.itemlist.values());
 //
                 }
             });
@@ -224,15 +224,15 @@ public class ShopPanel2 {
 //                    Item itemtest = new Item();     //여기서 thread 관련 오류가 나네
 //                    System.out.println(itemlist3);
 //                    itemtest.makeitemlist();
-                    System.out.println(Item.itemlist3);
-                    System.out.println("after makeitelist() =" + Item.itemlist3);
+                    System.out.println(Item.itemlist);
+                    System.out.println("after makeitelist() =" + Item.itemlist);
 
-                    Item.itemlist3.remove("potion");
-                    System.out.println("after remove potion = " + Item.itemlist3);
+                    Item.itemlist.remove("potion");
+                    System.out.println("after remove potion = " + Item.itemlist);
                     int potionnum = (int)(Math.random()*100);
-                    Item.itemlist3.put("potion", potionnum);
+                    Item.itemlist.put("potion", potionnum);
 
-                    System.out.println("after put potion = " + Item.itemlist3);
+                    System.out.println("after put potion = " + Item.itemlist);
 
                 }
             });

@@ -2,6 +2,7 @@ package Main;
 
 import pocketmon.*;
 
+import java.lang.management.ThreadInfo;
 import java.util.ArrayList;
 
 public class PocketmoncenterPanel {
@@ -17,6 +18,29 @@ public void recoverAll() {
     FourthPocketmon.hp = FourthPocketmon.hpMax;
     FifthPocketmon.hp = FifthPocketmon.hpMax;
     SixthPocketmon.hp = SixthPocketmon.hpMax;
+
+    for (int i = 0; i < 4; i++) {
+    FirstPocketmon.PP[i] = FirstPocketmon.maxPP[i];
+    }for (int i = 0; i < 4; i++) {
+    SecondPocketmon.PP[i] = SecondPocketmon.maxPP[i];
+    }for (int i = 0; i < 4; i++) {
+    ThirdPocketmon.PP[i] = ThirdPocketmon.maxPP[i];
+    }for (int i = 0; i < 4; i++) {
+    FourthPocketmon.PP[i] = FourthPocketmon.maxPP[i];
+    }for (int i = 0; i < 4; i++) {
+    FifthPocketmon.PP[i] = FifthPocketmon.maxPP[i];
+    }for (int i = 0; i < 4; i++) {
+    SixthPocketmon.PP[i] = SixthPocketmon.maxPP[i];
+    }
+    /*
+    FirstPocketmon.PP = FirstPocketmon.maxPP;
+    SecondPocketmon.PP = SecondPocketmon.maxPP;
+    ThirdPocketmon.PP = ThirdPocketmon.maxPP;
+    FourthPocketmon.PP= FourthPocketmon.maxPP;
+    FifthPocketmon.PP=FifthPocketmon.maxPP;
+    SixthPocketmon.PP=SixthPocketmon.maxPP;
+*/
+
 
     FirstPocketmon.isParalyzed = false;
     SecondPocketmon.isParalyzed = false;

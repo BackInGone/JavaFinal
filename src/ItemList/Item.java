@@ -29,11 +29,11 @@ public class Item {
     Pocketmon itemPoke = new Pocketmon();
     BattlePanel itemBattle = new BattlePanel();
 
-    String[] itemlist = new String[20];
+//    String[] itemlist = new String[20];
     String itemlist2[] = {"potion", "superpotion", "monsterball", "superball", "antidod", "cleaner", "strangecandy"
             , "redfruit" , "bluefruit", "greenfruit","","","","","","","","","",""};
 
-       public static HashMap<String, Integer> itemlist3 = new HashMap<String, Integer>();
+       public static HashMap<String, Integer> itemlist = new HashMap<String, Integer>();
 
     public Item() throws InterruptedException {
     }
@@ -58,7 +58,7 @@ public class Item {
     public void useItem(Pocketmon my, Pocketmon oppos){
         Scanner scan = new Scanner(System.in);
         int itemNum = scan.nextInt();
-            if(itemlist3.containsKey(itemNum)){
+            if(itemlist.containsKey(itemNum)){
 //                this.name = name;
 //                this.quantity = itemNum;
         switch (itemNum){

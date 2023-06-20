@@ -4,7 +4,8 @@ public class Charmender extends Pocketmon{
 
     public Charmender(int level) {
 
-        this.hp = (int)(150 + (this.level)*hpgrow);
+        this.hpMax = (int)(150 + (this.level)*hpgrow);
+        this.hp = hpMax;
         this.level = level;
         this.attack = 1F + (this.level)*attackgrow;
         this.defence = 1F + (this.level)*defencegrow;

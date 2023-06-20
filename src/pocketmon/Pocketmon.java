@@ -9,6 +9,8 @@ public class Pocketmon {
     public int level=1;
     public int exp;
     public int hp;
+    public int hpMax;
+
     public float attack;
     public float defence;
     public float accuracy;

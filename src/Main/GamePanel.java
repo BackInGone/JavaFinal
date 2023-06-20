@@ -1,6 +1,8 @@
 package Main;
 
+import ItemList.Item;
 import Shop.ShopPanel2;
+import person.Trainer;
 import pocketmon.*;
 
 import javax.imageio.ImageIO;
@@ -65,6 +67,7 @@ public class GamePanel extends JPanel implements Runnable{
                     FirstPocketmon firstpoke = new FirstPocketmon();
                     Esangssi esang = new Esangssi(5);
                     FirstPocketmon.hp = esang.hp;
+                    FirstPocketmon.hpMax = esang.hpMax;
                     FirstPocketmon.type = esang.type;
                     FirstPocketmon.attack = esang.attack;
                     FirstPocketmon.defence = esang.defence;
@@ -83,6 +86,7 @@ public class GamePanel extends JPanel implements Runnable{
                     FirstPocketmon firstpoke = new FirstPocketmon();
                     Charmender esang = new Charmender(5);
                     FirstPocketmon.hp = esang.hp;
+                    FirstPocketmon.hpMax = esang.hpMax;
                     FirstPocketmon.type = esang.type;
                     FirstPocketmon.attack = esang.attack;
                     FirstPocketmon.defence = esang.defence;
@@ -99,6 +103,7 @@ public class GamePanel extends JPanel implements Runnable{
                     FirstPocketmon firstpoke = new FirstPocketmon();
                     Kkobook esang = new Kkobook(5);
                     FirstPocketmon.hp = esang.hp;
+                    FirstPocketmon.hpMax = esang.hpMax;
                     FirstPocketmon.type = esang.type;
                     FirstPocketmon.attack = esang.attack;
                     FirstPocketmon.defence = esang.defence;
@@ -112,6 +117,9 @@ public class GamePanel extends JPanel implements Runnable{
                     break;
                 }
             }
+
+
+            Item.itemlist.put("potion", 1);
             SecondPocketmon sec = new SecondPocketmon();
                 Pikachu f = new Pikachu(5);
            sec.setFieldtoPikachu(sec, 7);
@@ -174,12 +182,15 @@ public class GamePanel extends JPanel implements Runnable{
 
         ////아래로 이탈하여
         else if (playerY <=5) {
+            keyH.downPressed = true;
             playerY = 20;    //todo 다시 돌아오지도 않고.
             System.out.println("위로 이탈");
+            keyH.downPressed = true;
+            playerY = 30;    //todo 다시 돌아오지도 않고.
+            keyH.downPressed = true;
             new BattlePanel();
             playerY = 20;    //todo 다시 돌아오지도 않고.
             keyH.upPressed = false;
-            keyH.downPressed = true;
             keyH.downPressed = false;
             keyH.leftPressed = false;
             keyH.rightPressed = false;

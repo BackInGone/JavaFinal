@@ -4,6 +4,7 @@ package person;
 import pocketmon.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -26,6 +27,7 @@ public class Trainer extends Person {
                 int code = 65;}
         }
         static char[] myPokeList = new char[6];
+//        public static HashMap<String, Integer> itemlist = new HashMap<>();
 
 
 

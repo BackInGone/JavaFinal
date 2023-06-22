@@ -28,6 +28,12 @@ public class Pocketmon {
     public int[] PP = new int[5];
     public int[] skill = new int[5];
 
+    public void SendtoTemp(int tlevel, int thp){
+
+        Temp temp = new Temp();
+
+    }
+
 
     public Pocketmon(){}
     public Pocketmon(int level){

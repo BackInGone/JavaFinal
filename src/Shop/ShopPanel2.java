@@ -190,7 +190,7 @@ public class ShopPanel2 {
 
                     Pocketmon[] oppos = new Pocketmon[6];
                     for (int i = 0; i <= 5; i++) {
-                        oppos[i] = new Pocketmon();
+                          oppos[i] = new Pocketmon();
                     }
 
                     int pokenum = 0;

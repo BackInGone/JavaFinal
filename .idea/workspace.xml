@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b52fd0b-d478-44e2-b51d-f9f4b121f31d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pocketmon/Temp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shop/ShopPanel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pikachu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pocketmon/Pocketmon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,6 +157,7 @@
       <workItem from="1686981753804" duration="19134000" />
       <workItem from="1687262397795" duration="3369000" />
       <workItem from="1687407506022" duration="13527000" />
+      <workItem from="1687501322901" duration="7300000" />
     </task>
     <task id="LOCAL-00003" summary="First">
       <created>1679329223668</created>

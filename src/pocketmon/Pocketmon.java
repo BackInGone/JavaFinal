@@ -31,6 +31,26 @@ public class Pocketmon {
     public void SendtoTemp(int tlevel, int thp){
 
         Temp temp = new Temp();
+        BattlePoke.exist = SecondPocketmon.exist;
+        BattlePoke.index = SecondPocketmon.index;
+        BattlePoke.level = SecondPocketmon.level;
+        BattlePoke.exp = SecondPocketmon.exp;
+        BattlePoke.hp = SecondPocketmon.hp;
+        BattlePoke.attack = SecondPocketmon.attack;
+        BattlePoke.defence = SecondPocketmon.defence;
+        BattlePoke.accuracy = SecondPocketmon.accuracy;
+        BattlePoke.type = SecondPocketmon.type;
+        BattlePoke.name = SecondPocketmon.name;
+        BattlePoke.depth = SecondPocketmon.depth;
+        BattlePoke.hpgrow = SecondPocketmon.hpgrow;
+        BattlePoke.attackgrow = SecondPocketmon.attackgrow;
+        BattlePoke.defencegrow = SecondPocketmon.defencegrow;
+        BattlePoke.isPoisoned = SecondPocketmon.isPoisoned;
+        BattlePoke.isParalyzed = SecondPocketmon.isParalyzed;
+        BattlePoke.maxPP = SecondPocketmon.maxPP;
+        BattlePoke.PP = SecondPocketmon.PP;
+        BattlePoke.skill = SecondPocketmon.skill;
+        BattlePoke.current = 'b';
 
     }
 

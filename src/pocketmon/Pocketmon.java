@@ -28,29 +28,142 @@ public class Pocketmon {
     public int[] PP = new int[5];
     public int[] skill = new int[5];
 
-    public void SendtoTemp(int tlevel, int thp){
-
+    public void KeeptoTemp(int tlevel, int thp, int num){
         Temp temp = new Temp();
-        BattlePoke.exist = SecondPocketmon.exist;
-        BattlePoke.index = SecondPocketmon.index;
-        BattlePoke.level = SecondPocketmon.level;
-        BattlePoke.exp = SecondPocketmon.exp;
-        BattlePoke.hp = SecondPocketmon.hp;
-        BattlePoke.attack = SecondPocketmon.attack;
-        BattlePoke.defence = SecondPocketmon.defence;
-        BattlePoke.accuracy = SecondPocketmon.accuracy;
-        BattlePoke.type = SecondPocketmon.type;
-        BattlePoke.name = SecondPocketmon.name;
-        BattlePoke.depth = SecondPocketmon.depth;
-        BattlePoke.hpgrow = SecondPocketmon.hpgrow;
-        BattlePoke.attackgrow = SecondPocketmon.attackgrow;
-        BattlePoke.defencegrow = SecondPocketmon.defencegrow;
-        BattlePoke.isPoisoned = SecondPocketmon.isPoisoned;
-        BattlePoke.isParalyzed = SecondPocketmon.isParalyzed;
-        BattlePoke.maxPP = SecondPocketmon.maxPP;
-        BattlePoke.PP = SecondPocketmon.PP;
-        BattlePoke.skill = SecondPocketmon.skill;
-        BattlePoke.current = 'b';
+
+        if (num == 1) {
+            temp.exist = FirstPocketmon.exist;
+            temp.index = FirstPocketmon.index;
+            temp.level = FirstPocketmon.level;
+            temp.exp = FirstPocketmon.exp;
+            temp.hp = FirstPocketmon.hp;
+            temp.attack = FirstPocketmon.attack;
+            temp.defence = FirstPocketmon.defence;
+            temp.accuracy = FirstPocketmon.accuracy;
+            temp.type = FirstPocketmon.type;
+            temp.name = FirstPocketmon.name;
+            temp.depth = FirstPocketmon.depth;
+            temp.hpgrow = FirstPocketmon.hpgrow;
+            temp.attackgrow = FirstPocketmon.attackgrow;
+            temp.defencegrow = FirstPocketmon.defencegrow;
+            temp.isPoisoned = FirstPocketmon.isPoisoned;
+            temp.isParalyzed = FirstPocketmon.isParalyzed;
+            temp.maxPP = FirstPocketmon.maxPP;
+            temp.PP = FirstPocketmon.PP;
+            temp.skill = FirstPocketmon.skill;
+//        temp.current = 'b';
+
+        }else if (num == 2) {
+        temp.exist = SecondPocketmon.exist;
+        temp.index = SecondPocketmon.index;
+        temp.level = SecondPocketmon.level;
+        temp.exp = SecondPocketmon.exp;
+        temp.hp = SecondPocketmon.hp;
+        temp.attack = SecondPocketmon.attack;
+        temp.defence = SecondPocketmon.defence;
+        temp.accuracy = SecondPocketmon.accuracy;
+        temp.type = SecondPocketmon.type;
+        temp.name = SecondPocketmon.name;
+        temp.depth = SecondPocketmon.depth;
+        temp.hpgrow = SecondPocketmon.hpgrow;
+        temp.attackgrow = SecondPocketmon.attackgrow;
+        temp.defencegrow = SecondPocketmon.defencegrow;
+        temp.isPoisoned = SecondPocketmon.isPoisoned;
+        temp.isParalyzed = SecondPocketmon.isParalyzed;
+        temp.maxPP = SecondPocketmon.maxPP;
+        temp.PP = SecondPocketmon.PP;
+        temp.skill = SecondPocketmon.skill;
+//        temp.current = 'b';
+
+        }else if (num == 3) {
+            temp.exist = ThirdPocketmon.exist;
+            temp.index = ThirdPocketmon.index;
+            temp.level = ThirdPocketmon.level;
+            temp.exp = ThirdPocketmon.exp;
+            temp.hp = ThirdPocketmon.hp;
+            temp.attack = ThirdPocketmon.attack;
+            temp.defence = ThirdPocketmon.defence;
+            temp.accuracy = ThirdPocketmon.accuracy;
+            temp.type = ThirdPocketmon.type;
+            temp.name = ThirdPocketmon.name;
+            temp.depth = ThirdPocketmon.depth;
+            temp.hpgrow = ThirdPocketmon.hpgrow;
+            temp.attackgrow = ThirdPocketmon.attackgrow;
+            temp.defencegrow = ThirdPocketmon.defencegrow;
+            temp.isPoisoned = ThirdPocketmon.isPoisoned;
+            temp.isParalyzed = ThirdPocketmon.isParalyzed;
+            temp.maxPP = ThirdPocketmon.maxPP;
+            temp.PP = ThirdPocketmon.PP;
+            temp.skill = ThirdPocketmon.skill;
+//        temp.current = 'b';
+
+        }else if (num == 4) {
+            temp.exist = FourthPocketmon.exist;
+            temp.index = FourthPocketmon.index;
+            temp.level = FourthPocketmon.level;
+            temp.exp = FourthPocketmon.exp;
+            temp.hp = FourthPocketmon.hp;
+            temp.attack = FourthPocketmon.attack;
+            temp.defence = FourthPocketmon.defence;
+            temp.accuracy = FourthPocketmon.accuracy;
+            temp.type = FourthPocketmon.type;
+            temp.name = FourthPocketmon.name;
+            temp.depth = FourthPocketmon.depth;
+            temp.hpgrow = FourthPocketmon.hpgrow;
+            temp.attackgrow = FourthPocketmon.attackgrow;
+            temp.defencegrow = FourthPocketmon.defencegrow;
+            temp.isPoisoned = FourthPocketmon.isPoisoned;
+            temp.isParalyzed = FourthPocketmon.isParalyzed;
+            temp.maxPP = FourthPocketmon.maxPP;
+            temp.PP = FourthPocketmon.PP;
+            temp.skill = FourthPocketmon.skill;
+//        temp.current = 'b';
+
+        }else if (num == 5) {
+            temp.exist = FifthPocketmon.exist;
+            temp.index = FifthPocketmon.index;
+            temp.level = FifthPocketmon.level;
+            temp.exp = FifthPocketmon.exp;
+            temp.hp = FifthPocketmon.hp;
+            temp.attack = FifthPocketmon.attack;
+            temp.defence = FifthPocketmon.defence;
+            temp.accuracy = FifthPocketmon.accuracy;
+            temp.type = FifthPocketmon.type;
+            temp.name = FifthPocketmon.name;
+            temp.depth = FifthPocketmon.depth;
+            temp.hpgrow = FifthPocketmon.hpgrow;
+            temp.attackgrow = FifthPocketmon.attackgrow;
+            temp.defencegrow = FifthPocketmon.defencegrow;
+            temp.isPoisoned = FifthPocketmon.isPoisoned;
+            temp.isParalyzed = FifthPocketmon.isParalyzed;
+            temp.maxPP = FifthPocketmon.maxPP;
+            temp.PP = FifthPocketmon.PP;
+            temp.skill = FifthPocketmon.skill;
+//        temp.current = 'b';
+
+        }else if (num == 6) {
+            temp.exist = SixthPocketmon.exist;
+            temp.index = SixthPocketmon.index;
+            temp.level = SixthPocketmon.level;
+            temp.exp = SixthPocketmon.exp;
+            temp.hp = SixthPocketmon.hp;
+            temp.attack = SixthPocketmon.attack;
+            temp.defence = SixthPocketmon.defence;
+            temp.accuracy = SixthPocketmon.accuracy;
+            temp.type = SixthPocketmon.type;
+            temp.name = SixthPocketmon.name;
+            temp.depth = SixthPocketmon.depth;
+            temp.hpgrow = SixthPocketmon.hpgrow;
+            temp.attackgrow = SixthPocketmon.attackgrow;
+            temp.defencegrow = SixthPocketmon.defencegrow;
+            temp.isPoisoned = SixthPocketmon.isPoisoned;
+            temp.isParalyzed = SixthPocketmon.isParalyzed;
+            temp.maxPP = SixthPocketmon.maxPP;
+            temp.PP = SixthPocketmon.PP;
+            temp.skill = SixthPocketmon.skill;
+//        temp.current = 'b';
+
+        }
 
     }
 
